@@ -8,4 +8,6 @@
 }
 .LanczAC .main-content {
   flex-grow: 1;
+  background-image: url("../../assets/images/hero-image-1440x768-unsplash.com_spacejoy.webp");
+  background-size: cover;
 }/*# sourceMappingURL=LanczAC.css.map */

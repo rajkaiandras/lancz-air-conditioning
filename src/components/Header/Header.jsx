@@ -1,17 +1,23 @@
-import React from 'react';
+import { React, useContext } from 'react';
 
-// SVG Logo Sprite
-import logoSprite from '../../assets/logos/logo-svg-sprite.svg';
+// Theme Context
+import { ThemeContext } from '../../contexts/ThemeContext.jsx';
+
+// Components
+import { Logo } from '../Logos/Logos.jsx';
+import { Icon } from '../Icons/Icons.jsx';
 
 // Styles
 import './Header.css';
 
-export const Header = () => {
+export const Header = ({ themePicker }) => {
+  const theme = useContext(ThemeContext);
+
   return (
     <header className="Header">
-      <svg className="header__logo">
-        <use href={logoSprite + '#logo-full-name'} />
-      </svg>
+      <a href="#section-main" className="header__logo">
+        <Logo id="full-name" />
+      </a>
       <nav className="header__desktop-nav">
         <ul className="desktop-nav-inner">
           <li className="desktop-nav__link">
@@ -46,6 +52,13 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
+      <div className="header__theme-picker" onClick={themePicker}>
+        {theme === 'light mode' ? (
+          <Icon id="dark-mode" />
+        ) : (
+          <Icon id="light-mode" />
+        )}
+      </div>
     </header>
   );
 };

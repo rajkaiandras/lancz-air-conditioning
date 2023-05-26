@@ -1,12 +1,23 @@
 // Button Styles
 .btn {
-  padding: 16px 32px;
+  padding: 8px 24px;
   color: $global-clr-txt-white;
+
+  &:hover {
+    color: $global-clr-txt-design-blue;
+  }
 }
 
 .btn--outline {
-  border: 1px solid $global-clr-design-blue;
+  border: 2px solid $global-clr-design-blue;
   border-radius: 8px;
+  font-family: 'Raleway - Semi Bold';
+  color: $global-clr-txt-design-blue;
+
+  &:hover {
+    background-color: $global-clr-design-blue;
+    color: $global-clr-txt-white;
+  }
 }
 
 .btn--filled {
