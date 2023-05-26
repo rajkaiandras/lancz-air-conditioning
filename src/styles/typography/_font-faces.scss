@@ -1,0 +1,32 @@
+// Typography - Font-Faces
+@font-face {
+  font-family: 'Raleway - Extra Light';
+  font-style: normal;
+  font-weight: 200;
+  font-display: fallback;
+  src: url(../../assets/fonts/Raleway-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway - Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../../assets/fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway - Semi Bold';
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+  src: url(../../assets/fonts/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway - Extra Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: url(../../assets/fonts/Raleway-ExtraBold.ttf);
+}

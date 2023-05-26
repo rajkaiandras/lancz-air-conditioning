@@ -1,5 +1,27 @@
+@charset "UTF-8";
+
+// Custom Properties - CSS Variables
+@import '../../styles/custom-properties/_variables.scss';
+
+// Main Header Styles
 .Header {
-  width: 100vw;
-  height: 100px;
-  background-color: tomato;
+  width: 100%;
+  height: 90px;
+  padding: 16px;
+  background: $global-clr-graphite;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__logo {
+    width: 256px;
+  }
+
+  .header__desktop-nav {
+    .desktop-nav-inner {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
 }

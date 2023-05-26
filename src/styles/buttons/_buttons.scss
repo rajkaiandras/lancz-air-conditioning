@@ -1,0 +1,15 @@
+// Button Styles
+.btn {
+  padding: 16px 32px;
+  color: $global-clr-txt-white;
+}
+
+.btn--outline {
+  border: 1px solid $global-clr-design-blue;
+  border-radius: 8px;
+}
+
+.btn--filled {
+  background-color: $global-clr-design-blue;
+  border-radius: 8px;
+}

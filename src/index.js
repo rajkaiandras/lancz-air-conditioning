@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import LanczAC from './Lancz-AC.jsx';
+
+// Components
+import { LanczAC } from './components/LanczAC/LanczAC.jsx';
+
+// Styles
+import './styles/shared/shared.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
