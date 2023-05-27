@@ -34,7 +34,7 @@ export const LanczAC = () => {
       <LogosSource />
       <IconsSource />
       <ThemeContext.Provider value={theme}>
-        <Header themePicker={themePicker} />
+        <Header className={theme} themePicker={themePicker} />
         <div className="main-content"></div>
         <Footer />
       </ThemeContext.Provider>
