@@ -3,13 +3,13 @@
 
 // Scroll Top Styles
 .ScrollTop {
-  position: absolute;
-  bottom: 20px;
-  right: 80px;
+  position: fixed;
+  bottom: 40px;
+  left: 80vw;
   z-index: 3;
   cursor: pointer;
 
-  .scroll-top-icon-wrapper {
+  .scroll-top-wrapper {
     width: 36px;
     height: 36px;
     border-radius: 50%;

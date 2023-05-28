@@ -9,7 +9,7 @@ export const HamburgerMenu = ({
   hamburgerMenuIsOpen,
 }) => {
   return (
-    <div class="Hamburger-menu" onClick={handleHamburgerMenu}>
+    <div class="HamburgerMenu" onClick={handleHamburgerMenu}>
       <div
         class={`hamburger-menu__bar bar-top ${
           darkMode || hamburgerMenuIsOpen ? 'dark-mode' : ''

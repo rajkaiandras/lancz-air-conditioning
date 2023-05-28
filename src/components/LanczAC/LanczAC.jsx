@@ -7,6 +7,7 @@ import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 import { LogosSource } from '../Logos/Logos.jsx';
 import { IconsSource } from '../Icons/Icons.jsx';
 import { Header } from '../Header/Header.jsx';
+import { AboutUs } from '../AboutUs/AboutUs.jsx';
 import { Footer } from '../Footer/Footer.jsx';
 import { ScrollTop } from '../ScrollTop/ScrollTop.jsx';
 
@@ -25,11 +26,12 @@ export const LanczAC = () => {
 
   return (
     <>
-      <div className="main-content"></div>
+      <div className="main-content" id="section-main"></div>
       <div className="LanczAC">
         <LogosSource />
         <IconsSource />
         <Header />
+        <AboutUs />
         <Footer />
         <ScrollTop />
       </div>

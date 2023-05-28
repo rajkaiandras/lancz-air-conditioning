@@ -10,7 +10,7 @@ export const NavigationDesktop = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <nav className="navigation-desktop">
+    <nav className="NavigationDesktop">
       <ul className="navigation-desktop__list">
         <li className="navigation-desktop__item">
           <a

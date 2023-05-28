@@ -52,7 +52,10 @@ export const Header = () => {
 
       {/* MOBILE NAVIGATION */}
       {windowWidth < 1024 && (
-        <NavigationMobile hamburgerMenuIsOpen={hamburgerMenuIsOpen} />
+        <NavigationMobile
+          hamburgerMenuIsOpen={hamburgerMenuIsOpen}
+          handleHamburgerMenu={handleHamburgerMenu}
+        />
       )}
 
       {/* DESKTOP NAVIGATION */}

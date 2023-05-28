@@ -28,7 +28,7 @@ export const ScrollTop = () => {
   return (
     <div className="ScrollTop" onClick={handleClick}>
       {visibility && (
-        <div className="scroll-top-icon-wrapper">
+        <div className="scroll-top-wrapper">
           <Icon id="top-arrow" />
         </div>
       )}

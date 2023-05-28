@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 // Navigation Desktop Styles
-.navigation-desktop__list {
-  display: flex;
-  flex-flow: row nowrap;
+.NavigationDesktop {
+  .navigation-desktop__list {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }
