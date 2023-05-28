@@ -46,6 +46,10 @@ body {
   color: $global-clr-txt-graphite;
   background-color: $global-clr-white;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   #root {
     &.dark-mode {
       background-color: $global-clr-graphite;

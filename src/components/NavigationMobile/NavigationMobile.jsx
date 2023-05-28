@@ -21,7 +21,7 @@ export const NavigationMobile = ({
         <li className="navigation-mobile__item">
           <a
             className={`btn ${darkMode ? 'dark-mode' : ''}`}
-            href="#section-main"
+            href="#section-home"
             onClick={closeNavigationMobile}
           >
             Főoldal

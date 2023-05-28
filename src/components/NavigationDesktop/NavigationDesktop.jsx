@@ -15,7 +15,7 @@ export const NavigationDesktop = () => {
         <li className="navigation-desktop__item">
           <a
             className={`btn ${darkMode ? 'dark-mode' : ''}`}
-            href="#section-main"
+            href="#section-home"
           >
             Főoldal
           </a>

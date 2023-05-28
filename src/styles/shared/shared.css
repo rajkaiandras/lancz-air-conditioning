@@ -228,6 +228,9 @@ body {
   color: hsl(0, 0%, 15%);
   background-color: hsl(0, 0%, 100%);
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 body #root.dark-mode {
   background-color: hsl(0, 0%, 15%);
 }/*# sourceMappingURL=shared.css.map */

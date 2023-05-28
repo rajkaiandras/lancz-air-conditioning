@@ -13,6 +13,7 @@ import { ScrollTop } from '../ScrollTop/ScrollTop.jsx';
 
 // Styles
 import './LanczAC.css';
+import { HomeCarousel } from '../HomeCarousel/HomeCarousel.jsx';
 
 export const LanczAC = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -26,7 +27,7 @@ export const LanczAC = () => {
 
   return (
     <>
-      <div className="main-content" id="section-main"></div>
+      <HomeCarousel />
       <div className="LanczAC">
         <LogosSource />
         <IconsSource />

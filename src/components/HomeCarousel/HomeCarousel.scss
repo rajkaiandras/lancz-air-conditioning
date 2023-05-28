@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+// Custom Properties - CSS Variables
+@import '../../styles/custom-properties/_variables.scss';
+
+// Home Carousel Styles
+.swiper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $global-clr-design-blue;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $global-clr-design-blue;
+  }
+
+  .slide-content {
+    position: absolute;
+    padding: 0 3rem;
+    top: 20vh;
+    left: 5vw;
+
+    .slide-title {
+      font-size: clamp(2rem, 4vw, 6rem);
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px #151515;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .slide-subtitle {
+      font-size: clamp(1rem, 2vw, 3rem);
+      font-weight: 500;
+      color: white;
+      text-shadow: 2px 2px #151515;
+    }
+  }
+
+  .slide-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
