@@ -1,13 +1,13 @@
 .LanczAC {
   width: 100%;
   max-width: 1280px;
-  height: 100vh;
   margin: 0 auto;
-  display: flex;
-  flex-flow: column wrap;
+  position: relative;
 }
-.LanczAC .main-content {
-  flex-grow: 1;
+
+.main-content {
+  width: 100vw;
+  height: 100vh;
   background-image: url("../../assets/images/hero-image-1440x768-unsplash.com_spacejoy.webp");
   background-size: cover;
 }/*# sourceMappingURL=LanczAC.css.map */

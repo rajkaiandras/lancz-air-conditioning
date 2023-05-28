@@ -1,0 +1,31 @@
+// Custom Properties - CSS Variables
+@import '../../styles/custom-properties/_variables.scss';
+
+// Scroll Top Styles
+.ScrollTop {
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+  z-index: 3;
+  cursor: pointer;
+
+  .scroll-top-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $global-clr-design-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $global-transition;
+
+    svg:has(use[href='#icon-top-arrow']) {
+      width: 36px;
+      height: 36px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

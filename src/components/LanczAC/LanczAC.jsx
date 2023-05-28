@@ -8,6 +8,7 @@ import { LogosSource } from '../Logos/Logos.jsx';
 import { IconsSource } from '../Icons/Icons.jsx';
 import { Header } from '../Header/Header.jsx';
 import { Footer } from '../Footer/Footer.jsx';
+import { ScrollTop } from '../ScrollTop/ScrollTop.jsx';
 
 // Styles
 import './LanczAC.css';
@@ -23,12 +24,15 @@ export const LanczAC = () => {
   }, [root, darkMode]);
 
   return (
-    <div className="LanczAC">
-      <LogosSource />
-      <IconsSource />
-      <Header />
+    <>
       <div className="main-content"></div>
-      <Footer />
-    </div>
+      <div className="LanczAC">
+        <LogosSource />
+        <IconsSource />
+        <Header />
+        <Footer />
+        <ScrollTop />
+      </div>
+    </>
   );
 };

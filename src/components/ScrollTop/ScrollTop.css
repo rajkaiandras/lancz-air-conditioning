@@ -1,0 +1,25 @@
+/* cubic-bezier(0.84, 0.06, 0.52, 1.8); */
+.ScrollTop {
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+  z-index: 3;
+  cursor: pointer;
+}
+.ScrollTop .scroll-top-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: hsl(189, 81%, 64%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-out;
+}
+.ScrollTop .scroll-top-icon-wrapper svg:has(use[href="#icon-top-arrow"]) {
+  width: 36px;
+  height: 36px;
+}
+.ScrollTop .scroll-top-icon-wrapper:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=ScrollTop.css.map */

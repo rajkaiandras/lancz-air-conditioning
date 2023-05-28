@@ -4,5 +4,9 @@ import React from 'react';
 import './Footer.css';
 
 export const Footer = () => {
-  return <div className="Footer">Footer</div>;
+  return (
+    <div className="Footer" id="section-contact">
+      Footer
+    </div>
+  );
 };
