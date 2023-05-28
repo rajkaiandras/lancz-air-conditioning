@@ -45,6 +45,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: $global-clr-graphite;
+  color: $global-clr-txt-graphite;
   background-color: $global-clr-white;
+
+  #root {
+    &.dark-mode {
+      background-color: $global-clr-graphite;
+    }
+  }
 }

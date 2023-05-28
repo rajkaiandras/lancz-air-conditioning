@@ -1,22 +1,35 @@
 // Button Styles
 .btn {
   padding: 8px 24px;
-  color: $global-clr-txt-white;
+  color: $global-clr-txt-graphite;
+  transition: $global-transition;
 
-  &:hover {
+  &.dark-mode {
+    color: $global-clr-txt-white;
+
+    &:hover,
+    &:focus {
+      color: $global-clr-txt-design-blue;
+    }
+  }
+
+  &:hover,
+  &:focus {
     color: $global-clr-txt-design-blue;
   }
 }
 
 .btn--outline {
-  border: 2px solid $global-clr-design-blue;
+  border: 1px solid $global-clr-design-blue;
   border-radius: 8px;
-  font-family: 'Raleway - Semi Bold';
+  font-family: 'Raleway - Regular';
   color: $global-clr-txt-design-blue;
+  transition: $global-transition;
 
-  &:hover {
-    background-color: $global-clr-design-blue;
+  &:hover,
+  &:focus {
     color: $global-clr-txt-white;
+    background-color: $global-clr-design-blue;
   }
 }
 

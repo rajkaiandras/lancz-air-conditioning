@@ -50,7 +50,7 @@ function Logo(props) {
       height={height}
       viewBox={viewBox}
     >
-      <use xlinkHref={'#' + prefix + '-' + props.id} />
+      <use href={'#' + prefix + '-' + props.id} />
     </svg>
   );
 }

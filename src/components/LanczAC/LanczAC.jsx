@@ -1,8 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 
-// Theme Context
-import { ThemeContext } from '../../contexts/ThemeContext.jsx';
+// Dark Mode Context
+import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // Components
 import { LogosSource } from '../Logos/Logos.jsx';
@@ -14,30 +13,22 @@ import { Footer } from '../Footer/Footer.jsx';
 import './LanczAC.css';
 
 export const LanczAC = () => {
-  // Theme Picker
-  const [theme, setTheme] = useState('light mode');
-  const themePicker = () => {
-    switch (theme) {
-      case 'light mode':
-        setTheme('dark mode');
-        break;
-      case 'dark mode':
-        setTheme('light mode');
-        break;
-      default:
-        setTheme('light mode');
-    }
-  };
+  const { darkMode } = useContext(DarkModeContext);
+  const root = document.getElementById('root');
+
+  useEffect(() => {
+    darkMode
+      ? root.classList.add('dark-mode')
+      : root.classList.remove('dark-mode');
+  }, [root, darkMode]);
 
   return (
     <div className="LanczAC">
       <LogosSource />
       <IconsSource />
-      <ThemeContext.Provider value={theme}>
-        <Header className={theme} themePicker={themePicker} />
-        <div className="main-content"></div>
-        <Footer />
-      </ThemeContext.Provider>
+      <Header />
+      <div className="main-content"></div>
+      <Footer />
     </div>
   );
 };
