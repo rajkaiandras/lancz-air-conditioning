@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+// Custom Properties - CSS Variables
+@import '../../styles/custom-properties/_variables.scss';
+
+// Navigation Mobile Styles
+.Navigation-mobile {
+  width: 70vw;
+  height: 100vh;
+  background-color: hsla(0, 0, 0%, 0.4);
+  position: fixed;
+  top: 0;
+  left: -70vw;
+  transition: $global-transition;
+  transition-delay: 100ms;
+  backdrop-filter: blur(2px);
+
+  &.open {
+    transform: translateX(70vw);
+  }
+
+  .navigation-mobile__list {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 24px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    .navigation-mobile__item {
+      .btn {
+        color: $global-clr-txt-white;
+
+        &:hover,
+        &:focus {
+          color: $global-clr-txt-design-blue;
+        }
+      }
+
+      .btn--outline {
+        color: $global-clr-design-blue;
+
+        &:hover,
+        &:focus {
+          color: $global-clr-txt-white;
+          background-color: $global-clr-design-blue;
+        }
+      }
+    }
+  }
+}

@@ -7,8 +7,8 @@
 .Header {
   width: 100%;
   max-width: 1280px;
-  height: 90px;
-  padding: 32px;
+  height: 74px;
+  padding: 16px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -19,55 +19,6 @@
   right: 0;
   margin: 0 auto;
 
-  .header__hamburger-menu {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 3;
-    cursor: pointer;
-
-    .hamburger-menu__bar {
-      position: absolute;
-      left: calc(50% - 12px);
-      top: calc(50% - 1px);
-      width: 24px;
-      height: 1.5px;
-      border-radius: 4px;
-      background-color: $global-clr-graphite;
-      transition: $global-transition;
-    }
-
-    .hamburger-menu__bar.dark-mode {
-      background-color: $global-clr-white;
-    }
-
-    .bar-top {
-      transform: translateY(-6px);
-
-      &.open {
-        transform: rotate((40deg));
-      }
-    }
-
-    .bar-center {
-      &.open {
-        opacity: 0;
-      }
-    }
-    .bar-bottom {
-      transform: translateY(6px);
-
-      &.open {
-        transform: rotate((-40deg));
-      }
-    }
-
-    @media (min-width: 1024px) {
-      display: none;
-    }
-  }
-
   .header__logo {
     svg:has(use[href='#logo-full-name']) {
       width: 175px;
@@ -77,70 +28,6 @@
     svg:has(use[href='#logo-monogram']) {
       width: 32px;
       height: 28px;
-    }
-  }
-
-  .header__navigation {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-
-    .navigation--mobile {
-      .navigation--mobile-menu {
-        width: 360px;
-        height: 100vh;
-        background-color: hsla(0, 0, 0%, 0.4);
-        position: fixed;
-        top: 0;
-        left: -360px;
-        transition: $global-transition;
-        transition-delay: 100ms;
-
-        &.open {
-          transform: translateX(360px);
-        }
-
-        .navigation--mobile {
-          height: 100%;
-          display: flex;
-          flex-flow: column nowrap;
-          row-gap: 24px;
-          justify-content: center;
-          align-items: center;
-          position: relative;
-          z-index: 2;
-
-          .navigation--mobile__link {
-            .btn {
-              color: $global-clr-txt-white;
-
-              &:hover,
-              &:focus {
-                color: $global-clr-txt-design-blue;
-              }
-            }
-
-            .btn--outline {
-              color: $global-clr-design-blue;
-
-              &:hover,
-              &:focus {
-                color: $global-clr-txt-white;
-                background-color: $global-clr-design-blue;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .navigation--desktop {
-      display: none;
-      flex-flow: row nowrap;
-
-      @media (min-width: 1024px) {
-        display: flex;
-      }
     }
   }
 

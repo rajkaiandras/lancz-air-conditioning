@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// Custom Properties - CSS Variables
+@import '../../styles/custom-properties/_variables.scss';
+
+// Hamburger Menu Styles
+.Hamburger-menu {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+
+  .hamburger-menu__bar {
+    position: absolute;
+    left: calc(50% - 12px);
+    top: calc(50% - 1px);
+    width: 24px;
+    height: 1.5px;
+    border-radius: 4px;
+    background-color: $global-clr-graphite;
+    transition: $global-transition;
+  }
+
+  .hamburger-menu__bar.dark-mode {
+    background-color: $global-clr-white;
+  }
+
+  .bar-top {
+    transform: translateY(-6px);
+
+    &.open {
+      transform: rotate((40deg));
+    }
+  }
+
+  .bar-center {
+    &.open {
+      opacity: 0;
+    }
+  }
+
+  .bar-bottom {
+    transform: translateY(6px);
+
+    &.open {
+      transform: rotate((-40deg));
+    }
+  }
+}
