@@ -9,14 +9,16 @@ import { Icon } from '../Icons/Icons.jsx';
 import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu.jsx';
 import { NavigationMobile } from '../NavigationMobile/NavigationMobile.jsx';
 import { NavigationDesktop } from '../NavigationDesktop/NavigationDesktop.jsx';
+import { Backdrop } from '../Backdrop/Backdrop.jsx';
 
 // Styles
-import './Header.css';
+import './MainHeader.css';
 
-export const Header = () => {
+export const MainHeader = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const body = document.querySelector('body');
 
   const handleDarkModeToggler = () => {
     toggleDarkMode();
@@ -27,6 +29,12 @@ export const Header = () => {
   };
 
   useEffect(() => {
+    hamburgerMenuIsOpen
+      ? body.classList.add('disable-scrolling')
+      : body.classList.remove('disable-scrolling');
+  }, [body, hamburgerMenuIsOpen]);
+
+  useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -35,7 +43,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="Header">
+    <header className="MainHeader">
       {/* HAMBURGER MENU */}
       {windowWidth < 1024 && (
         <HamburgerMenu
@@ -46,7 +54,7 @@ export const Header = () => {
       )}
 
       {/* LOGO */}
-      <a href="#section-main" className="header__logo">
+      <a href="#section-home" className="main-header__logo">
         {windowWidth <= 640 ? <Logo id="monogram" /> : <Logo id="full-name" />}
       </a>
 
@@ -63,11 +71,18 @@ export const Header = () => {
 
       {/* DARK MODE TOGGLER */}
       <div
-        className={`header__dark-mode-toggler ${darkMode ? 'dark-mode' : ''}`}
+        className={`main-header__dark-mode-toggler ${
+          darkMode ? 'dark-mode' : ''
+        }`}
         onClick={handleDarkModeToggler}
       >
         {darkMode ? <Icon id="light-mode" /> : <Icon id="dark-mode" />}
       </div>
+
+      {/* BACKDROP */}
+      {hamburgerMenuIsOpen && (
+        <Backdrop handleHamburgerMenu={handleHamburgerMenu} />
+      )}
     </header>
   );
 };

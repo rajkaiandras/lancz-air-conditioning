@@ -1,23 +1,24 @@
 @charset "UTF-8";
 
-// Custom Properties - CSS Variables
+// custom properties
 @import '../../styles/custom-properties/_variables.scss';
 
-// Main Header Styles
-.Header {
+// main header styles
+.MainHeader {
   width: 100%;
   max-width: 1280px;
   height: 74px;
   padding: 16px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  margin: 0 auto;
+  z-index: 1;
 
-  .header__logo {
+  .main-header__logo {
     svg:has(use[href='#logo-full-name']) {
       width: 175px;
       height: 28px;
@@ -29,7 +30,7 @@
     }
   }
 
-  .header__dark-mode-toggler {
+  .main-header__dark-mode-toggler {
     padding: 4px;
     border: 2px solid transparent;
     border-radius: 50%;

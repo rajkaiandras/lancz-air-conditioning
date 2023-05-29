@@ -1,26 +1,27 @@
 /* cubic-bezier(0.84, 0.06, 0.52, 1.8); */
-.Header {
+.MainHeader {
   width: 100%;
   max-width: 1280px;
   height: 74px;
   padding: 16px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  margin: 0 auto;
+  z-index: 1;
 }
-.Header .header__logo svg:has(use[href="#logo-full-name"]) {
+.MainHeader .main-header__logo svg:has(use[href="#logo-full-name"]) {
   width: 175px;
   height: 28px;
 }
-.Header .header__logo svg:has(use[href="#logo-monogram"]) {
+.MainHeader .main-header__logo svg:has(use[href="#logo-monogram"]) {
   width: 32px;
   height: 28px;
 }
-.Header .header__dark-mode-toggler {
+.MainHeader .main-header__dark-mode-toggler {
   padding: 4px;
   border: 2px solid transparent;
   border-radius: 50%;
@@ -30,9 +31,9 @@
   cursor: pointer;
   transition: all 300ms ease-out;
 }
-.Header .header__dark-mode-toggler.dark-mode {
+.MainHeader .main-header__dark-mode-toggler.dark-mode {
   background-color: hsla(0, 0%, 100%, 0.1);
 }
-.Header .header__dark-mode-toggler:hover {
+.MainHeader .main-header__dark-mode-toggler:hover {
   transform: scale(1.1);
-}/*# sourceMappingURL=Header.css.map */
+}/*# sourceMappingURL=MainHeader.css.map */

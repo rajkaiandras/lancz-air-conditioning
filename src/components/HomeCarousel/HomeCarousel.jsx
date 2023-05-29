@@ -45,7 +45,7 @@ export const HomeCarousel = () => {
       {swiperSlideDB.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="slide-content" id="section-home">
+            <div className="slide-content">
               <h1 className="slide-title">{slide.title}</h1>
               <h3 className="slide-subtitle">{slide.subtitle}</h3>
             </div>

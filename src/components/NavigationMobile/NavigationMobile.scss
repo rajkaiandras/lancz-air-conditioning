@@ -8,12 +8,13 @@
   width: 70vw;
   height: 100vh;
   background-color: hsla(0, 0, 0%, 0.4);
+  backdrop-filter: blur(2px);
   position: fixed;
   top: 0;
   left: -70vw;
+  z-index: 3;
   transition: $global-transition;
   transition-delay: 100ms;
-  backdrop-filter: blur(2px);
 
   &.open {
     transform: translateX(70vw);
@@ -27,9 +28,15 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2;
 
     .navigation-mobile__item {
+      svg:has(use[href='#logo-monogram']) {
+        width: auto;
+        height: 48px;
+        position: relative;
+        top: -24px;
+      }
+
       .btn {
         color: $global-clr-txt-white;
 

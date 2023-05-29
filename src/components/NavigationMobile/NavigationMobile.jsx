@@ -3,6 +3,9 @@ import React, { useContext } from 'react';
 // Dark Mode Context
 import { DarkModeContext } from '../../contexts/DarkModeContext';
 
+// Components
+import { Logo } from '../Logos/Logos.jsx';
+
 // Styles
 import './NavigationMobile.css';
 
@@ -18,6 +21,11 @@ export const NavigationMobile = ({
   return (
     <nav className={`NavigationMobile ${hamburgerMenuIsOpen ? 'open' : ''}`}>
       <ul className="navigation-mobile__list">
+        <li className="navigation-mobile__item">
+          <a href="#section-home" onClick={closeNavigationMobile}>
+            <Logo id="monogram" />
+          </a>
+        </li>
         <li className="navigation-mobile__item">
           <a
             className={`btn ${darkMode ? 'dark-mode' : ''}`}
