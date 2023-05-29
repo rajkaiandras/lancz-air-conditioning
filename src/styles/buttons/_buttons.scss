@@ -1,7 +1,9 @@
 // Button Styles
 .btn {
+  height: 42px;
   padding: 8px 24px;
   color: $global-clr-txt-graphite;
+  display: inline-block;
   transition: $global-transition;
 
   &.dark-mode {
@@ -22,9 +24,7 @@
 .btn--outline {
   border: 1px solid $global-clr-design-blue;
   border-radius: 8px;
-  font-family: 'Raleway - Regular';
   color: $global-clr-txt-design-blue;
-  transition: $global-transition;
 
   &:hover,
   &:focus {
@@ -34,6 +34,14 @@
 }
 
 .btn--filled {
-  background-color: $global-clr-design-blue;
+  border: 1px solid $global-clr-design-blue;
   border-radius: 8px;
+  color: $global-clr-txt-white;
+  background-color: $global-clr-design-blue;
+
+  &:hover,
+  &:focus {
+    color: $global-clr-txt-design-blue;
+    background-color: transparent;
+  }
 }

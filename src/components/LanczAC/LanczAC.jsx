@@ -11,11 +11,9 @@ import { Footer } from '../../sections/Footer/Footer.jsx';
 // components
 import { LogosSource } from '../Logos/Logos.jsx';
 import { IconsSource } from '../Icons/Icons.jsx';
-import { MainHeader } from '../MainHeader/MainHeader.jsx';
-import { HomeCarousel } from '../HomeCarousel/HomeCarousel.jsx';
 import { ScrollTop } from '../ScrollTop/ScrollTop.jsx';
 
-// Styles
+// styles
 import './LanczAC.css';
 
 export const LanczAC = () => {
@@ -30,11 +28,9 @@ export const LanczAC = () => {
 
   return (
     <>
-      <main className="LanczAC" id="section-home">
+      <main className="LanczAC">
         <LogosSource />
         <IconsSource />
-        <MainHeader />
-        <HomeCarousel />
         <Home />
         <AboutUs />
         <Footer />

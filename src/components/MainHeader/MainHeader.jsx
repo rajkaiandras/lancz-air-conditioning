@@ -1,9 +1,9 @@
 import { React, useState, useContext, useEffect } from 'react';
 
-// Dark Mode Context
+// dark mode context
 import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
-// Components
+// components
 import { Logo } from '../Logos/Logos.jsx';
 import { Icon } from '../Icons/Icons.jsx';
 import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu.jsx';
@@ -11,7 +11,7 @@ import { NavigationMobile } from '../NavigationMobile/NavigationMobile.jsx';
 import { NavigationDesktop } from '../NavigationDesktop/NavigationDesktop.jsx';
 import { Backdrop } from '../Backdrop/Backdrop.jsx';
 
-// Styles
+// styles
 import './MainHeader.css';
 
 export const MainHeader = () => {
@@ -55,7 +55,7 @@ export const MainHeader = () => {
 
       {/* LOGO */}
       <a href="#section-home" className="main-header__logo">
-        {windowWidth <= 640 ? <Logo id="monogram" /> : <Logo id="full-name" />}
+        {windowWidth <= 640 ? <Logo id="full-name" /> : <Logo id="full-name" />}
       </a>
 
       {/* MOBILE NAVIGATION */}

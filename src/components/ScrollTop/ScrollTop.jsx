@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-// Components
+// components
 import { Icon } from '../Icons/Icons';
 
-// Styles
+// styles
 import './ScrollTop.css';
 
 export const ScrollTop = () => {

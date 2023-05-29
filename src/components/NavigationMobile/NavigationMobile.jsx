@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 
-// Dark Mode Context
+// dark mode context
 import { DarkModeContext } from '../../contexts/DarkModeContext';
 
-// Components
+// components
 import { Logo } from '../Logos/Logos.jsx';
 
-// Styles
+// styles
 import './NavigationMobile.css';
 
 export const NavigationMobile = ({

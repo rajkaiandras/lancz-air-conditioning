@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Styles
+// styles
 import './Backdrop.css';
 
 export const Backdrop = ({ handleHamburgerMenu }) => {

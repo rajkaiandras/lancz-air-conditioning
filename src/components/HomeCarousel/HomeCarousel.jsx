@@ -1,3 +1,7 @@
+// components
+import { Logo } from '../Logos/Logos.jsx';
+import { Icon } from '../Icons/Icons.jsx';
+
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
@@ -18,14 +22,13 @@ import swiperSlideImage2 from '../../assets/images/heat-pump-1440x768-iStock-140
 // database
 const swiperSlideDB = [
   {
-    title: 'Star Lord',
-    subtitle:
-      'Peter Quill journeys through space as the leader of the Guardians of the Galaxy',
+    slogan: 'Mert bennünk megbízhat',
+    title: 'Klímák szakszerű telepítése, karbantartása és forgalmazása',
     image: swiperSlideImage1,
   },
   {
-    title: 'Avengers',
-    subtitle: 'Earths mightiest heroes fight together as a team',
+    slogan: 'Mert bennünk megbízhat',
+    title: 'Hőszivattyúk telepítése, karbantartása és beszerzése',
     image: swiperSlideImage2,
   },
 ];
@@ -45,9 +48,19 @@ export const HomeCarousel = () => {
       {swiperSlideDB.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="slide-content">
-              <h1 className="slide-title">{slide.title}</h1>
-              <h3 className="slide-subtitle">{slide.subtitle}</h3>
+            <div className="slide">
+              <Logo id="monogram" />
+              <h3 className="slide__slogan">{slide.slogan}</h3>
+              <h1 className="slide__title">{slide.title}</h1>
+              <div className="slide__contact-container">
+                <a className="btn btn--outline" href="tel:+36302965944">
+                  Hívjon most
+                </a>
+                <div className="contact__phone-number">
+                  <Icon id="phone-call" />
+                  +36 (30) 296 5944
+                </div>
+              </div>
             </div>
             <img className="slide-bg" src={slide.image} alt="marvel heroes" />
           </SwiperSlide>

@@ -1,198 +1,26 @@
 @charset "UTF-8";
-/*
-  License
 
-  Website Name: Lancz Air Conditioning - Lancz Klíma
-  Author: András Rajkai
-  Author e-mail: rajkaiandras@gmail.com
-  Description: lanczklima.hu website CSS Rules
-  Version: 2023.05.20.
-  License: Commercial
-*/
-/* 
-  http://meyerweb.com/eric/tools/css/reset/ 
-  v2.0 | 20110126
-  License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* cubic-bezier(0.84, 0.06, 0.52, 1.8); */
-@font-face {
-  font-family: "Raleway - Extra Light";
-  font-style: normal;
-  font-weight: 200;
-  font-display: fallback;
-  src: url(../../assets/fonts/Raleway-ExtraLight.ttf);
-}
-@font-face {
-  font-family: "Raleway - Regular";
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(../../assets/fonts/Raleway-Regular.ttf);
-}
-@font-face {
-  font-family: "Raleway - Semi Bold";
-  font-style: normal;
-  font-weight: 600;
-  font-display: fallback;
-  src: url(../../assets/fonts/Raleway-SemiBold.ttf);
-}
-@font-face {
-  font-family: "Raleway - Extra Bold";
-  font-style: normal;
-  font-weight: 800;
-  font-display: fallback;
-  src: url(../../assets/fonts/Raleway-ExtraBold.ttf);
-}
+// general rules
 body,
 input,
 textarea {
-  font-family: "Raleway - Regular", sans-serif;
+  font-family: 'Raleway - Regular', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: hsl(0, 0%, 15%);
+  color: $global-clr-txt-graphite;
 }
 
+// headings
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway - Semi Bold", sans-serif;
+  font-family: 'Raleway - Semi Bold', sans-serif;
   font-style: normal;
   margin: 48px 0 24px;
-  color: hsl(0, 0%, 15%);
+  color: $global-clr-txt-graphite;
 }
 
 /* h1 + h3,
@@ -201,6 +29,7 @@ h3 + h5,
 h4 + h6 {
   margin-top: 24px;
 } */
+
 h1 {
   font-size: 50px;
   line-height: 56px;
@@ -439,67 +268,3 @@ dl {
   }
 }
  */
-.btn {
-  height: 42px;
-  padding: 8px 24px;
-  color: hsl(0, 0%, 15%);
-  display: inline-block;
-  transition: all 300ms ease-out;
-}
-.btn.dark-mode {
-  color: hsl(0, 0%, 100%);
-}
-.btn.dark-mode:hover, .btn.dark-mode:focus {
-  color: hsl(189, 81%, 64%);
-}
-.btn:hover, .btn:focus {
-  color: hsl(189, 81%, 64%);
-}
-
-.btn--outline {
-  border: 1px solid hsl(189, 81%, 64%);
-  border-radius: 8px;
-  color: hsl(189, 81%, 64%);
-}
-.btn--outline:hover, .btn--outline:focus {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(189, 81%, 64%);
-}
-
-.btn--filled {
-  border: 1px solid hsl(189, 81%, 64%);
-  border-radius: 8px;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(189, 81%, 64%);
-}
-.btn--filled:hover, .btn--filled:focus {
-  color: hsl(189, 81%, 64%);
-  background-color: transparent;
-}
-
-*,
-:before,
-:after {
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  width: 100vw;
-  scroll-behavior: smooth;
-}
-
-body {
-  height: 100%;
-  overflow-x: hidden;
-  background-color: hsl(0, 0%, 100%);
-}
-body.disable-scrolling {
-  overflow-y: hidden;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-body #root.dark-mode {
-  background-color: hsl(0, 0%, 15%);
-}/*# sourceMappingURL=shared.css.map */

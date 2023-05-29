@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
-// Dark Mode Context
+// dark mode Context
 import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
-// Styles
+// styles
 import './NavigationDesktop.css';
 
 export const NavigationDesktop = () => {

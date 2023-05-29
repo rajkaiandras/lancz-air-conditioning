@@ -11,19 +11,20 @@
   License: Commercial
 */
 
-// Normalize - CSS Reset by Eric Meyer
+// normalize - CSS reset by Eric Meyer
 @import '../normalize/_normalize.scss';
 
-// Typography
-@import '../typography/_font-faces.scss';
-
-// Custom Variables
+// custom variables
 @import '../custom-properties/_variables.scss';
 
-// Buttons
+// typography
+@import '../typography/_font-faces.scss';
+@import '../typography/_typography.scss';
+
+// buttons
 @import '../buttons/_buttons.scss';
 
-// General Styles
+// general styles
 *,
 :before,
 :after {
@@ -39,11 +40,6 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
-  font-family: 'Raleway - Regular', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: $global-clr-txt-graphite;
   background-color: $global-clr-white;
 
   &.disable-scrolling {
