@@ -13,6 +13,11 @@
   top: 0;
   left: 0;
   z-index: 2;
+  transition: $global-transition;
+
+  &.hide {
+    top: -74px;
+  }
 
   &.dark-mode {
     background-color: $global-clr-trp-graphite;

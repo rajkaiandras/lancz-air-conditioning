@@ -8,6 +8,10 @@
   top: 0;
   left: 0;
   z-index: 2;
+  transition: all 300ms ease-out;
+}
+.MainHeader.hide {
+  top: -74px;
 }
 .MainHeader.dark-mode {
   background-color: hsla(0, 0%, 0%, 0.4);

@@ -19,7 +19,7 @@ export const MainHeader = () => {
 
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowScroll, setWindowScroll] = useState(window.pageYOffset);
+  const [headerVisibility, setHeaderVisibility] = useState(true);
 
   const handleDarkModeToggler = () => {
     toggleDarkMode();
@@ -55,7 +55,11 @@ export const MainHeader = () => {
   // header scroll effect (visibility) handler
   useEffect(() => {
     const handleWindowScroll = () => {
-      setWindowScroll(window.pageYOffset);
+      if (window.pageYOffset > 200) {
+        setHeaderVisibility(false);
+      } else {
+        setHeaderVisibility(true);
+      }
     };
 
     window.addEventListener('scroll', handleWindowScroll);
@@ -67,7 +71,11 @@ export const MainHeader = () => {
   }, []);
 
   return (
-    <header className={`MainHeader ${darkMode ? 'dark-mode' : ''}`}>
+    <header
+      className={`MainHeader ${darkMode ? 'dark-mode' : ''} ${
+        !headerVisibility ? 'hide' : ''
+      }`}
+    >
       <div className="main-header-container">
         {/* HAMBURGER MENU */}
         {windowWidth < 1024 && (
