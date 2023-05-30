@@ -1,15 +1,12 @@
 @charset "UTF-8";
 
-/*
-  License
-
+/*License
   Website Name: Lancz Air Conditioning - Lancz Klíma
   Author: András Rajkai
   Author e-mail: rajkaiandras@gmail.com
   Description: lanczklima.hu website CSS Rules
   Version: 2023.05.20.
-  License: Commercial
-*/
+  License: Commercial*/
 
 // normalize - CSS reset by Eric Meyer
 @import '../normalize/_normalize.scss';
@@ -38,14 +35,16 @@ html {
 }
 
 body {
-  height: 100%;
+  width: 100%;
   overflow-x: hidden;
   background-color: $global-clr-white;
 
+  // disable scrolling when navigation mobile opened
   &.disable-scrolling {
     overflow-y: hidden;
   }
 
+  // hide vertical scrollbar
   &::-webkit-scrollbar {
     display: none;
   }

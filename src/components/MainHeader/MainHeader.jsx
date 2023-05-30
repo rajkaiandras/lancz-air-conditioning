@@ -17,6 +17,7 @@ import './MainHeader.css';
 export const MainHeader = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
+  const [hideHeader, setHideHeader] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const body = document.querySelector('body');
 
@@ -43,46 +44,52 @@ export const MainHeader = () => {
   }, []);
 
   return (
-    <header className="MainHeader">
-      {/* HAMBURGER MENU */}
-      {windowWidth < 1024 && (
-        <HamburgerMenu
-          darkMode={darkMode}
-          handleHamburgerMenu={handleHamburgerMenu}
-          hamburgerMenuIsOpen={hamburgerMenuIsOpen}
-        />
-      )}
+    <header className={`MainHeader ${darkMode ? 'dark-mode' : ''}`}>
+      <div className="main-header-container">
+        {/* HAMBURGER MENU */}
+        {windowWidth < 1024 && (
+          <HamburgerMenu
+            darkMode={darkMode}
+            handleHamburgerMenu={handleHamburgerMenu}
+            hamburgerMenuIsOpen={hamburgerMenuIsOpen}
+          />
+        )}
 
-      {/* LOGO */}
-      <a href="#section-home" className="main-header__logo">
-        {windowWidth <= 640 ? <Logo id="full-name" /> : <Logo id="full-name" />}
-      </a>
+        {/* LOGO */}
+        <a href="#section-home" className="main-header__logo">
+          {windowWidth <= 640 ? (
+            <Logo id="monogram" />
+          ) : (
+            <Logo id="full-name" />
+          )}
+        </a>
 
-      {/* MOBILE NAVIGATION */}
-      {windowWidth < 1024 && (
-        <NavigationMobile
-          hamburgerMenuIsOpen={hamburgerMenuIsOpen}
-          handleHamburgerMenu={handleHamburgerMenu}
-        />
-      )}
+        {/* MOBILE NAVIGATION */}
+        {windowWidth < 1024 && (
+          <NavigationMobile
+            hamburgerMenuIsOpen={hamburgerMenuIsOpen}
+            handleHamburgerMenu={handleHamburgerMenu}
+          />
+        )}
 
-      {/* DESKTOP NAVIGATION */}
-      {windowWidth >= 1024 && <NavigationDesktop />}
+        {/* DESKTOP NAVIGATION */}
+        {windowWidth >= 1024 && <NavigationDesktop />}
 
-      {/* DARK MODE TOGGLER */}
-      <div
-        className={`main-header__dark-mode-toggler ${
-          darkMode ? 'dark-mode' : ''
-        }`}
-        onClick={handleDarkModeToggler}
-      >
-        {darkMode ? <Icon id="light-mode" /> : <Icon id="dark-mode" />}
+        {/* DARK MODE TOGGLER */}
+        <div
+          className={`main-header__dark-mode-toggler ${
+            darkMode ? 'dark-mode' : ''
+          }`}
+          onClick={handleDarkModeToggler}
+        >
+          {darkMode ? <Icon id="light-mode" /> : <Icon id="dark-mode" />}
+        </div>
+
+        {/* BACKDROP */}
+        {hamburgerMenuIsOpen && (
+          <Backdrop handleHamburgerMenu={handleHamburgerMenu} />
+        )}
       </div>
-
-      {/* BACKDROP */}
-      {hamburgerMenuIsOpen && (
-        <Backdrop handleHamburgerMenu={handleHamburgerMenu} />
-      )}
     </header>
   );
 };

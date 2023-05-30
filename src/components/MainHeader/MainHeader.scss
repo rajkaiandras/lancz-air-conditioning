@@ -6,46 +6,59 @@
 // main header styles
 .MainHeader {
   width: 100%;
-  max-width: 1280px;
-  height: 74px;
-  padding: 16px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  background-color: $global-clr-trp-white;
+  box-shadow: $global-shadow;
+  backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
-  z-index: 1;
+  left: 0;
+  z-index: 2;
 
-  .main-header__logo {
-    svg:has(use[href='#logo-full-name']) {
-      width: 175px;
-      height: 28px;
-    }
-
-    svg:has(use[href='#logo-monogram']) {
-      width: 32px;
-      height: 28px;
-    }
+  &.dark-mode {
+    background-color: $global-clr-trp-graphite;
   }
 
-  .main-header__dark-mode-toggler {
-    padding: 4px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    background-color: hsla(0, 0, 0%, 0.1);
+  .main-header-container {
+    width: 100%;
+    max-width: 1280px;
+    height: 74px;
+    padding: 16px;
+    margin: 0 auto;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
-    cursor: pointer;
-    transition: $global-transition;
 
-    &.dark-mode {
-      background-color: hsla(0, 0, 100%, 0.1);
+    .main-header__logo {
+      svg:has(use[href='#logo-monogram']) {
+        height: 28px;
+        width: auto;
+      }
+
+      svg:has(use[href='#logo-full-name']) {
+        height: 28px;
+        width: auto;
+      }
     }
 
-    &:hover {
-      transform: scale(1.1);
+    .main-header__dark-mode-toggler {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: $global-transition;
+
+      &.dark-mode:hover {
+        background-color: $global-clr-trp-graphite;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: hsla(0, 0, 100%, 0.1);
+      }
     }
   }
 }

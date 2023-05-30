@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// Dark Mode Context Provider
+// dark mode context provider
 import { DarkModeProvider } from './contexts/DarkModeContext.jsx';
 
-// Components
-import { LanczAC } from './components/LanczAC/LanczAC.jsx';
+// web app component
+import { LanczAC } from './LanczAC/LanczAC.jsx';
 
-// Styles
+// styles
 import './styles/shared/shared.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

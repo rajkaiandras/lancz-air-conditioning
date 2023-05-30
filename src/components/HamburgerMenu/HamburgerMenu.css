@@ -3,7 +3,7 @@
   height: 36px;
   border-radius: 50%;
   position: relative;
-  z-index: 4;
+  z-index: 5;
   cursor: pointer;
 }
 .HamburgerMenu .hamburger-menu__bar {

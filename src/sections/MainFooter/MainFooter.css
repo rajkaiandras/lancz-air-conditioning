@@ -1,5 +1,13 @@
 .MainFooter {
   width: 100%;
+}
+.MainFooter .main-footer-container {
+  width: 100%;
+  max-width: 1280px;
   height: 100vh;
-  background-color: tomato;
+  margin: 0 auto;
+}
+
+.dark-mode {
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=MainFooter.css.map */

@@ -1,17 +1,17 @@
 import React, { useEffect, useContext } from 'react';
 
 // dark mode context
-import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
+import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 
 // sections
-import { Home } from '../../sections/Home/Home.jsx';
-import { AboutUs } from '../../sections/AboutUs/AboutUs.jsx';
-import { MainFooter } from '../../sections/MainFooter/MainFooter.jsx';
+import { Home } from '../sections/Home/Home.jsx';
+import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
+import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
 // components
-import { LogosSource } from '../Logos/Logos.jsx';
-import { IconsSource } from '../Icons/Icons.jsx';
-import { ScrollTop } from '../ScrollTop/ScrollTop.jsx';
+import { LogosSource } from '../components/Logos/Logos.jsx';
+import { IconsSource } from '../components/Icons/Icons.jsx';
+import { ScrollTop } from '../components/ScrollTop/ScrollTop.jsx';
 
 // styles
 import './LanczAC.css';
