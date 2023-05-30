@@ -52,15 +52,15 @@ export const HomeCarousel = () => {
               <Logo id="monogram" />
               <h3 className="slide__slogan">{slide.slogan}</h3>
               <h1 className="slide__title">{slide.title}</h1>
-              <div className="slide__contact-container">
-                <a className="btn btn--outline" href="tel:+36302965944">
+              <a className="slide__contact-container" href="tel:+36302965944">
+                <div className="btn btn--outline" href="tel:+36302965944">
                   Hívjon most
-                </a>
+                </div>
                 <div className="contact__phone-number">
                   <Icon id="phone-call" />
                   +36 (30) 296 5944
                 </div>
-              </div>
+              </a>
             </div>
             <img className="slide-bg" src={slide.image} alt="marvel heroes" />
           </SwiperSlide>
