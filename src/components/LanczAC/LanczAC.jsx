@@ -6,7 +6,7 @@ import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 // sections
 import { Home } from '../../sections/Home/Home.jsx';
 import { AboutUs } from '../../sections/AboutUs/AboutUs.jsx';
-import { Footer } from '../../sections/Footer/Footer.jsx';
+import { MainFooter } from '../../sections/MainFooter/MainFooter.jsx';
 
 // components
 import { LogosSource } from '../Logos/Logos.jsx';
@@ -33,7 +33,7 @@ export const LanczAC = () => {
         <IconsSource />
         <Home />
         <AboutUs />
-        <Footer />
+        <MainFooter />
         <ScrollTop />
       </main>
     </>

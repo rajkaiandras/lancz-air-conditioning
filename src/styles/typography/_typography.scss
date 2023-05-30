@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-// general rules
+// general typography
 body,
 input,
 textarea {
@@ -22,13 +22,6 @@ h6 {
   margin: 48px 0 24px;
   color: $global-clr-txt-graphite;
 }
-
-/* h1 + h3,
-h2 + h4,
-h3 + h5,
-h4 + h6 {
-  margin-top: 24px;
-} */
 
 h1 {
   font-size: 50px;
@@ -58,6 +51,15 @@ h5 {
 h6 {
   font-size: 16px;
   line-height: 24px;
+}
+
+a {
+  color: $global-clr-txt-design-blue;
+}
+
+b,
+strong {
+  font-weight: 600;
 }
 
 /* @charset "UTF-8";

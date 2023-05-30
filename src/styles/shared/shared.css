@@ -145,7 +145,6 @@ table {
   border-spacing: 0;
 }
 
-/* cubic-bezier(0.84, 0.06, 0.52, 1.8); */
 @font-face {
   font-family: "Raleway - Extra Light";
   font-style: normal;
@@ -195,12 +194,6 @@ h6 {
   color: hsl(0, 0%, 15%);
 }
 
-/* h1 + h3,
-h2 + h4,
-h3 + h5,
-h4 + h6 {
-  margin-top: 24px;
-} */
 h1 {
   font-size: 50px;
   line-height: 56px;
@@ -229,6 +222,15 @@ h5 {
 h6 {
   font-size: 16px;
   line-height: 24px;
+}
+
+a {
+  color: hsl(189, 81%, 64%);
+}
+
+b,
+strong {
+  font-weight: 600;
 }
 
 /* @charset "UTF-8";
