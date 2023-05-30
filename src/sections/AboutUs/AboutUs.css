@@ -6,5 +6,7 @@
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
-  background-color: lightgray;
+}
+.AboutUs .dark-mode {
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=AboutUs.css.map */

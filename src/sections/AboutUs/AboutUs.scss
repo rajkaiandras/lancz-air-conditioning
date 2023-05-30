@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-// About Us Styles
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// about us styles
 .AboutUs {
   width: 100%;
 
@@ -9,6 +12,9 @@
     max-width: 1280px;
     height: 100vh;
     margin: 0 auto;
-    background-color: lightgray;
+  }
+
+  .dark-mode {
+    color: $global-clr-txt-white;
   }
 }

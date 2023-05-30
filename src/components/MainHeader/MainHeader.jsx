@@ -17,7 +17,6 @@ import './MainHeader.css';
 export const MainHeader = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
-  const [hideHeader, setHideHeader] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const body = document.querySelector('body');
 

@@ -7,7 +7,6 @@
   height: 100vh;
   margin: 0 auto;
 }
-
-.dark-mode {
+.MainFooter .dark-mode {
   color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=MainFooter.css.map */
