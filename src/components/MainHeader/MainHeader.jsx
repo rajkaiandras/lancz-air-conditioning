@@ -16,9 +16,10 @@ import './MainHeader.css';
 
 export const MainHeader = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const body = document.querySelector('body');
+  const [windowScroll, setWindowScroll] = useState(window.pageYOffset);
 
   const handleDarkModeToggler = () => {
     toggleDarkMode();
@@ -28,18 +29,41 @@ export const MainHeader = () => {
     setHamburgerMenuIsOpen(!hamburgerMenuIsOpen);
   };
 
+  // disable scrolling when navigation mobile is opened
   useEffect(() => {
+    const body = document.querySelector('body');
+
     hamburgerMenuIsOpen
       ? body.classList.add('disable-scrolling')
       : body.classList.remove('disable-scrolling');
-  }, [body, hamburgerMenuIsOpen]);
+  }, [hamburgerMenuIsOpen]);
 
+  // window resize handler
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleWindowResize);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  // header scroll effect (visibility) handler
+  useEffect(() => {
+    const handleWindowScroll = () => {
+      setWindowScroll(window.pageYOffset);
+    };
+
+    window.addEventListener('scroll', handleWindowScroll);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener('scroll', handleWindowScroll);
+    };
   }, []);
 
   return (
