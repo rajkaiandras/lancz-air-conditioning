@@ -10,8 +10,118 @@
   .main-footer-container {
     width: 100%;
     max-width: 1280px;
-    height: 100vh;
     margin: 0 auto;
+
+    .main-footer__widgets {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      row-gap: 24px;
+
+      .widget {
+        width: 320px;
+        min-height: 340px;
+        padding: 24px;
+      }
+
+      .widget__company {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        row-gap: 24px;
+
+        .company__profile-text {
+          width: 219px;
+        }
+      }
+
+      .widget__site-map {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .site-map__title {
+          width: 124px;
+          margin-top: 0;
+        }
+
+        .site-map__sections-list {
+          .section {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+
+            &:before {
+              content: '+';
+              width: 6px;
+              height: 6px;
+              position: absolute;
+              top: 0px;
+              left: 9px;
+            }
+          }
+        }
+      }
+
+      .widget__contact {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .contact__title {
+          width: 124px;
+          margin-top: 0;
+          color: inherit;
+        }
+
+        .contact__contacts-list {
+          .contact__item {
+            position: relative;
+            padding-left: 56px;
+            margin-bottom: 12px;
+
+            &:before {
+              width: 28px;
+              height: 28px;
+              position: absolute;
+              top: 10px;
+              left: 14px;
+            }
+
+            .item__title {
+              margin: 0;
+              color: inherit;
+            }
+          }
+
+          .contact__phone {
+            &:before {
+              content: url('../../assets/icons/icon-phone-call.svg');
+            }
+          }
+
+          .contact__email {
+            &:before {
+              content: url('../../assets/icons/icon-e-mail.svg');
+            }
+          }
+
+          .contact__location {
+            &:before {
+              content: url('../../assets/icons/icon-location.svg');
+              left: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .main-footer__copyright {
+      margin: 0 24px;
+      padding: 24px 0;
+      border-top: 1px solid $global-clr-design-blue;
+      text-align: center;
+    }
   }
 
   .dark-mode {

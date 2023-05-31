@@ -53,7 +53,7 @@ export const MainHeader = () => {
   }, []);
 
   // header scroll effect (visibility) handler
-  useEffect(() => {
+  /* useEffect(() => {
     const handleWindowScroll = () => {
       if (window.pageYOffset > 200) {
         setHeaderVisibility(false);
@@ -69,7 +69,7 @@ export const MainHeader = () => {
       window.removeEventListener('scroll', handleWindowScroll);
     };
   }, []);
-
+ */
   return (
     <header
       className={`MainHeader ${darkMode ? 'dark-mode' : ''} ${

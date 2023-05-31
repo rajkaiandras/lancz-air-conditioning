@@ -1,7 +1,7 @@
 .ScrollTop {
   position: fixed;
-  bottom: 40px;
-  left: 80vw;
+  bottom: 30px;
+  left: 85vw;
   z-index: 0;
   cursor: pointer;
 }
