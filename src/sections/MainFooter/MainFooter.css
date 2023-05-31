@@ -5,6 +5,9 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  background-image: url("../../assets/logos/hungary-map-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 .MainFooter .main-footer-container .main-footer__widgets {
   display: flex;

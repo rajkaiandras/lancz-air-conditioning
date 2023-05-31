@@ -5,7 +5,6 @@ import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // components
 import { Logo } from '../../components/Logos/Logos.jsx';
-import { Icon } from '../../components/Icons/Icons.jsx';
 
 // Styles
 import './MainFooter.css';
