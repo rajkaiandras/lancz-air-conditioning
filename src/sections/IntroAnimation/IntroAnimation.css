@@ -1,0 +1,229 @@
+.IntroAnimation {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.IntroAnimation svg .svg-elem-1 {
+  stroke-dashoffset: 86.498588562px;
+  stroke-dasharray: 86.498588562px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+}
+.IntroAnimation svg.active .svg-elem-1 {
+  stroke-dashoffset: 0;
+  fill: rgb(255, 255, 255);
+}
+.IntroAnimation svg .svg-elem-2 {
+  stroke-dashoffset: 105.6800384521px;
+  stroke-dasharray: 105.6800384521px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+}
+.IntroAnimation svg.active .svg-elem-2 {
+  stroke-dashoffset: 0;
+  fill: rgb(255, 255, 255);
+}
+.IntroAnimation svg .svg-elem-3 {
+  stroke-dashoffset: 99.4497756958px;
+  stroke-dasharray: 99.4497756958px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+}
+.IntroAnimation svg.active .svg-elem-3 {
+  stroke-dashoffset: 0;
+  fill: rgb(255, 255, 255);
+}
+.IntroAnimation svg .svg-elem-4 {
+  stroke-dashoffset: 77.8354110718px;
+  stroke-dasharray: 77.8354110718px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s;
+}
+.IntroAnimation svg.active .svg-elem-4 {
+  stroke-dashoffset: 0;
+  fill: rgb(255, 255, 255);
+}
+.IntroAnimation svg .svg-elem-5 {
+  stroke-dashoffset: 93.2653884888px;
+  stroke-dasharray: 93.2653884888px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s;
+}
+.IntroAnimation svg.active .svg-elem-5 {
+  stroke-dashoffset: 0;
+  fill: rgb(255, 255, 255);
+}
+.IntroAnimation svg .svg-elem-6 {
+  stroke-dashoffset: 138.5049285889px;
+  stroke-dasharray: 138.5049285889px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s;
+}
+.IntroAnimation svg.active .svg-elem-6 {
+  stroke-dashoffset: 0;
+  fill: rgb(89, 215, 238);
+}
+.IntroAnimation svg .svg-elem-7 {
+  stroke-dashoffset: 86.9599914551px;
+  stroke-dasharray: 86.9599914551px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.4s;
+}
+.IntroAnimation svg.active .svg-elem-7 {
+  stroke-dashoffset: 0;
+  fill: rgb(89, 215, 238);
+}
+.IntroAnimation svg .svg-elem-8 {
+  stroke-dashoffset: 66.3185043335px;
+  stroke-dasharray: 66.3185043335px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.84s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s;
+}
+.IntroAnimation svg.active .svg-elem-8 {
+  stroke-dashoffset: 0;
+  fill: rgb(89, 215, 238);
+}
+.IntroAnimation svg .svg-elem-9 {
+  stroke-dashoffset: 191.1763763428px;
+  stroke-dasharray: 191.1763763428px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.96s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s;
+}
+.IntroAnimation svg.active .svg-elem-9 {
+  stroke-dashoffset: 0;
+  fill: rgb(89, 215, 238);
+}
+.IntroAnimation svg .svg-elem-10 {
+  stroke-dashoffset: 136.1256103516px;
+  stroke-dasharray: 136.1256103516px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.08s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7s;
+}
+.IntroAnimation svg.active .svg-elem-10 {
+  stroke-dashoffset: 0;
+  fill: rgb(89, 215, 238);
+}
+.IntroAnimation svg .svg-elem-11 {
+  stroke-dashoffset: 152.219619751px;
+  stroke-dasharray: 152.219619751px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.2s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s;
+}
+.IntroAnimation svg.active .svg-elem-11 {
+  stroke-dashoffset: 0;
+  fill: rgb(255, 255, 255);
+}
+.IntroAnimation svg .svg-elem-12 {
+  stroke-dashoffset: 241.4223480225px;
+  stroke-dasharray: 241.4223480225px;
+  fill: transparent;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.32s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9s;
+}
+.IntroAnimation svg.active .svg-elem-12 {
+  stroke-dashoffset: 0;
+  fill: rgb(89, 215, 238);
+}
+.IntroAnimation svg .svg-elem-13 {
+  stroke-dashoffset: 86.498588562px;
+  stroke-dasharray: 86.498588562px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.44s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2s;
+}
+.IntroAnimation svg.active .svg-elem-13 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-14 {
+  stroke-dashoffset: 105.6800384521px;
+  stroke-dasharray: 105.6800384521px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.56s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.1s;
+}
+.IntroAnimation svg.active .svg-elem-14 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-15 {
+  stroke-dashoffset: 99.4497756958px;
+  stroke-dasharray: 99.4497756958px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.68s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.2s;
+}
+.IntroAnimation svg.active .svg-elem-15 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-16 {
+  stroke-dashoffset: 77.8354110718px;
+  stroke-dasharray: 77.8354110718px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.8s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.3s;
+}
+.IntroAnimation svg.active .svg-elem-16 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-17 {
+  stroke-dashoffset: 93.2653884888px;
+  stroke-dasharray: 93.2653884888px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 1.92s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4s;
+}
+.IntroAnimation svg.active .svg-elem-17 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-18 {
+  stroke-dashoffset: 138.5049285889px;
+  stroke-dasharray: 138.5049285889px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.04s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s;
+}
+.IntroAnimation svg.active .svg-elem-18 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-19 {
+  stroke-dashoffset: 86.9599914551px;
+  stroke-dasharray: 86.9599914551px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.16s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.6s;
+}
+.IntroAnimation svg.active .svg-elem-19 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-20 {
+  stroke-dashoffset: 66.3185043335px;
+  stroke-dasharray: 66.3185043335px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.28s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.7s;
+}
+.IntroAnimation svg.active .svg-elem-20 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-21 {
+  stroke-dashoffset: 191.1763763428px;
+  stroke-dasharray: 191.1763763428px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.4s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.8s;
+}
+.IntroAnimation svg.active .svg-elem-21 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-22 {
+  stroke-dashoffset: 136.1256103516px;
+  stroke-dasharray: 136.1256103516px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.52s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 2.9s;
+}
+.IntroAnimation svg.active .svg-elem-22 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-23 {
+  stroke-dashoffset: 152.219619751px;
+  stroke-dasharray: 152.219619751px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.64s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3s;
+}
+.IntroAnimation svg.active .svg-elem-23 {
+  stroke-dashoffset: 0;
+}
+.IntroAnimation svg .svg-elem-24 {
+  stroke-dashoffset: 241.4223480225px;
+  stroke-dasharray: 241.4223480225px;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 2.76s, fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3.1s;
+}
+.IntroAnimation svg.active .svg-elem-24 {
+  stroke-dashoffset: 0;
+}
+
+/***************************************************
+ * Generated by SVG Artista on 6/2/2023, 9:06:09 AM
+ * MIT license (https://opensource.org/licenses/MIT)
+ * W. https://svgartista.net
+ **************************************************//*# sourceMappingURL=IntroAnimation.css.map */
