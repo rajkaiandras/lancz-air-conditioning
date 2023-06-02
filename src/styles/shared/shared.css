@@ -222,6 +222,10 @@ h6 {
 }
 
 a {
+  color: hsl(0, 0%, 15%);
+  transition: all 300ms ease-out;
+}
+a:hover {
   color: hsl(189, 81%, 64%);
 }
 

@@ -35,12 +35,36 @@ export const MainFooter = () => {
                 darkMode ? 'dark-mode' : ''
               }`}
             >
-              <li className="section">Főoldal</li>
-              <li className="section">Szolgáltatások</li>
-              <li className="section">Árak</li>
-              <li className="section">Rólunk</li>
-              <li className="section">Árajánlat kérés</li>
-              <li className="section">Kapcsolat</li>
+              <li className="section">
+                <a className="section__link" href="#section-home">
+                  Főoldal
+                </a>
+              </li>
+              <li className="section">
+                <a className="section__link" href="#section-services">
+                  Szolgáltatások
+                </a>
+              </li>
+              <li className="section">
+                <a className="section__link" href="#section-prices">
+                  Árak
+                </a>
+              </li>
+              <li className="section">
+                <a className="section__link" href="#section-about-us">
+                  Rólunk
+                </a>
+              </li>
+              <li className="section">
+                <a className="section__link" href="#section-price-offer">
+                  Ajánlatkérés
+                </a>
+              </li>
+              <li className="section">
+                <a className="section__link" href="#section-contact">
+                  Kapcsolat
+                </a>
+              </li>
             </ul>
           </div>
           <div
@@ -51,15 +75,29 @@ export const MainFooter = () => {
             <ul className="contact__contacts-list">
               <li className="contact__item contact__phone">
                 <h6 className="item__title phone__title">Telefonszám</h6>
-                <p className="phone__number">+36 30 296 5944</p>
+                <a href="tel:+36302965944" className="phone__number item__link">
+                  +36 30 296 5944
+                </a>
               </li>
               <li className="contact__item contact__email">
                 <h6 className="item__title email__title">E-mail</h6>
-                <p className="email__address">info@lanczklima.hu</p>
+                <a
+                  href="mailto:info@lanczklima.hu"
+                  className="email__address item__link"
+                >
+                  info@lanczklima.hu
+                </a>
               </li>
               <li className="contact__item contact__location">
                 <h6 className="item__title location__title">Telephely</h6>
-                <p className="location__address">8373 Rezi, Vár utca 4.</p>
+                <a
+                  href="https://goo.gl/maps/gkrdMWmQfEaE7t959"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="location__address item__link"
+                >
+                  8373 Rezi, Vár utca 4.
+                </a>
               </li>
             </ul>
           </div>

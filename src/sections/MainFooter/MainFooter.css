@@ -51,6 +51,12 @@
   top: 0px;
   left: 9px;
 }
+.MainFooter .main-footer-container .main-footer__widgets .widget__site-map .site-map__sections-list .section .section__link {
+  color: inherit;
+}
+.MainFooter .main-footer-container .main-footer__widgets .widget__site-map .site-map__sections-list .section .section__link:hover {
+  color: hsl(189, 81%, 64%);
+}
 .MainFooter .main-footer-container .main-footer__widgets .widget__contact {
   display: flex;
   flex-flow: column nowrap;
@@ -76,6 +82,12 @@
 .MainFooter .main-footer-container .main-footer__widgets .widget__contact .contact__contacts-list .contact__item .item__title {
   margin: 0;
   color: inherit;
+}
+.MainFooter .main-footer-container .main-footer__widgets .widget__contact .contact__contacts-list .contact__item .item__link {
+  color: inherit;
+}
+.MainFooter .main-footer-container .main-footer__widgets .widget__contact .contact__contacts-list .contact__item .item__link:hover {
+  color: hsl(189, 81%, 64%);
 }
 .MainFooter .main-footer-container .main-footer__widgets .widget__contact .contact__contacts-list .contact__phone:before {
   content: url("../../assets/icons/icon-phone-call.svg");

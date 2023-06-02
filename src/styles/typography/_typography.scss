@@ -54,7 +54,12 @@ h6 {
 }
 
 a {
-  color: $global-clr-txt-design-blue;
+  color: $global-clr-txt-graphite;
+  transition: $global-transition;
+
+  &:hover {
+    color: $global-clr-txt-design-blue;
+  }
 }
 
 b,
