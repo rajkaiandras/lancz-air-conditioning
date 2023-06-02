@@ -13,7 +13,7 @@ export const MainFooter = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="MainFooter">
+    <footer className="MainFooter">
       <div className="main-footer-container">
         <div className="main-footer__widgets">
           <div className="widget widget__company">
@@ -108,12 +108,16 @@ export const MainFooter = () => {
           </p>
           <address className={`${darkMode ? 'dark-mode' : ''}`}>
             developed by{' '}
-            <a href="https://www.linkedin.com/in/andrasrajkai">
-              <author>András Rajkai</author>
+            <a
+              href="https://www.linkedin.com/in/andrasrajkai"
+              target="_blank"
+              rel="noreferrer"
+            >
+              András Rajkai
             </a>
           </address>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

@@ -19,7 +19,7 @@ export const IntroAnimation = () => {
   }, []);
 
   return (
-    <div className="IntroAnimation">
+    <section className="IntroAnimation">
       <svg
         className="intro-animation-logo"
         width="auto"
@@ -149,6 +149,6 @@ export const IntroAnimation = () => {
           class="svg-elem-24"
         ></path>
       </svg>
-    </div>
+    </section>
   );
 };

@@ -9,9 +9,9 @@ import './Home.css';
 
 export const Home = () => {
   return (
-    <div className="Home" id="section-home">
+    <section className="Home" id="section-home">
       <MainHeader />
       <HomeCarousel />
-    </div>
+    </section>
   );
 };

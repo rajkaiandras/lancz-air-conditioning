@@ -10,10 +10,10 @@ export const AboutUs = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className="AboutUs" id="section-about-us">
+    <section className="AboutUs" id="section-about-us">
       <div className={`about-us-container ${darkMode ? 'dark-mode' : ''}`}>
         About Us
       </div>
-    </div>
+    </section>
   );
 };
