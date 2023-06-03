@@ -1,5 +1,8 @@
 import React, { useContext, useState } from 'react';
 
+// components
+import { SectionTitle } from '../../components/SectionTitle/SectionTitle.jsx';
+
 // dark mode context
 import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
@@ -30,12 +33,7 @@ export const PriceOffer = () => {
   return (
     <section className="PriceOffer" id="section-price-offer">
       <div className={`price-offer-container ${darkMode ? 'dark-mode' : ''}`}>
-        <div className="section-title-container">
-          <h5 className="title__main-title">Árajánlat</h5>
-          <h3 className="title__subtitle">
-            Kérje ajánlatunkat ingyenes helyszíni felméréssel
-          </h3>
-        </div>
+        <SectionTitle />
         <form className="price-offer-form">
           <input
             type="text"

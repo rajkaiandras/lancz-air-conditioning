@@ -1,1 +1,1 @@
-{"version":3,"sources":["PriceOffer.scss","PriceOffer.css","../../styles/custom-properties/_variables.scss"],"names":[],"mappings":"AAMA;EACE,WAAA;ACLF;ADOE;EACE,WAAA;EACA,iBAAA;EACA,aAAA;EACA,cAAA;ACLJ;ADQE;EACE,uBEPmB;ADCvB","file":"PriceOffer.css"}
+{"version":3,"sources":["PriceOffer.scss","PriceOffer.css","../../styles/custom-properties/_variables.scss"],"names":[],"mappings":"AAMA;EACE,WAAA;ACLF;ADOE;EACE,WAAA;EACA,iBAAA;EACA,aAAA;EACA,aAAA;EACA,cAAA;ACLJ;ADQE;EACE,uBERmB;ADEvB","file":"PriceOffer.css"}

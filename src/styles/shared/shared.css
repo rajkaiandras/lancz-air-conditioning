@@ -229,6 +229,13 @@ a:hover {
   color: hsl(189, 81%, 64%);
 }
 
+a {
+  color: inherit;
+}
+a:hover {
+  color: hsl(189, 81%, 64%);
+}
+
 b,
 strong {
   font-weight: 600;

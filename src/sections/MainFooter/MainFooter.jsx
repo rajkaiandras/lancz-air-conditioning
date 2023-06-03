@@ -100,13 +100,14 @@ export const MainFooter = () => {
                 </a>
               </li>
             </ul>
+            <div className="map-bg"></div>
           </div>
         </div>
-        <div className="main-footer__copyright">
-          <p className={`${darkMode ? 'dark-mode' : ''}`}>
-            &copy; 2023 Lancz Klíma - Minden jog fenntartva
-          </p>
-          <address className={`${darkMode ? 'dark-mode' : ''}`}>
+        <div
+          className={`main-footer__copyright ${darkMode ? 'dark-mode' : ''}`}
+        >
+          <p>&copy; 2023 Lancz Klíma - Minden jog fenntartva</p>
+          <small>
             developed by{' '}
             <a
               href="https://www.linkedin.com/in/andrasrajkai"
@@ -115,7 +116,7 @@ export const MainFooter = () => {
             >
               András Rajkai
             </a>
-          </address>
+          </small>
         </div>
       </div>
     </footer>

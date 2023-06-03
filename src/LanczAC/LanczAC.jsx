@@ -4,7 +4,7 @@ import React, { useEffect, useContext } from 'react';
 import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 
 // sections
-import { IntroAnimation } from '../sections/IntroAnimation/IntroAnimation.jsx';
+/* import { IntroAnimation } from '../sections/IntroAnimation/IntroAnimation.jsx'; */
 import { Home } from '../sections/Home/Home.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';

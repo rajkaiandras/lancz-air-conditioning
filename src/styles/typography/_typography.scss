@@ -62,6 +62,14 @@ a {
   }
 }
 
+a {
+  color: inherit;
+
+  &:hover {
+    color: $global-clr-txt-design-blue;
+  }
+}
+
 b,
 strong {
   font-weight: 600;

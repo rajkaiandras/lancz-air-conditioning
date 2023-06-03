@@ -1,0 +1,30 @@
+.SectionTitle {
+  padding-left: 24px;
+  background-image: url(../../assets/logos/logo-name-grayscale.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.SectionTitle:before {
+  content: "";
+  width: 3px;
+  height: 99px;
+  border-radius: 1px;
+  background-color: hsl(189, 81%, 64%);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.SectionTitle .main-title,
+.SectionTitle .subtitle {
+  margin: 0;
+}
+.SectionTitle .subtitle {
+  color: inherit;
+}
+.SectionTitle .main-title {
+  color: hsl(189, 81%, 64%);
+}
+.SectionTitle .dark-mode {
+  color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=SectionTitle.css.map */

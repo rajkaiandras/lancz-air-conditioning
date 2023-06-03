@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+// custom variables
+@import '../../styles/custom-properties/_variables.scss';
+
+// section title styles
+.SectionTitle {
+  padding-left: 24px;
+  background-image: url(../../assets/logos/logo-name-grayscale.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 3px;
+    height: 99px;
+    border-radius: 1px;
+    background-color: $global-clr-design-blue;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  .main-title,
+  .subtitle {
+    margin: 0;
+  }
+
+  .subtitle {
+    color: inherit;
+  }
+
+  .main-title {
+    color: $global-clr-design-blue;
+  }
+
+  .dark-mode {
+    color: $global-clr-txt-white;
+  }
+}

@@ -5,19 +5,19 @@
 
 // navigation mobile styles
 .NavigationMobile {
-  width: 70vw;
+  width: 100vw;
   height: 100vh;
-  background-color: hsla(0, 0, 0%, 0.4);
+  background-color: hsla(0, 0, 0%, 1);
   backdrop-filter: blur(2px);
   position: fixed;
   top: 0;
-  left: -70vw;
+  left: -100vw;
   z-index: 4;
   transition: $global-transition;
   transition-delay: 100ms;
 
   &.open {
-    transform: translateX(70vw);
+    transform: translateX(100vw);
   }
 
   .navigation-mobile__list {
