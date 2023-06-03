@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// price offer form styles
+.PriceOfferForm {
+  input,
+  select {
+    height: 60px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 18px;
+    border: 2px solid $global-clr-design-blue;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    outline: none;
+
+    &:focus {
+      border: 2px solid $global-clr-design-blue;
+    }
+
+    &[type='submit'] {
+      background-color: $global-clr-design-blue;
+    }
+  }
+
+  textarea {
+    height: 328px;
+    resize: none;
+  }
+}

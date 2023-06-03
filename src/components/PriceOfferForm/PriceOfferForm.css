@@ -1,0 +1,28 @@
+.PriceOfferForm input,
+.PriceOfferForm select {
+  height: 60px;
+}
+.PriceOfferForm input,
+.PriceOfferForm textarea,
+.PriceOfferForm select {
+  width: 100%;
+  padding: 18px;
+  border: 2px solid hsl(189, 81%, 64%);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+}
+.PriceOfferForm input:focus,
+.PriceOfferForm textarea:focus,
+.PriceOfferForm select:focus {
+  border: 2px solid hsl(189, 81%, 64%);
+}
+.PriceOfferForm input[type=submit],
+.PriceOfferForm textarea[type=submit],
+.PriceOfferForm select[type=submit] {
+  background-color: hsl(189, 81%, 64%);
+}
+.PriceOfferForm textarea {
+  height: 328px;
+  resize: none;
+}/*# sourceMappingURL=PriceOfferForm.css.map */

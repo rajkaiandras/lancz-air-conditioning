@@ -110,6 +110,7 @@ export const MainFooter = () => {
           <small>
             developed by{' '}
             <a
+              className="developer-name"
               href="https://www.linkedin.com/in/andrasrajkai"
               target="_blank"
               rel="noreferrer"

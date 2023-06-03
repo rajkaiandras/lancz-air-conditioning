@@ -154,6 +154,14 @@
       padding: 24px 0;
       border-top: 1px solid $global-clr-design-blue;
       text-align: center;
+
+      .developer-name {
+        color: $global-clr-txt-design-blue;
+
+        &:hover {
+          font-weight: 800;
+        }
+      }
     }
   }
 
