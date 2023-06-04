@@ -25,25 +25,27 @@ export const PriceOfferForm = () => {
 
   return (
     <form className="PriceOfferForm">
-      <input
-        type="text"
-        value={fullName}
-        onChange={(e) => setFullName(e.target.value)}
-        placeholder="Teljes név"
-      />
-      <input
-        type="tel"
-        value={phoneNumber}
-        onChange={(e) => setPhoneNumber(e.target.value)}
-        placeholder="Telefonszám"
-      />
-      <input
-        type="email"
-        value={emailAddress}
-        onChange={(e) => setEmailAddress(e.target.value)}
-        placeholder="E-mail"
-      />
-      <div className="select">
+      <div className="input-container">
+        <input
+          type="text"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+          placeholder="Teljes név"
+        />
+        <input
+          type="tel"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          placeholder="Telefonszám"
+        />
+      </div>
+      <div className="input-container">
+        <input
+          type="email"
+          value={emailAddress}
+          onChange={(e) => setEmailAddress(e.target.value)}
+          placeholder="E-mail"
+        />
         <select
           value={offerSubject}
           onChange={(e) => setOfferSubject(e.target.value)}
@@ -53,15 +55,22 @@ export const PriceOfferForm = () => {
           <option value="warrantee">Garancia</option>
         </select>
       </div>
-      <textarea
-        type="text"
-        value={offerInformation}
-        onChange={(e) => setOfferInformation(e.target.value)}
-        placeholder="Információk"
-        rows="4"
-        cols="50"
-      />
-      <input type="submit" onClick={handlePriceOfferSubmit} value="Elküldés" />
+      <div className="input-container">
+        <textarea
+          type="text"
+          value={offerInformation}
+          onChange={(e) => setOfferInformation(e.target.value)}
+          placeholder="Információk"
+          /* rows="4"
+        cols="50" */
+        />
+        <input
+          className="btn btn--filled"
+          type="submit"
+          onClick={handlePriceOfferSubmit}
+          value="Elküldés"
+        />
+      </div>
     </form>
   );
 };
