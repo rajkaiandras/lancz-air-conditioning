@@ -6,15 +6,13 @@ import { DarkModeContext } from '../../contexts/DarkModeContext';
 // styles
 import './SectionTitle.css';
 
-export const SectionTitle = () => {
+export const SectionTitle = ({ title, subtitle }) => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
     <div className={`SectionTitle ${darkMode ? 'dark-mode' : ''}`}>
-      <h4 className="main-title">Árajánlat</h4>
-      <h2 className="subtitle">
-        Kérje ajánlatunkat ingyenes<br></br> helyszíni felméréssel
-      </h2>
+      <h4 className="title">{title}</h4>
+      <h2 className="subtitle">{subtitle}</h2>
     </div>
   );
 };

@@ -10,8 +10,115 @@
   .about-us-container {
     width: 100%;
     max-width: 1280px;
-    height: 100vh;
-    margin: 0 auto;
+    padding: 24px;
+    margin: 0 auto 90px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'text'
+      'image';
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 'text image';
+    }
+
+    .about-us__text {
+      width: 100%;
+      max-width: 640px;
+      margin-bottom: 24px;
+      grid-area: text;
+      justify-self: center;
+
+      .text__main {
+        margin-bottom: 48px;
+
+        p + p {
+          margin-top: 24px;
+        }
+      }
+
+      .text__highlighted {
+        max-width: 480px;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 48px;
+        background-color: $global-clr-design-blue-light;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        column-gap: 18px;
+
+        svg:has(use[href='#logo-monogram']) {
+          height: 28px;
+          width: auto;
+        }
+
+        .highlighted__separator {
+          width: 2px;
+          height: 40px;
+          border-radius: 1px;
+          background-color: $global-clr-design-blue;
+          vertical-align: center;
+        }
+
+        .highlighted__text {
+          width: 240px;
+          height: auto;
+          color: $global-clr-txt-graphite;
+        }
+      }
+
+      .text__listing {
+        li {
+          padding-left: 18px;
+          margin-bottom: 12px;
+          position: relative;
+
+          &:before {
+            content: url(../../assets/icons/icon-bullet-symbol.svg);
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .about-us__image {
+      width: 100%;
+      max-width: 480px;
+      height: 100%;
+      aspect-ratio: 1/1;
+      background-image: url(../../assets/images/air-conditioner-installation-team-600x600-iStock-1174798616.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 140%;
+      position: relative;
+      grid-area: image;
+      justify-self: center;
+
+      .image__badge {
+        width: 112px;
+        height: auto;
+        padding: 16px;
+        border: 1px solid $global-clr-design-blue;
+        border-radius: 8px;
+        background-color: $global-clr-graphite;
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+
+        .badge__text {
+          color: $global-clr-txt-design-blue;
+          margin: 0;
+          line-height: 16px;
+          text-align: left;
+        }
+      }
+    }
   }
 
   .dark-mode {

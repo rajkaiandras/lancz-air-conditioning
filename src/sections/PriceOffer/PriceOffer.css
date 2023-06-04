@@ -1,12 +1,55 @@
 .PriceOffer {
   width: 100%;
+  background-image: url(../../assets/images/wall-of-air-conditioners-1440x960-unsplash_kien-nguyen.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 1024px) {
+  .PriceOffer {
+    background: none;
+  }
 }
 .PriceOffer .price-offer-container {
   width: 100%;
   max-width: 1280px;
-  height: 100vh;
   padding: 24px;
-  margin: 0 auto;
+  margin: 0 auto 64px;
+}
+.PriceOffer .price-offer-container .price-offer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 24px;
+  grid-template-areas: "form" "image";
+}
+@media (min-width: 1024px) {
+  .PriceOffer .price-offer-container .price-offer-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    grid-template-areas: "form image";
+    position: relative;
+    top: -12.5vw;
+  }
+}
+.PriceOffer .price-offer-container .price-offer-content .bg-image {
+  display: none;
+  grid-area: image;
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  aspect-ratio: 1/1;
+  background-image: url(../../assets/images/wall-of-air-conditioners-640x600-unsplash_kien-nguyen.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1024px) {
+  .PriceOffer .price-offer-container .price-offer-content .bg-image {
+    display: block;
+  }
 }
 .PriceOffer .dark-mode {
   color: hsl(0, 0%, 100%);

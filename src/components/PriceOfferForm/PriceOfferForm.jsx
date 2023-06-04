@@ -30,7 +30,7 @@ export const PriceOfferForm = () => {
         type="text"
         value={fullName}
         onChange={(e) => setFullName(e.target.value)}
-        placeholder="Teljes név"
+        placeholder="Név"
       />
       <input
         className="input--phone-number"
@@ -70,6 +70,7 @@ export const PriceOfferForm = () => {
         onClick={handlePriceOfferSubmit}
         value="Elküldés"
       />
+      <div className="frame-decoration"></div>
     </form>
   );
 };

@@ -5,8 +5,9 @@ import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // components
 import { Logo } from '../../components/Logos/Logos.jsx';
+import { Icon } from '../../components/Icons/Icons.jsx';
 
-// Styles
+// styles
 import './MainFooter.css';
 
 export const MainFooter = () => {
@@ -25,6 +26,22 @@ export const MainFooter = () => {
               Klíma és hőszivattyú technológiák telepítésére, karbantartására
               specializálódva.
             </p>
+            <div className="company__social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=100005642478675"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon id="facebook" />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon id="instagram" />
+              </a>
+            </div>
           </div>
           <div className="widget widget__site-map">
             <h4 className={`site-map__title ${darkMode ? 'dark-mode' : ''}`}>
@@ -106,7 +123,7 @@ export const MainFooter = () => {
         <div
           className={`main-footer__copyright ${darkMode ? 'dark-mode' : ''}`}
         >
-          <p>&copy; 2023 Lancz Klíma - Minden jog fenntartva</p>
+          <p>&copy; 2023 Lancz Klíma - All Rights Reserved</p>
           <small>
             developed by{' '}
             <a

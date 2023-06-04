@@ -49,7 +49,7 @@ export const HomeCarousel = () => {
         return (
           <SwiperSlide key={index}>
             <div className="slide">
-              <Logo id="monogram" />
+              <Logo id="full-name" />
               <h3 className="slide__slogan">{slide.slogan}</h3>
               <h1 className="slide__title">{slide.title}</h1>
               <a className="slide__contact-container" href="tel:+36302965944">

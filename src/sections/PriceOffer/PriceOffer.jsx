@@ -13,11 +13,22 @@ import './PriceOffer.css';
 export const PriceOffer = () => {
   const { darkMode } = useContext(DarkModeContext);
 
+  const sectionTitleText = {
+    title: 'Árajánlat',
+    subtitle: 'Kérje ajánlatunkat ingyenes helyszíni felméréssel',
+  };
+
   return (
     <section className="PriceOffer" id="section-price-offer">
       <div className={`price-offer-container ${darkMode ? 'dark-mode' : ''}`}>
-        <SectionTitle />
-        <PriceOfferForm />
+        <SectionTitle
+          title={sectionTitleText.title}
+          subtitle={sectionTitleText.subtitle}
+        />
+        <div className="price-offer-content">
+          <PriceOfferForm />
+          <div className="bg-image"></div>
+        </div>
       </div>
     </section>
   );

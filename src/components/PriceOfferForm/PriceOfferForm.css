@@ -1,19 +1,27 @@
 .PriceOfferForm {
   width: 100%;
-  max-width: 840px;
+  max-width: 640px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 16px;
   grid-template-areas: "name" "phone" "email" "subject" "info" "submit";
+  position: relative;
+  grid-area: form;
+  justify-self: center;
 }
-@media (min-width: 760px) {
+@media (min-width: 640px) {
   .PriceOfferForm {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     -moz-column-gap: 16px;
          column-gap: 16px;
-    grid-template-areas: "name phone" "email subject" "info info" "submit .";
+    grid-template-areas: "name name phone phone" "email email subject subject" "info info info info" "submit . . .";
+  }
+}
+@media (min-width: 1024px) {
+  .PriceOfferForm {
+    align-self: end;
   }
 }
 .PriceOfferForm .input--full-name {
@@ -51,4 +59,21 @@
 }
 .PriceOfferForm textarea {
   resize: none;
+}
+.PriceOfferForm .frame-decoration {
+  display: none;
+  width: calc(100% + 260px);
+  height: calc(100% + 90px);
+  border: 2px solid hsl(189, 81%, 64%);
+  border-radius: 8px;
+  background: transparent;
+  position: absolute;
+  top: -48px;
+  left: -16px;
+  z-index: 0;
+}
+@media (min-width: 1024px) {
+  .PriceOfferForm .frame-decoration {
+    display: block;
+  }
 }/*# sourceMappingURL=PriceOfferForm.css.map */

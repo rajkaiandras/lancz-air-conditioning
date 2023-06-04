@@ -8,7 +8,7 @@
   width: 327px;
   height: 92px;
   padding-left: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   background-image: url(../../assets/logos/logo-name-grayscale.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,12 +25,12 @@
     left: 2px;
   }
 
-  .main-title,
+  .title,
   .subtitle {
     margin: 0;
   }
 
-  .main-title {
+  .title {
     line-height: 20px;
     color: $global-clr-design-blue;
   }
