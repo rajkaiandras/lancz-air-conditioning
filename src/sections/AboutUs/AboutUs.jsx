@@ -42,15 +42,19 @@ export const AboutUs = () => {
           <section className="text__highlighted">
             <Logo id="monogram" />
             <div className="highlighted__separator"></div>
-            <p className="highlighted__text">
+            <h6 className="highlighted__text">
               Munkáinkra minden esetben teljeskörű garanciát vállalunk!
-            </p>
+            </h6>
           </section>
-          <section className="text__listing">
-            <ul>
-              <li>Személyes kapcsolat kialakítás, helyszíni felmérés</li>
-              <li>Több év szakmai tapasztalat a minőségi munkához</li>
-              <li>
+          <section>
+            <ul className="icon-list">
+              <li className="icon-list__item">
+                Személyes kapcsolat kialakítás, helyszíni felmérés
+              </li>
+              <li className="icon-list__item">
+                Több év szakmai tapasztalat a minőségi munkához
+              </li>
+              <li className="icon-list__item">
                 A határidők pontos betartásával állunk ügyfeleink rendelkezésére
               </li>
             </ul>

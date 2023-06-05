@@ -7,6 +7,7 @@ import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 /* import { IntroAnimation } from '../sections/IntroAnimation/IntroAnimation.jsx'; */
 import { Home } from '../sections/Home/Home.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
+import { Prices } from '../sections/Prices/Prices.jsx';
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';
 import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
@@ -36,6 +37,7 @@ export const LanczAC = () => {
         {/* <IntroAnimation /> */}
         <Home />
         <AboutUs />
+        <Prices />
         <PriceOffer />
         <MainFooter />
         <ScrollTop />

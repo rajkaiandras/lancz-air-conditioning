@@ -68,21 +68,8 @@
           width: 240px;
           height: auto;
           color: $global-clr-txt-graphite;
-        }
-      }
-
-      .text__listing {
-        li {
-          padding-left: 18px;
-          margin-bottom: 12px;
-          position: relative;
-
-          &:before {
-            content: url(../../assets/icons/icon-bullet-symbol.svg);
-            position: absolute;
-            top: 0;
-            left: 0;
-          }
+          margin: 0;
+          line-height: 20px;
         }
       }
     }
@@ -108,7 +95,7 @@
         border-radius: 8px;
         background-color: $global-clr-graphite;
         position: absolute;
-        bottom: 80px;
+        bottom: 30px;
         left: 0;
 
         .badge__text {

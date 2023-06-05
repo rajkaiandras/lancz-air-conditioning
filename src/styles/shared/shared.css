@@ -241,6 +241,18 @@ strong {
   font-weight: 600;
 }
 
+.icon-list .icon-list__item {
+  padding-left: 18px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.icon-list .icon-list__item:before {
+  content: url(../../assets/icons/icon-bullet-symbol.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* @charset "UTF-8";
 
 // custom properties

@@ -1,0 +1,41 @@
+@charset 'UTOF-8';
+
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// prices styles
+.Prices {
+  width: 100%;
+
+  .prices-container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 24px;
+    margin: 0 auto;
+
+    .prices__air-conditioner-set {
+      width: 320px;
+      height: 320px;
+    }
+
+    .prices__third-list {
+      .third-list__item {
+        padding-left: 36px;
+        margin: 36px 0;
+
+        h5,
+        h4 {
+          margin: 0;
+        }
+      }
+
+      .third-list__item-separator {
+        width: 90%;
+        height: 2px;
+        border-radius: 1px;
+        margin: 0 auto;
+        background-color: $global-clr-design-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.Prices {
+  width: 100%;
+}
+.Prices .prices-container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 24px;
+  margin: 0 auto;
+}
+.Prices .prices-container .prices__air-conditioner-set {
+  width: 320px;
+  height: 320px;
+}
+.Prices .prices-container .prices__third-list .third-list__item {
+  padding-left: 36px;
+  margin: 36px 0;
+}
+.Prices .prices-container .prices__third-list .third-list__item h5,
+.Prices .prices-container .prices__third-list .third-list__item h4 {
+  margin: 0;
+}
+.Prices .prices-container .prices__third-list .third-list__item-separator {
+  width: 90%;
+  height: 2px;
+  border-radius: 1px;
+  margin: 0 auto;
+  background-color: hsl(189, 81%, 64%);
+}/*# sourceMappingURL=Prices.css.map */
