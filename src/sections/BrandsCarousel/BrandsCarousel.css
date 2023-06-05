@@ -1,0 +1,34 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-wrapper .swiper-slide {
+  padding: 48px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-wrapper .swiper-slide .slide {
+  width: 100%;
+  max-width: 1280px;
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+}
+.swiper .swiper-wrapper .swiper-slide .slide-bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  color: hsl(189, 81%, 64%);
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: hsl(189, 81%, 64%);
+}/*# sourceMappingURL=BrandsCarousel.css.map */

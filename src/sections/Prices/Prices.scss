@@ -1,4 +1,4 @@
-@charset 'UTOF-8';
+@charset 'UTF-8';
 
 // custom properties
 @import '../../styles/custom-properties/_variables.scss';
@@ -12,30 +12,185 @@
     max-width: 1280px;
     padding: 24px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'titles'
+      'lists'
+      'image'
+      'separated';
 
-    .prices__air-conditioner-set {
-      width: 320px;
-      height: 320px;
+    .prices__titles {
+      width: 100%;
+      max-width: 640px;
+      grid-area: titles;
+      justify-self: center;
+
+      .SectionTitle {
+        margin-bottom: 36px;
+      }
+
+      .titles__list-title {
+        margin-top: 0;
+        color: $global-clr-txt-design-blue;
+        position: relative;
+
+        /* ac set appearance */
+        @media (min-width: 1024px) {
+          &:after {
+            content: url(../../assets/images/air-conditioner-set-373x194-freepik.png);
+            position: absolute;
+            top: -120px;
+            right: -360px;
+            transform: scale(0.7);
+
+            @media (min-width: 1280px) {
+              right: -460px;
+              transform: scale(1);
+            }
+          }
+        }
+
+        /* frame decoration */
+        @media (min-width: 1280px) {
+          &:before {
+            content: '';
+            width: 1220px;
+            height: 430px;
+            border: 2px solid $global-clr-design-blue;
+            border-radius: 16px;
+            position: absolute;
+            top: -16px;
+            left: -20px;
+          }
+        }
+      }
+
+      @media (min-width: 1024px) {
+        justify-self: start;
+      }
     }
 
-    .prices__third-list {
-      .third-list__item {
+    .prices__lists-container {
+      width: 100%;
+      max-width: 640px;
+      grid-area: lists;
+      justify-self: center;
+
+      @media (min-width: 1024px) {
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 120px;
+      }
+    }
+
+    .prices__air-conditioner-set-img {
+      width: 320px;
+      height: 320px;
+      margin-top: 24px;
+      grid-area: image;
+      justify-self: center;
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .prices__separated-list {
+      grid-area: separated;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        '1st'
+        '2nd'
+        '3rd'
+        '4th';
+
+      @media (min-width: 640px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: '1st 2nd' '3rd 4th';
+      }
+
+      @media (min-width: 1024px) {
+        margin: 16px 0 60px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: '1st 2nd 3rd 4th';
+      }
+
+      .separated-list__item {
+        width: 100%;
+        max-width: 300px;
         padding-left: 36px;
-        margin: 36px 0;
+        margin: 36px auto;
+        position: relative;
+
+        /* horizontal separator - mobile view */
+        &:after {
+          content: '';
+          width: 150px;
+          height: 1px;
+          background-color: $global-clr-design-blue;
+          position: absolute;
+          bottom: -36px;
+          left: 75px;
+
+          @media (min-width: 640px) {
+            display: none;
+          }
+        }
+
+        /* vertical separator - desktop view */
+        @media (min-width: 1280px) {
+          &:before {
+            content: '';
+            width: 2px;
+            height: 50px;
+            background-color: $global-clr-design-blue;
+            position: absolute;
+            top: 20px;
+            right: 0;
+          }
+
+          &:last-child:before {
+            display: none;
+          }
+        }
+
+        /* &:last-child:after {
+          display: none;
+        } */
+
+        &:nth-child(1) {
+          grid-area: 1st;
+        }
+
+        &:nth-child(2) {
+          grid-area: 2nd;
+        }
+
+        &:nth-child(3) {
+          grid-area: 3rd;
+        }
+
+        &:nth-child(4) {
+          grid-area: 4th;
+        }
 
         h5,
         h4 {
           margin: 0;
+          color: $global-clr-design-blue;
         }
       }
+    }
 
-      .third-list__item-separator {
-        width: 90%;
-        height: 2px;
-        border-radius: 1px;
-        margin: 0 auto;
-        background-color: $global-clr-design-blue;
-      }
+    .dark-mode {
+      color: white;
     }
   }
 }

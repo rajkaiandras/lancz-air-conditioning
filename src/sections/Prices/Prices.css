@@ -6,23 +6,165 @@
   max-width: 1280px;
   padding: 24px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "titles" "lists" "image" "separated";
 }
-.Prices .prices-container .prices__air-conditioner-set {
+.Prices .prices-container .prices__titles {
+  width: 100%;
+  max-width: 640px;
+  grid-area: titles;
+  justify-self: center;
+}
+.Prices .prices-container .prices__titles .SectionTitle {
+  margin-bottom: 36px;
+}
+.Prices .prices-container .prices__titles .titles__list-title {
+  margin-top: 0;
+  color: hsl(189, 81%, 64%);
+  position: relative;
+  /* ac set appearance */
+  /* frame decoration */
+}
+@media (min-width: 1024px) {
+  .Prices .prices-container .prices__titles .titles__list-title:after {
+    content: url(../../assets/images/air-conditioner-set-373x194-freepik.png);
+    position: absolute;
+    top: -120px;
+    right: -360px;
+    transform: scale(0.7);
+  }
+}
+@media (min-width: 1024px) and (min-width: 1280px) {
+  .Prices .prices-container .prices__titles .titles__list-title:after {
+    right: -460px;
+    transform: scale(1);
+  }
+}
+@media (min-width: 1280px) {
+  .Prices .prices-container .prices__titles .titles__list-title:before {
+    content: "";
+    width: 1220px;
+    height: 430px;
+    border: 2px solid hsl(189, 81%, 64%);
+    border-radius: 16px;
+    position: absolute;
+    top: -16px;
+    left: -20px;
+  }
+}
+@media (min-width: 1024px) {
+  .Prices .prices-container .prices__titles {
+    justify-self: start;
+  }
+}
+.Prices .prices-container .prices__lists-container {
+  width: 100%;
+  max-width: 640px;
+  grid-area: lists;
+  justify-self: center;
+}
+@media (min-width: 1024px) {
+  .Prices .prices-container .prices__lists-container {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    -moz-column-gap: 120px;
+         column-gap: 120px;
+  }
+}
+.Prices .prices-container .prices__air-conditioner-set-img {
   width: 320px;
   height: 320px;
+  margin-top: 24px;
+  grid-area: image;
+  justify-self: center;
 }
-.Prices .prices-container .prices__third-list .third-list__item {
+@media (min-width: 1024px) {
+  .Prices .prices-container .prices__air-conditioner-set-img {
+    display: none;
+  }
+}
+.Prices .prices-container .prices__separated-list {
+  grid-area: separated;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "1st" "2nd" "3rd" "4th";
+}
+@media (min-width: 640px) {
+  .Prices .prices-container .prices__separated-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "1st 2nd" "3rd 4th";
+  }
+}
+@media (min-width: 1024px) {
+  .Prices .prices-container .prices__separated-list {
+    margin: 16px 0 60px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "1st 2nd 3rd 4th";
+  }
+}
+.Prices .prices-container .prices__separated-list .separated-list__item {
+  width: 100%;
+  max-width: 300px;
   padding-left: 36px;
-  margin: 36px 0;
+  margin: 36px auto;
+  position: relative;
+  /* horizontal separator - mobile view */
+  /* vertical separator - desktop view */
+  /* &:last-child:after {
+    display: none;
+  } */
 }
-.Prices .prices-container .prices__third-list .third-list__item h5,
-.Prices .prices-container .prices__third-list .third-list__item h4 {
-  margin: 0;
-}
-.Prices .prices-container .prices__third-list .third-list__item-separator {
-  width: 90%;
-  height: 2px;
-  border-radius: 1px;
-  margin: 0 auto;
+.Prices .prices-container .prices__separated-list .separated-list__item:after {
+  content: "";
+  width: 150px;
+  height: 1px;
   background-color: hsl(189, 81%, 64%);
+  position: absolute;
+  bottom: -36px;
+  left: 75px;
+}
+@media (min-width: 640px) {
+  .Prices .prices-container .prices__separated-list .separated-list__item:after {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .Prices .prices-container .prices__separated-list .separated-list__item:before {
+    content: "";
+    width: 2px;
+    height: 50px;
+    background-color: hsl(189, 81%, 64%);
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+  .Prices .prices-container .prices__separated-list .separated-list__item:last-child:before {
+    display: none;
+  }
+}
+.Prices .prices-container .prices__separated-list .separated-list__item:nth-child(1) {
+  grid-area: 1st;
+}
+.Prices .prices-container .prices__separated-list .separated-list__item:nth-child(2) {
+  grid-area: 2nd;
+}
+.Prices .prices-container .prices__separated-list .separated-list__item:nth-child(3) {
+  grid-area: 3rd;
+}
+.Prices .prices-container .prices__separated-list .separated-list__item:nth-child(4) {
+  grid-area: 4th;
+}
+.Prices .prices-container .prices__separated-list .separated-list__item h5,
+.Prices .prices-container .prices__separated-list .separated-list__item h4 {
+  margin: 0;
+  color: hsl(189, 81%, 64%);
+}
+.Prices .prices-container .dark-mode {
+  color: white;
 }/*# sourceMappingURL=Prices.css.map */

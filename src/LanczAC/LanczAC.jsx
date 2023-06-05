@@ -8,12 +8,14 @@ import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 import { Home } from '../sections/Home/Home.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
+/* import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx'; */
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';
 import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
 // components
-import { LogosSource } from '../components/Logos/Logos.jsx';
 import { IconsSource } from '../components/Icons/Icons.jsx';
+import { LogosSource } from '../components/Logos/Logos.jsx';
+import { BrandLogosSource } from '../components/BrandLogos/BrandLogos.jsx';
 import { ScrollTop } from '../components/ScrollTop/ScrollTop.jsx';
 
 // styles
@@ -32,12 +34,14 @@ export const LanczAC = () => {
   return (
     <>
       <main className="LanczAC">
-        <LogosSource />
         <IconsSource />
+        <LogosSource />
+        <BrandLogosSource />
         {/* <IntroAnimation /> */}
         <Home />
         <AboutUs />
         <Prices />
+        {/* <BrandsCarousel /> */}
         <PriceOffer />
         <MainFooter />
         <ScrollTop />

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// swiper home carousel styles
+// swiper slider main container
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  // swiper additional required wrapper
+  .swiper-wrapper {
+    // swiper slides
+    .swiper-slide {
+      padding: 48px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // nested content
+      .slide {
+        width: 100%;
+        max-width: 1280px;
+        padding: 16px;
+        position: relative;
+        z-index: 1;
+      }
+
+      // nested swiper slide bg
+      .slide-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  // navigation buttons
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $global-clr-design-blue;
+  }
+
+  // pagination
+  .swiper-pagination-bullet-active {
+    background-color: $global-clr-design-blue;
+  }
+}
