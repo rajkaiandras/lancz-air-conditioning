@@ -1,0 +1,139 @@
+.Services {
+  width: 100%;
+}
+.Services .services-inner {
+  width: 100%;
+  max-width: 1280px;
+  padding: 24px;
+  margin: 0 auto;
+}
+.Services .services-inner .SectionTitle {
+  margin-bottom: 90px;
+}
+.Services .services-inner .services__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "installation" "counseling" "warranty";
+  row-gap: 84px;
+}
+@media (min-width: 920px) {
+  .Services .services-inner .services__cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "counseling warranty" "installation installation";
+  }
+}
+@media (min-width: 1280px) {
+  .Services .services-inner .services__cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "counseling installation warranty";
+    align-items: center;
+  }
+}
+.Services .services-inner .services__cards .card {
+  width: 100%;
+  max-width: 360px;
+  height: 500px;
+  padding: 36px;
+  border-radius: 8px;
+  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-self: center;
+  transition: all 300ms ease-out;
+}
+.Services .services-inner .services__cards .card:hover {
+  transform: translateY(-24px);
+}
+.Services .services-inner .services__cards .card .card__title {
+  text-align: center;
+  margin: 0 0 36px;
+  position: relative;
+}
+.Services .services-inner .services__cards .card .card__title:after {
+  content: "";
+  width: 180px;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 48px;
+  left: calc(50% - 90px);
+}
+.Services .services-inner .services__cards .card__installation {
+  padding-top: 140px;
+  grid-area: installation;
+  background-color: hsl(189, 81%, 64%);
+  position: relative;
+}
+.Services .services-inner .services__cards .card__installation .card__image {
+  width: 300px;
+  height: 180px;
+  border-radius: 8px;
+  border: 2px solid hsl(189, 81%, 64%);
+  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
+  background: url(../../assets/images/installation.png) hsl(189, 81%, 90%);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 120%;
+  position: absolute;
+  top: -60px;
+  left: calc(50% - 150px);
+}
+@media (min-width: 1280px) {
+  .Services .services-inner .services__cards .card__installation {
+    max-width: 420px;
+    height: 580px;
+  }
+}
+.Services .services-inner .services__cards .card__installation .card__title {
+  text-align: left;
+  color: hsl(0, 0%, 100%);
+}
+.Services .services-inner .services__cards .card__installation .card__separator {
+  background-color: hsl(0, 0%, 100%);
+}
+.Services .services-inner .services__cards .card__warranty {
+  padding-top: 180px;
+  grid-area: warranty;
+  position: relative;
+}
+.Services .services-inner .services__cards .card__warranty .card__image {
+  width: 300px;
+  height: 180px;
+  border-radius: 8px;
+  border: 2px solid hsl(189, 81%, 64%);
+  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
+  background: url(../../assets/images/warranty.png) hsl(189, 81%, 90%);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 140%;
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 150px);
+}
+.Services .services-inner .services__cards .card__warranty .card__title:after {
+  background-color: hsl(189, 81%, 64%);
+}
+.Services .services-inner .services__cards .card__counseling {
+  padding-top: 180px;
+  grid-area: counseling;
+  position: relative;
+}
+.Services .services-inner .services__cards .card__counseling .card__image {
+  width: 300px;
+  height: 180px;
+  border-radius: 8px;
+  border: 2px solid hsl(189, 81%, 64%);
+  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
+  background: url(../../assets/images/counseling.png) hsl(189, 81%, 90%);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  position: absolute;
+  top: -20px;
+  left: calc(50% - 150px);
+}
+.Services .services-inner .services__cards .card__counseling .card__title:after {
+  background-color: hsl(189, 81%, 64%);
+}/*# sourceMappingURL=Services.css.map */

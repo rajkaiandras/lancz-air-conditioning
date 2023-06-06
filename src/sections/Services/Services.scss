@@ -1,0 +1,171 @@
+@charset 'UTF-8';
+
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// services styles
+.Services {
+  width: 100%;
+
+  .services-inner {
+    width: 100%;
+    max-width: 1280px;
+    padding: 24px;
+    margin: 0 auto;
+
+    .SectionTitle {
+      margin-bottom: 90px;
+    }
+
+    .services__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        'installation'
+        'counseling'
+        'warranty';
+      row-gap: 84px;
+
+      @media (min-width: 920px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          'counseling warranty'
+          'installation installation';
+      }
+
+      @media (min-width: 1280px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'counseling installation warranty';
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 360px;
+        height: 500px;
+        padding: 36px;
+        border-radius: 8px;
+        box-shadow: $global-shadow;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-self: center;
+        transition: $global-transition;
+
+        &:hover {
+          transform: translateY(-24px);
+        }
+
+        .card__title {
+          text-align: center;
+          margin: 0 0 36px;
+          position: relative;
+
+          &:after {
+            content: '';
+            width: 180px;
+            height: 2px;
+            background-color: $global-clr-white;
+            position: absolute;
+            top: 48px;
+            left: calc(50% - 90px);
+          }
+        }
+      }
+
+      .card__installation {
+        padding-top: 140px;
+        grid-area: installation;
+        background-color: $global-clr-design-blue;
+        position: relative;
+
+        .card__image {
+          width: 300px;
+          height: 180px;
+          border-radius: 8px;
+          border: 2px solid $global-clr-design-blue;
+          box-shadow: $global-shadow;
+          background: url(../../assets/images/installation.png)
+            $global-clr-design-blue-light;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: 120%;
+          position: absolute;
+          top: -60px;
+          left: calc(50% - 150px);
+        }
+
+        @media (min-width: 1280px) {
+          max-width: 420px;
+          height: 580px;
+        }
+
+        .card__title {
+          text-align: left;
+          color: $global-clr-txt-white;
+        }
+
+        .card__separator {
+          background-color: $global-clr-white;
+        }
+      }
+
+      .card__warranty {
+        padding-top: 180px;
+        grid-area: warranty;
+        position: relative;
+
+        .card__image {
+          width: 300px;
+          height: 180px;
+          border-radius: 8px;
+          border: 2px solid $global-clr-design-blue;
+          box-shadow: $global-shadow;
+          background: url(../../assets/images/warranty.png)
+            $global-clr-design-blue-light;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: 140%;
+          position: absolute;
+          top: -20px;
+          left: calc(50% - 150px);
+        }
+
+        .card__title {
+          &:after {
+            background-color: $global-clr-design-blue;
+          }
+        }
+      }
+
+      .card__counseling {
+        padding-top: 180px;
+        grid-area: counseling;
+        position: relative;
+
+        .card__image {
+          width: 300px;
+          height: 180px;
+          border-radius: 8px;
+          border: 2px solid $global-clr-design-blue;
+          box-shadow: $global-shadow;
+          background: url(../../assets/images/counseling.png)
+            $global-clr-design-blue-light;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: 100%;
+          position: absolute;
+          top: -20px;
+          left: calc(50% - 150px);
+        }
+
+        .card__title {
+          &:after {
+            background-color: $global-clr-design-blue;
+          }
+        }
+      }
+    }
+  }
+}

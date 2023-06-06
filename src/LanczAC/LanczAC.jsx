@@ -3,9 +3,10 @@ import React, { useEffect, useContext } from 'react';
 // dark mode context
 import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 
-// sections
+// section components
 /* import { IntroAnimation } from '../sections/IntroAnimation/IntroAnimation.jsx'; */
 import { Home } from '../sections/Home/Home.jsx';
+import { Services } from '../sections/Services/Services.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
 /* import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx'; */
@@ -39,6 +40,7 @@ export const LanczAC = () => {
         <BrandLogosSource />
         {/* <IntroAnimation /> */}
         <Home />
+        <Services />
         <AboutUs />
         <Prices />
         {/* <BrandsCarousel /> */}
