@@ -1,15 +1,15 @@
-// components
-/* import { Logos } from '../../components/Logos.jsx';
- */
+import React, { useRef, useState } from 'react';
+
+// brand logos
+import { BrandLogo } from '../../components/BrandLogos/BrandLogos';
+
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
+import { Pagination } from 'swiper';
 
 // swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 
 // styles
 import './BrandsCarousel.css';
@@ -31,23 +31,26 @@ const brandsDB = [
 
 export const BrandsCarousel = () => {
   return (
-    <Swiper
-      modules={[Navigation, Pagination, EffectFade, Autoplay]}
-      navigation
-      pagination
-      autoplay
-      effect={'fade'}
-      speed={3000}
-      slidesPerView={1}
-      loop
-    >
-      {brandsDB.map((brand, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div>{brand}</div>
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <section className="BrandsCarousel">
+      <div className="brand-carousel-inner">
+        <Swiper
+          modules={[Pagination]}
+          pagination={{
+            clickable: true,
+          }}
+          slidesPerView={5}
+          spaceBetween={64}
+          className="mySwiper"
+        >
+          {brandsDB.map((brand, index) => {
+            return (
+              <SwiperSlide>
+                <BrandLogo id={brand} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+    </section>
   );
 };

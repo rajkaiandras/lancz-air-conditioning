@@ -9,7 +9,7 @@ import { ActualAd } from '../sections/ActualAd/ActualAd.jsx';
 import { Services } from '../sections/Services/Services.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
-/* import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx'; */
+import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx';
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';
 import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
@@ -43,7 +43,7 @@ export const LanczAC = () => {
         <AboutUs />
         <Services />
         <Prices />
-        {/* <BrandsCarousel /> */}
+        <BrandsCarousel />
         <PriceOffer />
         <MainFooter />
         <ScrollTop />

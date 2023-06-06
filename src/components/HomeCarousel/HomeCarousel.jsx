@@ -35,37 +35,39 @@ const swiperSlideDB = [
 
 export const HomeCarousel = () => {
   return (
-    <Swiper
-      modules={[Navigation, Pagination, EffectFade, Autoplay]}
-      navigation
-      pagination
-      autoplay
-      effect={'fade'}
-      speed={3000}
-      slidesPerView={1}
-      loop
-    >
-      {swiperSlideDB.map((slide, index) => {
-        return (
-          <SwiperSlide key={index}>
-            <div className="slide">
-              <Logo id="full-name" />
-              <h3 className="slide__slogan">{slide.slogan}</h3>
-              <h1 className="slide__title">{slide.title}</h1>
-              <a className="slide__contact-container" href="tel:+36302965944">
-                <div className="btn btn--outline" href="tel:+36302965944">
-                  Hívjon most
-                </div>
-                <div className="contact__phone-number">
-                  <Icon id="phone-call" />
-                  +36 (30) 296 5944
-                </div>
-              </a>
-            </div>
-            <img className="slide-bg" src={slide.image} alt="marvel heroes" />
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    <div className="HomeCarousel">
+      <Swiper
+        modules={[Navigation, Pagination, EffectFade, Autoplay]}
+        navigation
+        pagination
+        autoplay
+        effect={'fade'}
+        speed={3000}
+        slidesPerView={1}
+        loop
+      >
+        {swiperSlideDB.map((slide, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <div className="slide">
+                <Logo id="full-name" />
+                <h3 className="slide__slogan">{slide.slogan}</h3>
+                <h1 className="slide__title">{slide.title}</h1>
+                <a className="slide__contact-container" href="tel:+36302965944">
+                  <div className="btn btn--outline" href="tel:+36302965944">
+                    Hívjon most
+                  </div>
+                  <div className="contact__phone-number">
+                    <Icon id="phone-call" />
+                    +36 (30) 296 5944
+                  </div>
+                </a>
+              </div>
+              <img className="slide-bg" src={slide.image} alt="marvel heroes" />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
   );
 };

@@ -5,49 +5,39 @@
 
 // swiper home carousel styles
 // swiper slider main container
-.swiper {
+.BrandsCarousel {
   width: 100%;
-  height: 100%;
 
-  // swiper additional required wrapper
-  .swiper-wrapper {
-    // swiper slides
-    .swiper-slide {
-      padding: 48px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .brand-carousel-inner {
+    max-width: 1280px;
+    height: 160px;
 
-      // nested content
-      .slide {
-        width: 100%;
-        max-width: 1280px;
-        padding: 16px;
-        position: relative;
-        z-index: 1;
+    .swiper {
+      width: 100%;
+      height: 100%;
+
+      // swiper additional required wrapper
+      .swiper-wrapper {
+        // swiper slides
+        .swiper-slide {
+          width: 240px;
+          height: 120px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg:has(use) {
+            width: 100%;
+            height: auto;
+          }
+        }
       }
 
-      // nested swiper slide bg
-      .slide-bg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
+      // pagination
+      .swiper-pagination-bullet-active {
+        background-color: $global-clr-design-blue;
       }
     }
-  }
-
-  // navigation buttons
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: $global-clr-design-blue;
-  }
-
-  // pagination
-  .swiper-pagination-bullet-active {
-    background-color: $global-clr-design-blue;
   }
 }
