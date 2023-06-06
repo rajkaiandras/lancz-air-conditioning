@@ -1,0 +1,94 @@
+.ActualAd {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .ActualAd {
+    margin-bottom: 48px;
+  }
+}
+.ActualAd .actual-ad-inner {
+  width: 100%;
+  max-width: 1280px;
+  padding: 24px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .ActualAd .actual-ad-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "discount-text discount-img";
+  }
+}
+.ActualAd .actual-ad-inner .discount-text-container {
+  width: 340px;
+  display: flex;
+  margin: 0 auto 48px;
+  flex-flow: column nowrap;
+  align-items: center;
+  grid-area: discount-text;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .ActualAd .actual-ad-inner .discount-text-container {
+    margin: 0 auto;
+  }
+}
+.ActualAd .actual-ad-inner .discount-text-container .discount-text__logo {
+  width: 80px;
+  height: auto;
+}
+.ActualAd .actual-ad-inner .discount-text-container .discount-text__title {
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(to right, hsl(13, 100%, 78%), hsl(338, 98%, 62%));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ActualAd .actual-ad-inner .discount-text-container .discount-text__title .highlighted {
+  text-transform: uppercase;
+}
+.ActualAd .actual-ad-inner .discount-text-container .discount-text__title.dark-mode {
+  z-index: 1;
+}
+.ActualAd .actual-ad-inner .discount-text-container .discount-text__price {
+  margin: 0;
+  color: hsl(189, 81%, 64%);
+}
+.ActualAd .actual-ad-inner .discount-text-container .discount-text__price.dark-mode {
+  z-index: 1;
+}
+.ActualAd .actual-ad-inner .discount-text-container .frame-decoration {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .ActualAd .actual-ad-inner .discount-text-container .frame-decoration {
+    display: block;
+    width: 840px;
+    height: 120px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(338, 98%, 62%), transparent) border-box;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    position: absolute;
+    top: 112px;
+    left: 0;
+    z-index: -1;
+  }
+  .ActualAd .actual-ad-inner .discount-text-container .frame-decoration.dark-mode {
+    background: linear-gradient(hsl(0, 0%, 15%), hsl(0, 0%, 15%)) padding-box, linear-gradient(to right, hsl(338, 98%, 62%), transparent) border-box;
+    z-index: 0;
+  }
+}
+.ActualAd .actual-ad-inner .discount-img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  grid-area: discount-img;
+  align-self: center;
+}
+.ActualAd .actual-ad-inner .discount-img.dark-mode {
+  position: relative;
+  z-index: 1;
+}/*# sourceMappingURL=ActualAd.css.map */

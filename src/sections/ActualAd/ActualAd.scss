@@ -1,0 +1,114 @@
+@charset 'UTF-8';
+
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// actual ad styles
+.ActualAd {
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 48px;
+  }
+
+  .actual-ad-inner {
+    width: 100%;
+    max-width: 1280px;
+    padding: 24px;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto;
+      grid-template-areas: 'discount-text discount-img';
+    }
+
+    .discount-text-container {
+      width: 340px;
+      display: flex;
+      margin: 0 auto 48px;
+      flex-flow: column nowrap;
+      align-items: center;
+      grid-area: discount-text;
+      position: relative;
+
+      @media (min-width: 1024px) {
+        margin: 0 auto;
+      }
+
+      .discount-text__logo {
+        width: 80px;
+        height: auto;
+      }
+
+      .discount-text__title {
+        margin: 0;
+        text-align: center;
+        background: $global-clr-gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        .highlighted {
+          text-transform: uppercase;
+        }
+
+        &.dark-mode {
+          z-index: 1;
+        }
+      }
+
+      .discount-text__price {
+        margin: 0;
+        color: $global-clr-txt-design-blue;
+
+        &.dark-mode {
+          z-index: 1;
+        }
+      }
+
+      .frame-decoration {
+        display: none;
+
+        @media (min-width: 1024px) {
+          display: block;
+          width: 840px;
+          height: 120px;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(to right, hsl(338, 98, 62), transparent) border-box;
+          border-radius: 8px;
+          border: 2px solid transparent;
+          position: absolute;
+          top: 112px;
+          left: 0;
+          z-index: -1;
+
+          &.dark-mode {
+            background: linear-gradient(
+                  $global-clr-graphite,
+                  $global-clr-graphite
+                )
+                padding-box,
+              linear-gradient(to right, hsl(338, 98, 62), transparent)
+                border-box;
+            z-index: 0;
+          }
+        }
+      }
+    }
+
+    .discount-img {
+      display: block;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      grid-area: discount-img;
+      align-self: center;
+
+      &.dark-mode {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}

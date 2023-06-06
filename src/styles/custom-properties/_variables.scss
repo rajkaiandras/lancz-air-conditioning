@@ -8,6 +8,13 @@ $global-clr-design-blue-light: hsl(189, 81%, 90);
 $global-clr-trp-white: hsla(0, 0, 100%, 0.4);
 $global-clr-trp-graphite: hsla(0, 0, 0%, 0.4);
 
+// gradient colors
+$global-clr-gradient: linear-gradient(
+  to right,
+  hsl(13, 100, 78),
+  hsl(338, 98, 62)
+);
+
 // text colors
 $global-clr-txt-white: hsl(0, 0%, 100);
 $global-clr-txt-graphite: hsl(0, 0%, 15);

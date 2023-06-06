@@ -4,8 +4,8 @@ import React, { useEffect, useContext } from 'react';
 import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 
 // section components
-/* import { IntroAnimation } from '../sections/IntroAnimation/IntroAnimation.jsx'; */
 import { Home } from '../sections/Home/Home.jsx';
+import { ActualAd } from '../sections/ActualAd/ActualAd.jsx';
 import { Services } from '../sections/Services/Services.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
@@ -38,10 +38,10 @@ export const LanczAC = () => {
         <IconsSource />
         <LogosSource />
         <BrandLogosSource />
-        {/* <IntroAnimation /> */}
         <Home />
-        <Services />
+        <ActualAd />
         <AboutUs />
+        <Services />
         <Prices />
         {/* <BrandsCarousel /> */}
         <PriceOffer />
