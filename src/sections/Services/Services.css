@@ -10,6 +10,9 @@
 .Services .services-inner .SectionTitle {
   margin-bottom: 90px;
 }
+.Services .services-inner .SectionTitle.dark-mode {
+  color: hsl(0, 0%, 100%);
+}
 .Services .services-inner .services__cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,7 +30,7 @@
   .Services .services-inner .services__cards {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "counseling installation warranty";
-    align-items: center;
+    align-items: start;
   }
 }
 .Services .services-inner .services__cards .card {
@@ -66,6 +69,13 @@
   background-color: hsl(189, 81%, 64%);
   position: relative;
 }
+@media (min-width: 1280px) {
+  .Services .services-inner .services__cards .card__installation {
+    padding-top: 200px;
+    max-width: 420px;
+    height: 520px;
+  }
+}
 .Services .services-inner .services__cards .card__installation .card__image {
   width: 300px;
   height: 180px;
@@ -81,9 +91,10 @@
   left: calc(50% - 150px);
 }
 @media (min-width: 1280px) {
-  .Services .services-inner .services__cards .card__installation {
-    max-width: 420px;
-    height: 580px;
+  .Services .services-inner .services__cards .card__installation .card__image {
+    width: 360px;
+    height: 240px;
+    left: calc(50% - 180px);
   }
 }
 .Services .services-inner .services__cards .card__installation .card__title {
@@ -93,10 +104,16 @@
 .Services .services-inner .services__cards .card__installation .card__separator {
   background-color: hsl(0, 0%, 100%);
 }
+.Services .services-inner .services__cards .card__installation .card__text {
+  color: hsl(0, 0%, 100%);
+}
 .Services .services-inner .services__cards .card__warranty {
   padding-top: 180px;
   grid-area: warranty;
   position: relative;
+}
+.Services .services-inner .services__cards .card__warranty.dark-mode {
+  background-color: white;
 }
 .Services .services-inner .services__cards .card__warranty .card__image {
   width: 300px;
@@ -119,6 +136,9 @@
   padding-top: 180px;
   grid-area: counseling;
   position: relative;
+}
+.Services .services-inner .services__cards .card__counseling.dark-mode {
+  background-color: white;
 }
 .Services .services-inner .services__cards .card__counseling .card__image {
   width: 300px;

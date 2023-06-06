@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+// context
+import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // components
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle.jsx';
-import { Logo } from '../../components/Logos/Logos.jsx';
-import { Icon } from '../../components/Icons/Icons.jsx';
 
 // styles
 import './Services.css';
 
 export const Services = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   const sectionTitleText = {
     title: 'Szolgáltatásaink',
     subtitle: 'Teljes körű megoldások kedvező áron az egész Dunántúl területén',
@@ -29,12 +32,12 @@ export const Services = () => {
               Szakszerű telepítés előre egyeztetett időpontban. Egyszerűbb klíma
               felszerelés 2-4 óra alatt megvalósul, míg összetettebb telepítés
               akár több napot is igénybe vehet. Bel- és kültéri egység
-              felhelyezése, kondenz víz elvezetése, bekötés. Villanyszerelő
-              végzettséggel is rendelkezünk, az elektromos hálózat kiépítését is
-              elvégezzük.{' '}
+              felhelyezése, kondenz víz elvezetése, bekötés.
+              <br></br>Villanyszerelő végzettséggel is rendelkezünk, az
+              elektromos hálózat kiépítését is elvégezzük.{' '}
             </p>
           </div>
-          <div className="card card__warranty">
+          <div className={`card card__warranty ${darkMode ? 'dark-mode' : ''}`}>
             <div className="card__image"></div>
             <h4 className="card__title">Karbantartás és Garancia</h4>
             <p className="card__text">
@@ -45,7 +48,9 @@ export const Services = () => {
               készülék szivárgásvizsgálatot is vállalunk.
             </p>
           </div>
-          <div className="card card__counseling">
+          <div
+            className={`card card__counseling ${darkMode ? 'dark-mode' : ''}`}
+          >
             <div className="card__image"></div>
             <h4 className="card__title">Felmérés és Tanácsadás</h4>
             <p className="card__text">

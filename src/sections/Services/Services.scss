@@ -15,6 +15,10 @@
 
     .SectionTitle {
       margin-bottom: 90px;
+
+      &.dark-mode {
+        color: $global-clr-white;
+      }
     }
 
     .services__cards {
@@ -37,7 +41,7 @@
       @media (min-width: 1280px) {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 'counseling installation warranty';
-        align-items: center;
+        align-items: start;
       }
 
       .card {
@@ -80,6 +84,12 @@
         background-color: $global-clr-design-blue;
         position: relative;
 
+        @media (min-width: 1280px) {
+          padding-top: 200px;
+          max-width: 420px;
+          height: 520px;
+        }
+
         .card__image {
           width: 300px;
           height: 180px;
@@ -94,11 +104,12 @@
           position: absolute;
           top: -60px;
           left: calc(50% - 150px);
-        }
 
-        @media (min-width: 1280px) {
-          max-width: 420px;
-          height: 580px;
+          @media (min-width: 1280px) {
+            width: 360px;
+            height: 240px;
+            left: calc(50% - 180px);
+          }
         }
 
         .card__title {
@@ -109,12 +120,20 @@
         .card__separator {
           background-color: $global-clr-white;
         }
+
+        .card__text {
+          color: $global-clr-txt-white;
+        }
       }
 
       .card__warranty {
         padding-top: 180px;
         grid-area: warranty;
         position: relative;
+
+        &.dark-mode {
+          background-color: white;
+        }
 
         .card__image {
           width: 300px;
@@ -143,6 +162,10 @@
         padding-top: 180px;
         grid-area: counseling;
         position: relative;
+
+        &.dark-mode {
+          background-color: white;
+        }
 
         .card__image {
           width: 300px;
