@@ -46,23 +46,20 @@ export const PriceOfferForm = () => {
         onChange={(e) => setEmailAddress(e.target.value)}
         placeholder="E-mail"
       />
-      <select
+      <input
         className="input--offer-subject"
+        type="text"
         value={offerSubject}
         onChange={(e) => setOfferSubject(e.target.value)}
-      >
-        <option value="install">Telepítés</option>
-        <option value="repair">Javítás</option>
-        <option value="warrantee">Garancia</option>
-      </select>
+        placeholder="Tárgy"
+      ></input>
       <textarea
         className="input--offer-information"
         type="text"
         value={offerInformation}
         onChange={(e) => setOfferInformation(e.target.value)}
         placeholder="Információk"
-        /* rows="4"
-        cols="50" */
+        rows="4"
       />
       <input
         className="btn btn--filled input--submit"

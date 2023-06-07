@@ -6,10 +6,7 @@
 // actual ad styles
 .ActualAd {
   width: 100%;
-
-  @media (min-width: 1024px) {
-    margin-bottom: 48px;
-  }
+  padding-top: 60px;
 
   .actual-ad-inner {
     width: 100%;

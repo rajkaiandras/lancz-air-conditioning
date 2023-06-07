@@ -13,17 +13,19 @@ export const Services = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   const sectionTitleText = {
-    title: 'Szolgáltatásaink',
+    title: 'Szolgáltatások',
     subtitle: 'Teljes körű megoldások kedvező áron az egész Dunántúl területén',
   };
 
   return (
-    <section className="Services">
+    <section className="Services" id="section-services">
       <div className="services-inner">
-        <SectionTitle
-          title={sectionTitleText.title}
-          subtitle={sectionTitleText.subtitle}
-        />
+        <div className="section-title-inner">
+          <SectionTitle
+            title={sectionTitleText.title}
+            subtitle={sectionTitleText.subtitle}
+          />
+        </div>
         <div className="services__cards">
           <div className="card card__installation">
             <div className="card__image"></div>

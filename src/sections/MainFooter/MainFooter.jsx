@@ -15,7 +15,7 @@ export const MainFooter = () => {
 
   return (
     <footer className="MainFooter">
-      <div className="main-footer-container">
+      <div className="main-footer-inner">
         <div className="main-footer__widgets">
           <div className="widget widget__company">
             <Logo id="monogram" />
@@ -58,6 +58,11 @@ export const MainFooter = () => {
                 </a>
               </li>
               <li className="section">
+                <a className="section__link" href="#section-about-us">
+                  Rólunk
+                </a>
+              </li>
+              <li className="section">
                 <a className="section__link" href="#section-services">
                   Szolgáltatások
                 </a>
@@ -67,11 +72,7 @@ export const MainFooter = () => {
                   Árak
                 </a>
               </li>
-              <li className="section">
-                <a className="section__link" href="#section-about-us">
-                  Rólunk
-                </a>
-              </li>
+
               <li className="section">
                 <a className="section__link" href="#section-price-offer">
                   Ajánlatkérés

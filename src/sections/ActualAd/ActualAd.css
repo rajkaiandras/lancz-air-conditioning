@@ -1,10 +1,6 @@
 .ActualAd {
   width: 100%;
-}
-@media (min-width: 1024px) {
-  .ActualAd {
-    margin-bottom: 48px;
-  }
+  padding-top: 60px;
 }
 .ActualAd .actual-ad-inner {
   width: 100%;

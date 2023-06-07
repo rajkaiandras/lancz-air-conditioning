@@ -1,5 +1,6 @@
 .PriceOffer {
   width: 100%;
+  padding-top: 60px;
   background-image: url(../../assets/images/wall-of-air-conditioners-1440x960-unsplash_kien-nguyen.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,31 +10,41 @@
     background: none;
   }
 }
-.PriceOffer .price-offer-container {
+.PriceOffer .price-offer-inner {
   width: 100%;
   max-width: 1280px;
   padding: 24px;
-  margin: 0 auto 64px;
-}
-.PriceOffer .price-offer-container .price-offer-content {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 24px;
-  grid-template-areas: "form" "image";
+  grid-template-areas: "title" "form" "image";
 }
 @media (min-width: 1024px) {
-  .PriceOffer .price-offer-container .price-offer-content {
+  .PriceOffer .price-offer-inner {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 92px 1fr;
     -moz-column-gap: 24px;
          column-gap: 24px;
-    grid-template-areas: "form image";
-    position: relative;
-    top: -12.5vw;
+    grid-template-areas: "title image" "form image";
   }
 }
-.PriceOffer .price-offer-container .price-offer-content .bg-image {
+.PriceOffer .price-offer-inner .section-title-wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  grid-area: title;
+}
+@media (min-width: 1024px) {
+  .PriceOffer .price-offer-inner .section-title-wrapper {
+    max-width: 1280px;
+  }
+}
+.PriceOffer .price-offer-inner .section-title-wrapper .SectionTitle {
+  margin-bottom: 36px;
+}
+.PriceOffer .price-offer-inner .bg-image {
   display: none;
   grid-area: image;
   width: 100%;
@@ -47,10 +58,11 @@
   z-index: 2;
 }
 @media (min-width: 1024px) {
-  .PriceOffer .price-offer-container .price-offer-content .bg-image {
+  .PriceOffer .price-offer-inner .bg-image {
     display: block;
   }
 }
-.PriceOffer .dark-mode {
+
+.dark-mode {
   color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=PriceOffer.css.map */

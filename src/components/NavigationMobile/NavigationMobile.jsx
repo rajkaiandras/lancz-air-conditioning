@@ -38,6 +38,15 @@ export const NavigationMobile = ({
         <li className="navigation-mobile__item">
           <a
             className={`btn ${darkMode ? 'dark-mode' : ''}`}
+            href="#section-about-us"
+            onClick={closeNavigationMobile}
+          >
+            Rólunk
+          </a>
+        </li>
+        <li className="navigation-mobile__item">
+          <a
+            className={`btn ${darkMode ? 'dark-mode' : ''}`}
             href="#section-services"
             onClick={closeNavigationMobile}
           >
@@ -53,15 +62,7 @@ export const NavigationMobile = ({
             Árak
           </a>
         </li>
-        <li className="navigation-mobile__item">
-          <a
-            className={`btn ${darkMode ? 'dark-mode' : ''}`}
-            href="#section-about-us"
-            onClick={closeNavigationMobile}
-          >
-            Rólunk
-          </a>
-        </li>
+
         <li className="navigation-mobile__item">
           <a
             className={`btn ${darkMode ? 'dark-mode' : ''}`}

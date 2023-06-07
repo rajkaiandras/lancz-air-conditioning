@@ -23,6 +23,14 @@ export const NavigationDesktop = () => {
         <li className="navigation-desktop__item">
           <a
             className={`btn ${darkMode ? 'dark-mode' : ''}`}
+            href="#section-about-us"
+          >
+            Rólunk
+          </a>
+        </li>
+        <li className="navigation-desktop__item">
+          <a
+            className={`btn ${darkMode ? 'dark-mode' : ''}`}
             href="#section-services"
           >
             Szolgáltatások
@@ -34,14 +42,6 @@ export const NavigationDesktop = () => {
             href="#section-prices"
           >
             Árak
-          </a>
-        </li>
-        <li className="navigation-desktop__item">
-          <a
-            className={`btn ${darkMode ? 'dark-mode' : ''}`}
-            href="#section-about-us"
-          >
-            Rólunk
           </a>
         </li>
         <li className="navigation-desktop__item">

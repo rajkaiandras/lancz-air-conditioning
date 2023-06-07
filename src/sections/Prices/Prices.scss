@@ -6,8 +6,9 @@
 // prices styles
 .Prices {
   width: 100%;
+  padding-top: 60px;
 
-  .prices-container {
+  .prices-inner {
     width: 100%;
     max-width: 1280px;
     padding: 24px;
@@ -117,7 +118,7 @@
       }
 
       @media (min-width: 1024px) {
-        margin: 16px 0 60px;
+        margin: 16px 0 0;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: '1st 2nd 3rd 4th';
       }
@@ -144,6 +145,10 @@
           }
         }
 
+        &:last-child:after {
+          display: none;
+        }
+
         /* vertical separator - desktop view */
         @media (min-width: 1280px) {
           &:before {
@@ -160,10 +165,6 @@
             display: none;
           }
         }
-
-        /* &:last-child:after {
-          display: none;
-        } */
 
         &:nth-child(1) {
           grid-area: 1st;

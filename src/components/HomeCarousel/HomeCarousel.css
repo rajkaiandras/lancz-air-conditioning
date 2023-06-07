@@ -29,12 +29,16 @@
   line-height: clamp(24px, 2vw, 32px);
   text-transform: uppercase;
   color: hsl(189, 81%, 64%);
+  margin: 12px 0 6px;
 }
 .HomeCarousel .swiper .swiper-wrapper .swiper-slide .slide .slide__title {
+  width: 100%;
+  max-width: 640px;
   font-size: clamp(24px, 4vw, 50px);
   line-height: clamp(34px, 4vw, 56px);
   color: hsl(0, 0%, 100%);
   text-shadow: hsl(0, 0%, 15%) 3px 5px 2px;
+  margin: 24px 0 24px;
 }
 .HomeCarousel .swiper .swiper-wrapper .swiper-slide .slide .slide__contact-container {
   display: flex;
@@ -68,6 +72,10 @@
 .HomeCarousel .swiper .swiper-button-next,
 .HomeCarousel .swiper .swiper-button-prev {
   color: hsl(189, 81%, 64%);
+}
+.HomeCarousel .swiper .swiper-button-next:hover,
+.HomeCarousel .swiper .swiper-button-prev:hover {
+  color: hsl(189, 81%, 90%);
 }
 .HomeCarousel .swiper .swiper-pagination-bullet-active {
   background-color: hsl(189, 81%, 64%);

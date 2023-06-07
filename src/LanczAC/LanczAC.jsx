@@ -10,7 +10,6 @@ import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { Services } from '../sections/Services/Services.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';
-import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx';
 import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
 // components
@@ -46,7 +45,6 @@ export const LanczAC = () => {
         <AboutUs />
         <Services />
         <Prices />
-        <BrandsCarousel />
         <PriceOffer />
         <MainFooter />
 

@@ -14,21 +14,21 @@ export const PriceOffer = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   const sectionTitleText = {
-    title: 'Árajánlat',
+    title: 'Ajánlatkérés',
     subtitle: 'Kérje ajánlatunkat ingyenes helyszíni felméréssel',
   };
 
   return (
     <section className="PriceOffer" id="section-price-offer">
-      <div className={`price-offer-container ${darkMode ? 'dark-mode' : ''}`}>
-        <SectionTitle
-          title={sectionTitleText.title}
-          subtitle={sectionTitleText.subtitle}
-        />
-        <div className="price-offer-content">
-          <PriceOfferForm />
-          <div className="bg-image"></div>
+      <div className={`price-offer-inner ${darkMode ? 'dark-mode' : ''}`}>
+        <div className="section-title-wrapper">
+          <SectionTitle
+            title={sectionTitleText.title}
+            subtitle={sectionTitleText.subtitle}
+          />
         </div>
+        <PriceOfferForm />
+        <div className="bg-image"></div>
       </div>
     </section>
   );

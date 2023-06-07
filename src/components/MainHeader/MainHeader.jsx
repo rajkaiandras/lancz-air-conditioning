@@ -20,7 +20,6 @@ export const MainHeader = () => {
   const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [headerVisibility, setHeaderVisibility] = useState(true);
-
   const handleDarkModeToggler = () => {
     toggleDarkMode();
   };

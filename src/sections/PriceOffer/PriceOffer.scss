@@ -6,6 +6,7 @@
 // price offer styles
 .PriceOffer {
   width: 100%;
+  padding-top: 60px;
   background-image: url(../../assets/images/wall-of-air-conditioners-1440x960-unsplash_kien-nguyen.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,51 +15,64 @@
     background: none;
   }
 
-  .price-offer-container {
+  .price-offer-inner {
     width: 100%;
     max-width: 1280px;
     padding: 24px;
-    margin: 0 auto 64px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 24px;
+    grid-template-areas:
+      'title'
+      'form'
+      'image';
 
-    .price-offer-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      row-gap: 24px;
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 92px 1fr;
+      column-gap: 24px;
       grid-template-areas:
-        'form'
-        'image';
+        'title image'
+        'form image';
+    }
+
+    .section-title-wrapper {
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      grid-area: title;
 
       @media (min-width: 1024px) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 24px;
-        grid-template-areas: 'form image';
-        position: relative;
-        top: -12.5vw;
+        max-width: 1280px;
       }
 
-      .bg-image {
-        display: none;
-        grid-area: image;
-        width: 100%;
-        height: auto;
-        max-height: 540px;
-        aspect-ratio: 1/1;
-        background-image: url(../../assets/images/wall-of-air-conditioners-640x600-unsplash_kien-nguyen.webp);
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: relative;
-        z-index: 2;
+      .SectionTitle {
+        margin-bottom: 36px;
+      }
+    }
 
-        @media (min-width: 1024px) {
-          display: block;
-        }
+    .bg-image {
+      display: none;
+      grid-area: image;
+      width: 100%;
+      height: auto;
+      max-height: 540px;
+      aspect-ratio: 1/1;
+      background-image: url(../../assets/images/wall-of-air-conditioners-640x600-unsplash_kien-nguyen.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      z-index: 2;
+
+      @media (min-width: 1024px) {
+        display: block;
       }
     }
   }
+}
 
-  .dark-mode {
-    color: $global-clr-txt-white;
-  }
+.dark-mode {
+  color: $global-clr-txt-white;
 }

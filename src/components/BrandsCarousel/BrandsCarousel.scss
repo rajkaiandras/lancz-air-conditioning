@@ -10,7 +10,9 @@
 
   .brand-carousel-inner {
     max-width: 1280px;
-    height: 160px;
+    height: 200px;
+    padding: 24px;
+    margin: 0 auto;
 
     .swiper {
       width: 100%;
@@ -20,8 +22,8 @@
       .swiper-wrapper {
         // swiper slides
         .swiper-slide {
-          width: 240px;
-          height: 120px;
+          width: 200px;
+          height: 100px;
           position: relative;
           display: flex;
           justify-content: center;

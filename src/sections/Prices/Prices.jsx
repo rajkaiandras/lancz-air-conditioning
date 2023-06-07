@@ -8,6 +8,7 @@ import airConditionerSet from '../../assets/images/air-conditioner-set-600x600-f
 
 // components
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle.jsx';
+import { BrandsCarousel } from '../../components/BrandsCarousel/BrandsCarousel.jsx';
 
 // styles
 import './Prices.css';
@@ -16,13 +17,13 @@ export const Prices = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   const sectionTitleText = {
-    title: 'Áraink',
+    title: 'Árak',
     subtitle: 'Kizárólag helyszíni felmérés után adunk konkrét árajánlatot',
   };
 
   return (
-    <section className="Prices">
-      <div className={`prices-container ${darkMode ? 'dark-mode' : ''}`}>
+    <section className="Prices" id="section-prices">
+      <div className={`prices-inner ${darkMode ? 'dark-mode' : ''}`}>
         <div className="prices__titles">
           <SectionTitle
             title={sectionTitleText.title}
@@ -113,6 +114,7 @@ export const Prices = () => {
           </li>
         </ul>
       </div>
+      <BrandsCarousel />
     </section>
   );
 };

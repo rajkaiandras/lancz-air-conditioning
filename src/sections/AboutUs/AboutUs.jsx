@@ -22,7 +22,7 @@ export const AboutUs = () => {
 
   return (
     <section className="AboutUs" id="section-about-us">
-      <div className={`about-us-container ${darkMode ? 'dark-mode' : ''}`}>
+      <div className={`about-us-inner ${darkMode ? 'dark-mode' : ''}`}>
         <article className="about-us__text">
           <SectionTitle
             title={sectionTitleText.title}

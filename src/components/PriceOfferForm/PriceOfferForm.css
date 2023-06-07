@@ -16,7 +16,7 @@
     grid-template-rows: auto;
     -moz-column-gap: 16px;
          column-gap: 16px;
-    grid-template-areas: "name name phone phone" "email email subject subject" "info info info info" "submit . . .";
+    grid-template-areas: "name name phone phone" "email email subject subject" "info info info info" "submit submit . .";
   }
 }
 @media (min-width: 1024px) {
@@ -43,7 +43,6 @@
   grid-area: submit;
 }
 .PriceOfferForm input,
-.PriceOfferForm textarea,
 .PriceOfferForm select {
   height: 60px;
   padding: 16px;
@@ -53,8 +52,18 @@
   box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
 }
 .PriceOfferForm input:focus,
-.PriceOfferForm textarea:focus,
 .PriceOfferForm select:focus {
+  border: 2px solid hsl(189, 81%, 64%);
+}
+.PriceOfferForm textarea {
+  height: 180px;
+  padding: 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
+}
+.PriceOfferForm textarea:focus {
   border: 2px solid hsl(189, 81%, 64%);
 }
 .PriceOfferForm textarea {
@@ -63,14 +72,14 @@
 .PriceOfferForm .frame-decoration {
   display: none;
   width: calc(100% + 260px);
-  height: calc(100% + 90px);
+  height: calc(100% + 34px);
   border: 2px solid hsl(189, 81%, 64%);
   border-radius: 8px;
   background: transparent;
   position: absolute;
-  top: -48px;
+  top: -16px;
   left: -16px;
-  z-index: 0;
+  z-index: -1;
 }
 @media (min-width: 1024px) {
   .PriceOfferForm .frame-decoration {

@@ -1,41 +1,45 @@
 .AboutUs {
   width: 100%;
+  padding-top: 60px;
 }
-.AboutUs .about-us-container {
+.AboutUs .about-us-inner {
   width: 100%;
   max-width: 1280px;
   padding: 24px;
-  margin: 0 auto 90px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: "text" "image";
 }
 @media (min-width: 1024px) {
-  .AboutUs .about-us-container {
+  .AboutUs .about-us-inner {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "text image";
   }
 }
-.AboutUs .about-us-container .about-us__text {
+.AboutUs .about-us-inner .SectionTitle {
+  margin-bottom: 36px;
+}
+.AboutUs .about-us-inner .about-us__text {
   width: 100%;
   max-width: 640px;
   margin-bottom: 24px;
   grid-area: text;
   justify-self: center;
 }
-.AboutUs .about-us-container .about-us__text .text__main {
+.AboutUs .about-us-inner .about-us__text .text__main {
   margin-bottom: 48px;
 }
-.AboutUs .about-us-container .about-us__text .text__main p + p {
+.AboutUs .about-us-inner .about-us__text .text__main p + p {
   margin-top: 24px;
 }
-.AboutUs .about-us-container .about-us__text .text__highlighted {
+.AboutUs .about-us-inner .about-us__text .text__highlighted {
   max-width: 480px;
   padding: 16px;
   border-radius: 8px;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
   background-color: hsl(189, 81%, 90%);
   display: flex;
   justify-content: space-evenly;
@@ -43,25 +47,25 @@
   -moz-column-gap: 18px;
        column-gap: 18px;
 }
-.AboutUs .about-us-container .about-us__text .text__highlighted svg:has(use[href="#logo-monogram"]) {
+.AboutUs .about-us-inner .about-us__text .text__highlighted svg:has(use[href="#logo-monogram"]) {
   height: 28px;
   width: auto;
 }
-.AboutUs .about-us-container .about-us__text .text__highlighted .highlighted__separator {
+.AboutUs .about-us-inner .about-us__text .text__highlighted .highlighted__separator {
   width: 2px;
   height: 40px;
   border-radius: 1px;
   background-color: hsl(189, 81%, 64%);
   vertical-align: center;
 }
-.AboutUs .about-us-container .about-us__text .text__highlighted .highlighted__text {
+.AboutUs .about-us-inner .about-us__text .text__highlighted .highlighted__text {
   width: 240px;
   height: auto;
   color: hsl(0, 0%, 15%);
   margin: 0;
   line-height: 20px;
 }
-.AboutUs .about-us-container .about-us__image {
+.AboutUs .about-us-inner .about-us__image {
   width: 100%;
   max-width: 480px;
   height: 100%;
@@ -74,7 +78,12 @@
   grid-area: image;
   justify-self: center;
 }
-.AboutUs .about-us-container .about-us__image .image__badge {
+@media (min-width: 1280px) {
+  .AboutUs .about-us-inner .about-us__image {
+    justify-self: right;
+  }
+}
+.AboutUs .about-us-inner .about-us__image .image__badge {
   width: 112px;
   height: auto;
   padding: 16px;
@@ -85,7 +94,7 @@
   bottom: 30px;
   left: 0;
 }
-.AboutUs .about-us-container .about-us__image .image__badge .badge__text {
+.AboutUs .about-us-inner .about-us__image .image__badge .badge__text {
   color: hsl(189, 81%, 64%);
   margin: 0;
   line-height: 16px;

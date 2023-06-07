@@ -40,13 +40,17 @@
             line-height: clamp(24px, 2vw, 32px);
             text-transform: uppercase;
             color: $global-clr-design-blue;
+            margin: 12px 0 6px;
           }
 
           .slide__title {
+            width: 100%;
+            max-width: 640px;
             font-size: clamp(24px, 4vw, 50px);
             line-height: clamp(34px, 4vw, 56px);
             color: $global-clr-txt-white;
             text-shadow: $global-clr-graphite 3px 5px 2px;
+            margin: 24px 0 24px;
           }
 
           .slide__contact-container {
@@ -88,6 +92,10 @@
     .swiper-button-next,
     .swiper-button-prev {
       color: $global-clr-design-blue;
+
+      &:hover {
+        color: $global-clr-design-blue-light;
+      }
     }
 
     // pagination

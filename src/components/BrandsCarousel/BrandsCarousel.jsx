@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // brand logos
-import { BrandLogo } from '../../components/BrandLogos/BrandLogos';
+import { BrandLogo } from '../BrandLogos/BrandLogos.jsx';
 
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -30,6 +30,22 @@ const brandsDB = [
 ];
 
 export const BrandsCarousel = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // window resize handler
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
   return (
     <section className="BrandsCarousel">
       <div className="brand-carousel-inner">
@@ -38,13 +54,13 @@ export const BrandsCarousel = () => {
           pagination={{
             clickable: true,
           }}
-          slidesPerView={5}
+          slidesPerView={windowWidth >= 640 ? 5 : 3}
           spaceBetween={64}
           className="mySwiper"
         >
           {brandsDB.map((brand, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <BrandLogo id={brand} />
               </SwiperSlide>
             );
