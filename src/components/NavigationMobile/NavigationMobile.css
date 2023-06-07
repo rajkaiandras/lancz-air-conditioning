@@ -1,7 +1,7 @@
 .NavigationMobile {
   width: 100vw;
   height: 100vh;
-  background-color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 15%);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   position: fixed;

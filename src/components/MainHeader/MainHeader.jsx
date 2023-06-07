@@ -9,7 +9,7 @@ import { Icon } from '../Icons/Icons.jsx';
 import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu.jsx';
 import { NavigationMobile } from '../NavigationMobile/NavigationMobile.jsx';
 import { NavigationDesktop } from '../NavigationDesktop/NavigationDesktop.jsx';
-import { Backdrop } from '../Backdrop/Backdrop.jsx';
+/* import { Backdrop } from '../Backdrop/Backdrop.jsx'; */
 
 // styles
 import './MainHeader.css';
@@ -77,7 +77,7 @@ export const MainHeader = () => {
       }`}
     >
       <div className="main-header-container">
-        {/* HAMBURGER MENU */}
+        {/* hamburger menu */}
         {windowWidth < 1024 && (
           <HamburgerMenu
             darkMode={darkMode}
@@ -86,7 +86,7 @@ export const MainHeader = () => {
           />
         )}
 
-        {/* LOGO */}
+        {/* header logo */}
         <a href="#section-home" className="main-header__logo">
           {windowWidth <= 640 ? (
             <Logo id="monogram" />
@@ -95,7 +95,7 @@ export const MainHeader = () => {
           )}
         </a>
 
-        {/* MOBILE NAVIGATION */}
+        {/* mobile navigation */}
         {windowWidth < 1024 && (
           <NavigationMobile
             hamburgerMenuIsOpen={hamburgerMenuIsOpen}
@@ -103,10 +103,10 @@ export const MainHeader = () => {
           />
         )}
 
-        {/* DESKTOP NAVIGATION */}
+        {/* desktop navigation */}
         {windowWidth >= 1024 && <NavigationDesktop />}
 
-        {/* DARK MODE TOGGLER */}
+        {/* dark mode toggler */}
         <div
           className={`main-header__dark-mode-toggler ${
             darkMode ? 'dark-mode' : ''
@@ -116,10 +116,10 @@ export const MainHeader = () => {
           {darkMode ? <Icon id="light-mode" /> : <Icon id="dark-mode" />}
         </div>
 
-        {/* BACKDROP */}
-        {hamburgerMenuIsOpen && (
+        {/* backdrop */}
+        {/* {hamburgerMenuIsOpen && (
           <Backdrop handleHamburgerMenu={handleHamburgerMenu} />
-        )}
+        )} */}
       </div>
     </header>
   );

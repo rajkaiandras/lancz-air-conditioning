@@ -7,7 +7,7 @@
 .NavigationMobile {
   width: 100vw;
   height: 100vh;
-  background-color: hsla(0, 0, 0%, 1);
+  background-color: $global-clr-graphite;
   backdrop-filter: blur(2px);
   position: fixed;
   top: 0;

@@ -6,11 +6,11 @@ import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
 // section components
 import { Home } from '../sections/Home/Home.jsx';
 import { ActualAd } from '../sections/ActualAd/ActualAd.jsx';
-import { Services } from '../sections/Services/Services.jsx';
 import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
+import { Services } from '../sections/Services/Services.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
-import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx';
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';
+import { BrandsCarousel } from '../sections/BrandsCarousel/BrandsCarousel.jsx';
 import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
 // components
@@ -35,9 +35,12 @@ export const LanczAC = () => {
   return (
     <>
       <main className="LanczAC">
+        {/* sprite sources */}
         <IconsSource />
         <LogosSource />
         <BrandLogosSource />
+
+        {/* section components */}
         <Home />
         <ActualAd />
         <AboutUs />
@@ -46,6 +49,8 @@ export const LanczAC = () => {
         <BrandsCarousel />
         <PriceOffer />
         <MainFooter />
+
+        {/* scroll to top component */}
         <ScrollTop />
       </main>
     </>
