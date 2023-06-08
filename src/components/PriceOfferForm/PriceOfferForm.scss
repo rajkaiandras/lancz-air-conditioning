@@ -37,32 +37,79 @@
     align-self: end;
   }
 
-  .input--full-name {
+  .input--full-name-wrapper {
     grid-area: name;
+    position: relative;
+
+    svg:has(use[href='#icon-person-fill']) {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 22px;
+      right: 22px;
+    }
   }
 
-  .input--phone-number {
+  .input--phone-number-wrapper {
     grid-area: phone;
+
+    position: relative;
+
+    svg:has(use[href='#icon-phone-fill']) {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 22px;
+      right: 22px;
+    }
   }
 
-  .input--e-mail {
+  .input--e-mail-wrapper {
     grid-area: email;
+    position: relative;
+
+    svg:has(use[href='#icon-mail-fill']) {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 22px;
+      right: 22px;
+    }
   }
 
-  .input--offer-subject {
+  .input--offer-subject-wrapper {
     grid-area: subject;
+    position: relative;
+
+    svg:has(use[href='#icon-engineering-fill']) {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
   }
 
-  .input--offer-information {
+  .input--offer-information-wrapper {
     grid-area: info;
+    position: relative;
+
+    svg:has(use[href='#icon-info-fill']) {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
   }
 
-  .input--submit {
+  .input--submit-wrapper {
     grid-area: submit;
   }
 
   input,
   select {
+    width: 100%;
     height: 60px;
     padding: 16px;
     border: 2px solid transparent;
@@ -76,6 +123,7 @@
   }
 
   textarea {
+    width: 100%;
     height: 180px;
     padding: 16px;
     border: 2px solid transparent;

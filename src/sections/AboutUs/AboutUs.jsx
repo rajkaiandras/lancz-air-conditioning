@@ -49,13 +49,14 @@ export const AboutUs = () => {
           <section>
             <ul className="icon-list">
               <li className="icon-list__item">
-                Személyes kapcsolat kialakítás, helyszíni felmérés
+                Személyes kapcsolat kialakítás, helyszíni felmérés.
               </li>
               <li className="icon-list__item">
-                Több év szakmai tapasztalat a minőségi munkához
+                Több év szakmai tapasztalat a minőségi munkához.
               </li>
               <li className="icon-list__item">
-                A határidők pontos betartásával állunk ügyfeleink rendelkezésére
+                A határidők pontos betartásával állunk ügyfeleink
+                rendelkezésére.
               </li>
             </ul>
           </section>

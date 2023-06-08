@@ -24,26 +24,67 @@
     align-self: end;
   }
 }
-.PriceOfferForm .input--full-name {
+.PriceOfferForm .input--full-name-wrapper {
   grid-area: name;
+  position: relative;
 }
-.PriceOfferForm .input--phone-number {
+.PriceOfferForm .input--full-name-wrapper svg:has(use[href="#icon-person-fill"]) {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.PriceOfferForm .input--phone-number-wrapper {
   grid-area: phone;
+  position: relative;
 }
-.PriceOfferForm .input--e-mail {
+.PriceOfferForm .input--phone-number-wrapper svg:has(use[href="#icon-phone-fill"]) {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.PriceOfferForm .input--e-mail-wrapper {
   grid-area: email;
+  position: relative;
 }
-.PriceOfferForm .input--offer-subject {
+.PriceOfferForm .input--e-mail-wrapper svg:has(use[href="#icon-mail-fill"]) {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.PriceOfferForm .input--offer-subject-wrapper {
   grid-area: subject;
+  position: relative;
 }
-.PriceOfferForm .input--offer-information {
+.PriceOfferForm .input--offer-subject-wrapper svg:has(use[href="#icon-engineering-fill"]) {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.PriceOfferForm .input--offer-information-wrapper {
   grid-area: info;
+  position: relative;
 }
-.PriceOfferForm .input--submit {
+.PriceOfferForm .input--offer-information-wrapper svg:has(use[href="#icon-info-fill"]) {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.PriceOfferForm .input--submit-wrapper {
   grid-area: submit;
 }
 .PriceOfferForm input,
 .PriceOfferForm select {
+  width: 100%;
   height: 60px;
   padding: 16px;
   border: 2px solid transparent;
@@ -56,6 +97,7 @@
   border: 2px solid hsl(189, 81%, 64%);
 }
 .PriceOfferForm textarea {
+  width: 100%;
   height: 180px;
   padding: 16px;
   border: 2px solid transparent;

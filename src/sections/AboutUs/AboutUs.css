@@ -52,7 +52,7 @@
   width: auto;
 }
 .AboutUs .about-us-inner .about-us__text .text__highlighted .highlighted__separator {
-  width: 2px;
+  width: 1px;
   height: 40px;
   border-radius: 1px;
   background-color: hsl(189, 81%, 64%);

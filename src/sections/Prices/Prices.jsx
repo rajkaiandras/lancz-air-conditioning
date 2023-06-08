@@ -65,24 +65,24 @@ export const Prices = () => {
           </ul>
           <ul className="list-second icon-list">
             <li className="icon-list__item">
-              A klíma, hőszivattyú beépítésének, karbantartásának munkadíját
+              A klíma, hőszivattyú beépítésének, karbantartásának munkadíját.
             </li>
-            <li className="icon-list__item">Egyszeri főfal átfúrást</li>
+            <li className="icon-list__item">Egyszeri főfal átfúrást.</li>
             <li className="icon-list__item">
               Takarófólia leterítést, lábzsák használatát (az értékek megóvása
-              érdekében)
+              érdekében).
             </li>
             <li className="icon-list__item">
-              A keletkezett törmelék eltakarítást
+              A keletkezett törmelék eltakarítást.
             </li>
             <li className="icon-list__item">
-              A telepített berendezés szakszerű beüzemelését
+              A telepített berendezés szakszerű beüzemelését.
             </li>
             <li className="icon-list__item">
-              1 év garanciát az általunk végzett munkára
+              1 év garanciát az általunk végzett munkára.
             </li>
             <li className="icon-list__item">
-              A készülék üzemeltetésének bemutatását
+              A készülék üzemeltetésének bemutatását.
             </li>
           </ul>
         </section>
