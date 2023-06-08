@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
+// price offer info modal styles
+.PriceOfferInfoModal {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px;
+  border: 2px solid $global-clr-design-blue;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: $global-clr-white;
+  position: absolute;
+  top: -204px;
+  right: -12px;
+
+  .price-offer-info-modal__title {
+    margin: 0;
+    font-size: inherit;
+    color: $global-clr-txt-graphite;
+  }
+
+  .price-offer-info-modal__list {
+    padding-left: 24px;
+    list-style-type: disc;
+  }
+
+  svg:has(use[href='#icon-modal-arrow']) {
+    transform: rotate(-90deg);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: -10px;
+    right: 33px;
+  }
+}

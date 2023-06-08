@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 // components
 import { Icon } from '../Icons/Icons.jsx';
+import { PriceOfferInfoModal } from '../PriceOfferInfoModal/PriceOfferInfoModal.jsx';
 
 // styles
 import './PriceOfferForm.css';
@@ -34,6 +35,7 @@ export const PriceOfferForm = () => {
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           placeholder="Név"
+          required
         />
         <Icon id="person-fill" />
       </div>
@@ -77,6 +79,7 @@ export const PriceOfferForm = () => {
           rows="4"
         />
         <Icon id="info-fill" />
+        <PriceOfferInfoModal />
       </div>
       <div className="input--submit-wrapper">
         <input

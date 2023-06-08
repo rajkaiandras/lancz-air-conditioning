@@ -86,7 +86,7 @@
 .PriceOfferForm select {
   width: 100%;
   height: 60px;
-  padding: 16px;
+  padding: 16px 56px 16px 16px;
   border: 2px solid transparent;
   border-radius: 8px;
   outline: none;
@@ -99,7 +99,7 @@
 .PriceOfferForm textarea {
   width: 100%;
   height: 180px;
-  padding: 16px;
+  padding: 16px 56px 16px 16px;
   border: 2px solid transparent;
   border-radius: 8px;
   outline: none;
