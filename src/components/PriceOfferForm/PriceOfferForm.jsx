@@ -13,6 +13,7 @@ export const PriceOfferForm = () => {
   const [emailAddress, setEmailAddress] = useState('');
   const [offerSubject, setOfferSubject] = useState('');
   const [offerInformation, setOfferInformation] = useState('');
+  const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
 
   const priceOfferData = {
     'Teljes név': fullName,
@@ -25,6 +26,10 @@ export const PriceOfferForm = () => {
   const handlePriceOfferSubmit = (e) => {
     e.preventDefault();
     console.log(priceOfferData);
+  };
+
+  const handleOfferInfoClick = () => {
+    setOfferInfoVisibility(!offerInfoVisibility);
   };
 
   return (
@@ -78,8 +83,10 @@ export const PriceOfferForm = () => {
           placeholder="Információk"
           rows="4"
         />
-        <Icon id="info-fill" />
-        <PriceOfferInfoModal />
+        <div onClick={handleOfferInfoClick}>
+          <Icon id="info-fill" />
+        </div>
+        {offerInfoVisibility && <PriceOfferInfoModal />}
       </div>
       <div className="input--submit-wrapper">
         <input

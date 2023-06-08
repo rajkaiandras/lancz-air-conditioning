@@ -7,13 +7,23 @@
   font-size: 14px;
   background-color: hsl(0, 0%, 100%);
   position: absolute;
-  top: -204px;
-  right: -12px;
+  top: -198px;
+  right: 0;
+}
+@media (min-width: 1024px) {
+  .PriceOfferInfoModal {
+    top: 0;
+    right: -324px;
+    z-index: 3;
+  }
 }
 .PriceOfferInfoModal .price-offer-info-modal__title {
   margin: 0;
   font-size: inherit;
   color: hsl(0, 0%, 15%);
+}
+.PriceOfferInfoModal .price-offer-info-modal__title.dark-mode {
+  color: hsl(189, 81%, 64%);
 }
 .PriceOfferInfoModal .price-offer-info-modal__list {
   padding-left: 24px;
@@ -25,5 +35,16 @@
   height: 16px;
   position: absolute;
   bottom: -10px;
-  right: 33px;
+  right: 21px;
+}
+@media (min-width: 1024px) {
+  .PriceOfferInfoModal svg:has(use[href="#icon-modal-arrow"]) {
+    transform: rotate(0);
+    top: 20px;
+    left: -10px;
+    z-index: 3;
+  }
+}
+.PriceOfferInfoModal.dark-mode {
+  background-color: hsl(0, 0%, 15%);
 }/*# sourceMappingURL=PriceOfferInfoModal.css.map */

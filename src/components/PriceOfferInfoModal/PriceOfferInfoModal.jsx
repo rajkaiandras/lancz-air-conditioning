@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+// context
+import { DarkModeContext } from '../../contexts/DarkModeContext';
 
 // components
 import { Icon } from '../Icons/Icons';
@@ -7,9 +10,15 @@ import { Icon } from '../Icons/Icons';
 import './PriceOfferInfoModal.css';
 
 export const PriceOfferInfoModal = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <div className="PriceOfferInfoModal">
-      <h6 className="price-offer-info-modal__title">
+    <div className={`PriceOfferInfoModal ${darkMode ? 'dark-mode' : ''}`}>
+      <h6
+        className={`price-offer-info-modal__title ${
+          darkMode ? 'dark-mode' : ''
+        }`}
+      >
         Az alábbi információk megadásával segítheti az ajánlattétel pontosságát:
       </h6>
       <ul className="price-offer-info-modal__list">

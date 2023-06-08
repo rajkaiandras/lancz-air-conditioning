@@ -13,13 +13,23 @@
   font-size: 14px;
   background-color: $global-clr-white;
   position: absolute;
-  top: -204px;
-  right: -12px;
+  top: -198px;
+  right: 0;
+
+  @media (min-width: 1024px) {
+    top: 0;
+    right: -324px;
+    z-index: 3;
+  }
 
   .price-offer-info-modal__title {
     margin: 0;
     font-size: inherit;
     color: $global-clr-txt-graphite;
+
+    &.dark-mode {
+      color: $global-clr-txt-design-blue;
+    }
   }
 
   .price-offer-info-modal__list {
@@ -33,6 +43,17 @@
     height: 16px;
     position: absolute;
     bottom: -10px;
-    right: 33px;
+    right: 21px;
+
+    @media (min-width: 1024px) {
+      transform: rotate(0);
+      top: 20px;
+      left: -10px;
+      z-index: 3;
+    }
+  }
+
+  &.dark-mode {
+    background-color: $global-clr-graphite;
   }
 }
