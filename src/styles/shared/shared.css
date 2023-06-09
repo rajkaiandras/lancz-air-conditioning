@@ -489,14 +489,27 @@ dl {
 }
 
 .btn--filled {
-  border: 1px solid hsl(189, 81%, 64%);
+  border: 1px solid transparent;
   border-radius: 8px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(189, 81%, 64%);
+  transition: none;
 }
-.btn--filled:hover, .btn--filled:focus {
-  color: hsl(189, 81%, 64%);
-  background-color: transparent;
+.btn--filled:hover {
+  color: hsl(0, 0%, 100%);
+}
+.btn--filled:active {
+  transform: scale(0.95);
+}
+.btn--filled:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.btn--filled:disabled:hover {
+  color: white;
+}
+.btn--filled:disabled:active {
+  transform: scale(1);
 }
 
 *,

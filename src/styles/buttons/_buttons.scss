@@ -34,14 +34,30 @@
 }
 
 .btn--filled {
-  border: 1px solid $global-clr-design-blue;
+  border: 1px solid transparent;
   border-radius: 8px;
   color: $global-clr-txt-white;
   background-color: $global-clr-design-blue;
+  transition: none;
 
-  &:hover,
-  &:focus {
-    color: $global-clr-txt-design-blue;
-    background-color: transparent;
+  &:hover {
+    color: $global-clr-txt-white;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      transform: scale(1);
+    }
   }
 }

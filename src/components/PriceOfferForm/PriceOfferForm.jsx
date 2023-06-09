@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // components
 import { Icon } from '../Icons/Icons.jsx';
@@ -13,19 +13,48 @@ export const PriceOfferForm = () => {
   const [emailAddress, setEmailAddress] = useState('');
   const [offerSubject, setOfferSubject] = useState('');
   const [offerInformation, setOfferInformation] = useState('');
+
   const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
 
-  const priceOfferData = {
-    'Teljes név': fullName,
+  const [isInputFieldEmpty, setIsInputFieldsEmpty] = useState(false);
+
+  const priceOfferFormData = {
+    Név: fullName,
     Telefonszám: phoneNumber,
-    'E-mail cím': emailAddress,
-    'Ajánlat tárgya': offerSubject,
-    Információk: offerInformation,
+    Email: emailAddress,
+    Tárgy: offerSubject,
+    Információ: offerInformation,
   };
 
   const handlePriceOfferSubmit = (e) => {
     e.preventDefault();
-    console.log(priceOfferData);
+
+    resetInputFields();
+
+    console.log(priceOfferFormData);
+  };
+
+  // empty input field test
+  useEffect(() => {
+    if (
+      fullName.length === 0 ||
+      phoneNumber.length === 0 ||
+      emailAddress.length === 0 ||
+      offerSubject.length === 0 ||
+      offerInformation.length === 0
+    ) {
+      setIsInputFieldsEmpty(true);
+    } else {
+      setIsInputFieldsEmpty(false);
+    }
+  }, [fullName, phoneNumber, emailAddress, offerSubject, offerInformation]);
+
+  const resetInputFields = () => {
+    setFullName('');
+    setPhoneNumber('');
+    setEmailAddress('');
+    setOfferSubject('');
+    setOfferInformation('');
   };
 
   const handleOfferInfoClick = () => {
@@ -40,7 +69,6 @@ export const PriceOfferForm = () => {
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           placeholder="Név"
-          required
         />
         <Icon id="person-fill" />
       </div>
@@ -80,7 +108,7 @@ export const PriceOfferForm = () => {
           type="text"
           value={offerInformation}
           onChange={(e) => setOfferInformation(e.target.value)}
-          placeholder="Információk"
+          placeholder="Információ"
           rows="4"
         />
         <div onClick={handleOfferInfoClick}>
@@ -94,6 +122,7 @@ export const PriceOfferForm = () => {
           type="submit"
           onClick={handlePriceOfferSubmit}
           value="Elküldés"
+          disabled={isInputFieldEmpty}
         />
       </div>
       <div className="frame-decoration"></div>
