@@ -54,8 +54,16 @@ export const BrandsCarousel = () => {
           pagination={{
             clickable: true,
           }}
-          slidesPerView={windowWidth >= 640 ? 5 : 3}
-          spaceBetween={64}
+          slidesPerView={
+            windowWidth <= 480
+              ? 3
+              : windowWidth <= 768
+              ? 5
+              : windowWidth <= 1024
+              ? 6
+              : 7
+          }
+          spaceBetween={32}
           className="mySwiper"
         >
           {brandsDB.map((brand, index) => {

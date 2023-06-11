@@ -172,7 +172,8 @@ table {
 }
 body,
 input,
-textarea {
+textarea,
+button {
   font-family: "Raleway - Regular", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -493,23 +494,28 @@ dl {
   border-radius: 8px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(189, 81%, 64%);
-  transition: none;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  /* &:disabled {
+    opacity: 0.7;
+    cursor: default;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  } */
 }
-.btn--filled:hover {
-  color: hsl(0, 0%, 100%);
+.btn--filled:hover, .btn--filled:focus {
+  border: 1px solid hsl(189, 81%, 64%);
+  color: hsl(189, 81%, 64%);
+  background-color: transparent;
 }
 .btn--filled:active {
-  transform: scale(0.95);
-}
-.btn--filled:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-.btn--filled:disabled:hover {
-  color: white;
-}
-.btn--filled:disabled:active {
-  transform: scale(1);
+  transform: scale(0.975);
 }
 
 *,

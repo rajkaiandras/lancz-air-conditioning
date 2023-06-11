@@ -14,28 +14,22 @@ export const PriceOfferForm = () => {
   const [offerSubject, setOfferSubject] = useState('');
   const [offerInformation, setOfferInformation] = useState('');
 
+  /* const [isInputFieldEmpty, setIsInputFieldsEmpty] = useState(false); */
+
   const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
 
-  const [isInputFieldEmpty, setIsInputFieldsEmpty] = useState(false);
-
-  const priceOfferFormData = {
-    Név: fullName,
-    Telefonszám: phoneNumber,
-    Email: emailAddress,
-    Tárgy: offerSubject,
-    Információ: offerInformation,
-  };
-
+  // form submit handler
   const handlePriceOfferSubmit = (e) => {
     e.preventDefault();
 
-    resetInputFields();
+    const priceOfferFormData = new FormData(e.target);
+    console.log(Object.fromEntries(priceOfferFormData.entries()));
 
-    console.log(priceOfferFormData);
+    resetInputFields();
   };
 
-  // empty input field test
-  useEffect(() => {
+  // disable submit btn (empty input field)
+  /* useEffect(() => {
     if (
       fullName.length === 0 ||
       phoneNumber.length === 0 ||
@@ -47,8 +41,9 @@ export const PriceOfferForm = () => {
     } else {
       setIsInputFieldsEmpty(false);
     }
-  }, [fullName, phoneNumber, emailAddress, offerSubject, offerInformation]);
+  }, [fullName, phoneNumber, emailAddress, offerSubject, offerInformation]); */
 
+  // reset input fields to default placeholder texts
   const resetInputFields = () => {
     setFullName('');
     setPhoneNumber('');
@@ -57,18 +52,24 @@ export const PriceOfferForm = () => {
     setOfferInformation('');
   };
 
+  // info modal visibility
   const handleOfferInfoClick = () => {
     setOfferInfoVisibility(!offerInfoVisibility);
   };
 
   return (
-    <form className="PriceOfferForm">
+    <form onSubmit={handlePriceOfferSubmit} className="PriceOfferForm">
       <div className="input--full-name-wrapper">
         <input
+          className="input--full-name"
           type="text"
+          name="fullName"
           value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
+          onChange={(e) => {
+            setFullName(e.target.value);
+          }}
           placeholder="Név"
+          required
         />
         <Icon id="person-fill" />
       </div>
@@ -76,9 +77,11 @@ export const PriceOfferForm = () => {
         <input
           className="input--phone-number"
           type="tel"
+          name="phoneNumber"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           placeholder="Telefonszám"
+          required
         />
         <Icon id="phone-fill" />
       </div>
@@ -86,9 +89,11 @@ export const PriceOfferForm = () => {
         <input
           className="input--e-mail"
           type="email"
+          name="emailAddress"
           value={emailAddress}
           onChange={(e) => setEmailAddress(e.target.value)}
           placeholder="E-mail"
+          required
         />
         <Icon id="mail-fill" />
       </div>
@@ -96,9 +101,11 @@ export const PriceOfferForm = () => {
         <input
           className="input--offer-subject"
           type="text"
+          name="offerSubject"
           value={offerSubject}
           onChange={(e) => setOfferSubject(e.target.value)}
           placeholder="Tárgy"
+          required
         />
         <Icon id="engineering-fill" />
       </div>
@@ -106,10 +113,12 @@ export const PriceOfferForm = () => {
         <textarea
           className="input--offer-information"
           type="text"
+          name="offerInformation"
           value={offerInformation}
           onChange={(e) => setOfferInformation(e.target.value)}
           placeholder="Információ"
           rows="4"
+          required
         />
         <div onClick={handleOfferInfoClick}>
           <Icon id="info-fill" />
@@ -117,13 +126,12 @@ export const PriceOfferForm = () => {
         {offerInfoVisibility && <PriceOfferInfoModal />}
       </div>
       <div className="input--submit-wrapper">
-        <input
-          className="btn btn--filled input--submit"
-          type="submit"
-          onClick={handlePriceOfferSubmit}
-          value="Elküldés"
-          disabled={isInputFieldEmpty}
-        />
+        <button
+          /* disabled={isInputFieldEmpty} */
+          className="btn btn--filled btn--submit"
+        >
+          Elküldés
+        </button>
       </div>
       <div className="frame-decoration"></div>
     </form>

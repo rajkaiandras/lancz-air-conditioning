@@ -12,7 +12,8 @@
   height: 100%;
 }
 .BrandsCarousel .brand-carousel-inner .swiper .swiper-wrapper .swiper-slide {
-  width: 200px;
+  width: 100%;
+  max-width: 180px;
   height: 100px;
   position: relative;
   display: flex;

@@ -40,15 +40,15 @@
         /* ac set appearance */
         @media (min-width: 1024px) {
           &:after {
-            content: url(../../assets/images/air-conditioner-set-373x194-freepik.png);
+            content: url(../../assets/images/prices-ac-set-mini-1024x640.png);
             position: absolute;
-            top: -120px;
-            right: -360px;
-            transform: scale(0.7);
+            top: -351px;
+            right: -680px;
+            transform: scale(0.3);
 
             @media (min-width: 1280px) {
-              right: -460px;
-              transform: scale(1);
+              right: -800px;
+              transform: scale(0.3);
             }
           }
         }

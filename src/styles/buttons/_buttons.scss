@@ -38,18 +38,22 @@
   border-radius: 8px;
   color: $global-clr-txt-white;
   background-color: $global-clr-design-blue;
-  transition: none;
+  transition: $global-transition;
+  cursor: pointer;
 
-  &:hover {
-    color: $global-clr-txt-white;
+  &:hover,
+  &:focus {
+    border: 1px solid $global-clr-design-blue;
+    color: $global-clr-txt-design-blue;
+    background-color: transparent;
   }
 
   &:active {
-    transform: scale(0.95);
+    transform: scale(0.975);
   }
 
-  &:disabled {
-    opacity: 0.5;
+  /* &:disabled {
+    opacity: 0.7;
     cursor: default;
 
     &:hover {
@@ -59,5 +63,5 @@
     &:active {
       transform: scale(1);
     }
-  }
+  } */
 }

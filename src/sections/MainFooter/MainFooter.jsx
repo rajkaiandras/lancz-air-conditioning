@@ -114,7 +114,7 @@ export const MainFooter = () => {
                   rel="noreferrer"
                   className="location__address item__link"
                 >
-                  8373 Rezi, Vár utca 4.
+                  8373 Rezi, Zala vármegye
                 </a>
               </li>
             </ul>

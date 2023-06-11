@@ -92,8 +92,7 @@
   height: 180px;
   border-radius: 8px;
   box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
-  border: 2px solid hsl(189, 81%, 64%);
-  background: url(../../assets/images/installation.png) hsla(0, 0%, 100%, 0.2);
+  background: url(../../assets/images/services-installing.png) hsla(0, 0%, 100%, 0.2);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   background-repeat: no-repeat;
@@ -133,14 +132,12 @@
   width: 300px;
   height: 180px;
   border-radius: 8px;
-  border: 2px solid hsl(189, 81%, 64%);
-  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
-  background: url(../../assets/images/warranty.png) hsl(189, 81%, 90%);
+  background: url(../../assets/images/services-warranty.png);
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: 140%;
+  background-position: center;
+  background-size: 130%;
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: calc(50% - 150px);
 }
 .Services .services-inner .services__cards .card__warranty .card__title:after {
@@ -159,14 +156,12 @@
   width: 300px;
   height: 180px;
   border-radius: 8px;
-  border: 2px solid hsl(189, 81%, 64%);
-  box-shadow: 0 5px 16px hsla(0, 0%, 0%, 0.1);
-  background: url(../../assets/images/counseling.png) hsl(189, 81%, 90%);
+  background: url(../../assets/images/services-counseling.png);
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
+  background-position: center;
+  background-size: 130%;
   position: absolute;
-  top: -20px;
+  top: 0px;
   left: calc(50% - 150px);
 }
 .Services .services-inner .services__cards .card__counseling .card__title:after {

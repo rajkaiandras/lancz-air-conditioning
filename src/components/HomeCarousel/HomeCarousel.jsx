@@ -16,20 +16,22 @@ import 'swiper/css/effect-fade';
 import './HomeCarousel.css';
 
 // assets
-import swiperSlideImage1 from '../../assets/images/hero-image-1440x768-unsplash.com_spacejoy.webp';
-import swiperSlideImage2 from '../../assets/images/heat-pump-1440x768-iStock-1407175869.webp';
+import livingRoom from '../../assets/images/home-carousel-living-room-1920x1080.webp';
+import heatPump from '../../assets/images/home-carousel-heat-pump-1440x768.webp';
 
 // database
 const swiperSlideDB = [
   {
     slogan: 'Mert bennünk megbízhat',
     title: 'Klímák szakszerű telepítése, karbantartása és forgalmazása',
-    image: swiperSlideImage1,
+    image: livingRoom,
+    alt: 'air conditioner in living room',
   },
   {
     slogan: 'Mert bennünk megbízhat',
     title: 'Hőszivattyúk telepítése, karbantartása és beszerzése',
-    image: swiperSlideImage2,
+    image: heatPump,
+    alt: 'heat pump',
   },
 ];
 
@@ -54,7 +56,7 @@ export const HomeCarousel = () => {
                 <h3 className="slide__slogan">{slide.slogan}</h3>
                 <h1 className="slide__title">{slide.title}</h1>
                 <a className="slide__contact-container" href="tel:+36302965944">
-                  <div className="btn btn--outline" href="tel:+36302965944">
+                  <div className="btn btn--filled" href="tel:+36302965944">
                     Hívjon most
                   </div>
                   <div className="contact__phone-number">
@@ -63,7 +65,7 @@ export const HomeCarousel = () => {
                   </div>
                 </a>
               </div>
-              <img className="slide-bg" src={slide.image} alt="marvel heroes" />
+              <img className="slide-bg" src={slide.image} alt={slide.alt} />
             </SwiperSlide>
           );
         })}

@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { DarkModeContext } from '../../contexts/DarkModeContext';
 
 // assets
-import airConditionerSet from '../../assets/images/air-conditioner-set-600x600-freepik.com@macrovector.png';
+import airConditionerSet from '../../assets/images/prices-ac-set-1024x1024.png';
 
 // components
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle.jsx';

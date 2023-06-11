@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 
 // dark mode context
-import { DarkModeContext, darkMode } from '../../contexts/DarkModeContext.jsx';
+import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // assets
-import logoDiscount from '../../assets/logos/discount.png';
-import actualAdGree from '../../assets/images/actual-ad-gree.png';
+import logoDiscount from '../../assets/images/actual-ad-logo-discount.png';
+import actualAdImg from '../../assets/images/actual-ad-gree-ac.png';
 
 // styles
 import './ActualAd.css';
@@ -35,7 +35,7 @@ export const ActualAd = () => {
         </article>
         <img
           className={`discount-img ${darkMode ? 'dark-mode' : ''}`}
-          src={actualAdGree}
+          src={actualAdImg}
           alt="air conditioner"
         />
       </div>
