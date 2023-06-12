@@ -1,10 +1,6 @@
 <?php
-if (isset($_GET['run']) && function_exists($_GET['run'])){
-  contact();
-} else {
-  echo 'Function not Found';
-}
 
+  contact();
 
   function contact()
   {
@@ -43,7 +39,7 @@ if (isset($_GET['run']) && function_exists($_GET['run'])){
       $message .= '<p><strong>Telefonszám: </strong>'.$contactData['phoneNumber'].'</p>';
       $message .= '<p><strong>E-mail: <br /></strong>'.$contactData['emailAddress'].'</p>';
 
-      $success = mail('info@lanczklima.hu', 'Lancz Klíma - Ajánlatkérés', $message, 'Content-Type: text/html; charset=utf-8', '-f rajkaiandras@gmail.com');
+      $success = mail('info@lanczklima.hu', 'Lancz Klíma - Ajánlatkérés', $message, 'Content-Type: text/html; charset=utf-8', '-f '.$contactData['emailAddress']);
     
       if (!$success) {
           $errorMessage = error_get_last()['message'];

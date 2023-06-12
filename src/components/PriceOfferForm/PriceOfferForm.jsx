@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // components
 import { Icon } from '../Icons/Icons.jsx';
@@ -24,6 +24,17 @@ export const PriceOfferForm = () => {
 
     const priceOfferFormData = new FormData(e.target);
     console.log(Object.fromEntries(priceOfferFormData.entries()));
+
+    const response = fetch('https://lanczklima.hu/api.php', {
+      method: 'POST',
+      body: JSON.stringify(Object.fromEntries(priceOfferFormData.entries())),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    /* const result = response.json();
+    console.log(result); */
 
     resetInputFields();
   };
