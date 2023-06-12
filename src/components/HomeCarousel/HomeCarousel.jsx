@@ -16,7 +16,7 @@ import 'swiper/css/effect-fade';
 import './HomeCarousel.css';
 
 // assets
-import livingRoom from '../../assets/images/home-carousel-living-room-1920x1080.webp';
+import airCondition from '../../assets/images/home-carousel-air-condition-1440x768.webp';
 import heatPump from '../../assets/images/home-carousel-heat-pump-1440x768.webp';
 
 // database
@@ -24,7 +24,7 @@ const swiperSlideDB = [
   {
     slogan: 'Mert bennünk megbízhat',
     title: 'Klímák szakszerű telepítése, karbantartása és forgalmazása',
-    image: livingRoom,
+    image: airCondition,
     alt: 'air conditioner in living room',
   },
   {
