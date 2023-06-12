@@ -41,6 +41,10 @@
             text-transform: uppercase;
             color: $global-clr-design-blue;
             margin: 12px 0 6px;
+
+            @media (min-width: 1024px) {
+              text-shadow: $global-clr-graphite 3px 5px 2px;
+            }
           }
 
           .slide__title {
@@ -49,8 +53,12 @@
             font-size: clamp(24px, 4vw, 50px);
             line-height: clamp(34px, 4vw, 56px);
             color: $global-clr-txt-white;
-            text-shadow: $global-clr-graphite 3px 5px 2px;
+
             margin: 24px 0 24px;
+
+            @media (min-width: 1024px) {
+              text-shadow: $global-clr-graphite 3px 5px 2px;
+            }
           }
 
           .slide__contact-container {
