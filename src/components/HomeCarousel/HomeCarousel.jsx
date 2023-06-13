@@ -1,6 +1,8 @@
+import React, { useState, useEffect } from 'react';
+
 // components
 import { Logo } from '../Logos/Logos.jsx';
-import { Icon } from '../Icons/Icons.jsx';
+/* import { Icon } from '../Icons/Icons.jsx'; */
 
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,27 +17,37 @@ import 'swiper/css/effect-fade';
 // styles
 import './HomeCarousel.css';
 
-// assets
-import airCondition from '../../assets/images/home-carousel-air-condition-1920x1080.webp';
-import heatPump from '../../assets/images/home-carousel-heat-pump-1440x768.webp';
-
 // database
 const swiperSlideDB = [
   {
     slogan: 'Mert bennünk megbízhat',
     title: 'Klímák szakszerű telepítése, karbantartása és forgalmazása',
-    image: airCondition,
-    alt: 'air conditioner in living room',
+    image: 'air-conditioner',
   },
   {
     slogan: 'Mert bennünk megbízhat',
     title: 'Hőszivattyúk telepítése, karbantartása és beszerzése',
-    image: heatPump,
-    alt: 'heat pump',
+    image: 'heat-pump',
   },
 ];
 
 export const HomeCarousel = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // window resize handler
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
   return (
     <div className="HomeCarousel">
       <Swiper
@@ -52,7 +64,11 @@ export const HomeCarousel = () => {
           return (
             <SwiperSlide key={index}>
               <div className="slide">
-                <Logo id="full-name" />
+                {windowWidth < 640 ? (
+                  <Logo id="full-name" />
+                ) : (
+                  <Logo id="monogram" />
+                )}
                 <h3 className="slide__slogan">{slide.slogan}</h3>
                 <h1 className="slide__title">{slide.title}</h1>
                 <a className="slide__contact-container" href="tel:+36302965944">
@@ -60,12 +76,12 @@ export const HomeCarousel = () => {
                     Hívjon most
                   </div>
                   <div className="contact__phone-number">
-                    <Icon id="phone-call" />
+                    {/* <Icon id="phone-call" /> */}
                     +36 (30) 296 5944
                   </div>
                 </a>
               </div>
-              <img className="slide-bg" src={slide.image} alt={slide.alt} />
+              <div className={`slide-bg ${slide.image}`}></div>
             </SwiperSlide>
           );
         })}

@@ -87,11 +87,7 @@ export const MainHeader = () => {
 
         {/* header logo */}
         <a href="#section-home" className="main-header__logo">
-          {windowWidth <= 640 ? (
-            <Logo id="monogram" />
-          ) : (
-            <Logo id="full-name" />
-          )}
+          {windowWidth < 640 ? <Logo id="monogram" /> : <Logo id="full-name" />}
         </a>
 
         {/* mobile navigation */}
