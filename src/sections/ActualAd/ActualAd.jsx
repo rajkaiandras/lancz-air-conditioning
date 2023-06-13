@@ -5,7 +5,7 @@ import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // assets
 import logoDiscount from '../../assets/images/actual-ad-logo-discount.png';
-import actualAdImg from '../../assets/images/actual-ad-gree-ac.png';
+import actualAdImg from '../../assets/images/actual-ad-gree-ac-comfort-x.png';
 
 // styles
 import './ActualAd.css';
@@ -26,9 +26,12 @@ export const ActualAd = () => {
             Aktuális Gree klíma akciónk<br></br>
             <span className="highlighted">beszereléssel együtt</span>
           </h3>
-          <h1 className={`discount-text__price ${darkMode ? 'dark-mode' : ''}`}>
-            360.000 Ft
-          </h1>
+          <h3 className={`discount-text__price ${darkMode ? 'dark-mode' : ''}`}>
+            Comfort X 2.5kw 253.400 Ft
+          </h3>
+          <h3 className={`discount-text__price ${darkMode ? 'dark-mode' : ''}`}>
+            Comfort X 3.5kw 262.400 Ft
+          </h3>
           <div
             className={`frame-decoration ${darkMode ? 'dark-mode' : ''}`}
           ></div>
