@@ -43,6 +43,7 @@
   -webkit-text-fill-color: transparent;
 }
 .ActualAd .actual-ad-inner .discount-text-container .discount-text__title .highlighted {
+  font-size: 14px;
   text-transform: uppercase;
 }
 .ActualAd .actual-ad-inner .discount-text-container .discount-text__title.dark-mode {
@@ -62,7 +63,7 @@
   .ActualAd .actual-ad-inner .discount-text-container .frame-decoration {
     display: block;
     width: 840px;
-    height: 105px;
+    height: 150px;
     background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(338, 98%, 62%), transparent) border-box;
     border-radius: 8px;
     border: 2px solid transparent;

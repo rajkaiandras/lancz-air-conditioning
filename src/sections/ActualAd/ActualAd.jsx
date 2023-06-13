@@ -24,7 +24,12 @@ export const ActualAd = () => {
           />
           <h3 className={`discount-text__title ${darkMode ? 'dark-mode' : ''}`}>
             Aktuális Gree klíma akciónk<br></br>
-            <span className="highlighted">beszereléssel együtt</span>
+            {/* <span className="highlighted">beszereléssel együtt</span> */}
+            {
+              <span className="highlighted">
+                WiFi / 3D légáram / Cold Plasma / Távirányítóba integrált hőmérő
+              </span>
+            }
           </h3>
           <h3 className={`discount-text__price ${darkMode ? 'dark-mode' : ''}`}>
             Comfort X 2.5kw 253.400 Ft

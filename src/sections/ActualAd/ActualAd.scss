@@ -47,6 +47,7 @@
         -webkit-text-fill-color: transparent;
 
         .highlighted {
+          font-size: 14px;
           text-transform: uppercase;
         }
 
@@ -70,7 +71,7 @@
         @media (min-width: 1024px) {
           display: block;
           width: 840px;
-          height: 105px;
+          height: 150px;
           background: linear-gradient(white, white) padding-box,
             linear-gradient(to right, hsl(338, 98, 62), transparent) border-box;
           border-radius: 8px;
