@@ -1,3 +1,5 @@
+<!-- e-mail sending api - PLACE TO THE ROOT FOLDER ON SERVER -->
+
 <?php
 
   contact();

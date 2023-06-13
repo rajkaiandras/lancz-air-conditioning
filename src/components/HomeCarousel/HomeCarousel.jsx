@@ -16,7 +16,7 @@ import 'swiper/css/effect-fade';
 import './HomeCarousel.css';
 
 // assets
-import airCondition from '../../assets/images/home-carousel-air-condition-1440x768.webp';
+import airCondition from '../../assets/images/home-carousel-air-condition-1920x1080.webp';
 import heatPump from '../../assets/images/home-carousel-heat-pump-1440x768.webp';
 
 // database
