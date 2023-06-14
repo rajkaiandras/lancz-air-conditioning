@@ -138,12 +138,13 @@
   padding: 16px;
   border: 2px solid hsl(189, 81%, 64%);
   border-radius: 8px;
+  background-color: hsl(189, 81%, 64%);
   position: fixed;
   top: calc(50vh - 120px);
   left: calc(50vw - 120px);
-  background-color: hsl(189, 81%, 64%);
+  z-index: 999;
 }
 .PriceOfferForm .offer-sent-modal .modal__text {
-  color: white;
+  color: hsl(0, 0%, 15%);
   text-align: center;
 }/*# sourceMappingURL=PriceOfferForm.css.map */

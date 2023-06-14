@@ -168,13 +168,14 @@
     padding: 16px;
     border: 2px solid $global-clr-design-blue;
     border-radius: 8px;
+    background-color: $global-clr-design-blue;
     position: fixed;
     top: calc(50vh - 120px);
     left: calc(50vw - 120px);
-    background-color: $global-clr-design-blue;
+    z-index: 999;
 
     .modal__text {
-      color: white;
+      color: $global-clr-txt-graphite;
       text-align: center;
     }
   }

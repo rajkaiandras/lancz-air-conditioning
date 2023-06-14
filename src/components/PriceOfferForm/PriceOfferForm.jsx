@@ -55,7 +55,7 @@ export const PriceOfferForm = () => {
 
         setTimeout(() => {
           setIsOfferSent(false);
-        }, 3000);
+        }, 4000);
 
         console.log('Response object is the following:', response);
       } catch (catchError) {
