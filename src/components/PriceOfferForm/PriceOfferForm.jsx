@@ -14,45 +14,66 @@ export const PriceOfferForm = () => {
   const [offerSubject, setOfferSubject] = useState('');
   const [offerInformation, setOfferInformation] = useState('');
 
-  /* const [isInputFieldEmpty, setIsInputFieldsEmpty] = useState(false); */
+  const [error, setError] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [isOfferSent, setIsOfferSent] = useState(false);
 
   const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
 
   // form submit handler
   const handlePriceOfferSubmit = (e) => {
     e.preventDefault();
+    const url = 'https://lanczklima.hu/api.php';
 
+    // capture html form (name attribute values) as an object
     const priceOfferFormData = new FormData(e.target);
-    console.log(Object.fromEntries(priceOfferFormData.entries()));
 
-    const response = fetch('https://lanczklima.hu/api.php', {
-      method: 'POST',
-      body: JSON.stringify(Object.fromEntries(priceOfferFormData.entries())),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    // transforms form data key-value pairs into an object
+    const formDataEntriesObject = Object.fromEntries(
+      priceOfferFormData.entries()
+    );
 
-    /* const result = response.json();
-    console.log(result); */
+    const postData = async () => {
+      setIsPending(true);
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formDataEntriesObject),
+        });
+
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+
+        setIsPending(false);
+        setIsOfferSent(true);
+        setError(null);
+
+        setTimeout(() => {
+          setIsOfferSent(false);
+        }, 3000);
+
+        console.log('Response object is the following:', response);
+      } catch (catchError) {
+        console.log('Catch error is the following:', catchError);
+
+        setIsPending(false);
+        setIsOfferSent(false);
+        setError(
+          'Sajnos nem tudtuk elküldeni az ajánlatkérést. Legyen szíves telefonos kapcsolaton érdeklődni munktársunktól. Megértését köszönjük.'
+        );
+        console.log(error);
+      }
+    };
+
+    postData();
 
     resetInputFields();
   };
-
-  // disable submit btn (empty input field)
-  /* useEffect(() => {
-    if (
-      fullName.length === 0 ||
-      phoneNumber.length === 0 ||
-      emailAddress.length === 0 ||
-      offerSubject.length === 0 ||
-      offerInformation.length === 0
-    ) {
-      setIsInputFieldsEmpty(true);
-    } else {
-      setIsInputFieldsEmpty(false);
-    }
-  }, [fullName, phoneNumber, emailAddress, offerSubject, offerInformation]); */
 
   // reset input fields to default placeholder texts
   const resetInputFields = () => {
@@ -137,13 +158,23 @@ export const PriceOfferForm = () => {
         {offerInfoVisibility && <PriceOfferInfoModal />}
       </div>
       <div className="input--submit-wrapper">
-        <button
-          /* disabled={isInputFieldEmpty} */
-          className="btn btn--filled btn--submit"
-        >
-          Elküldés
-        </button>
+        {!isPending && (
+          <button className="btn btn--filled btn--submit">Küldés</button>
+        )}
+        {isPending && (
+          <button className="btn btn--filled btn--submit">
+            Folyamatban...
+          </button>
+        )}
       </div>
+      {isOfferSent && (
+        <div className="offer-sent-modal">
+          <p className="modal__text">
+            Ajánlatkérését megkaptuk. Munkatársunk hamarosan felveszi Önnel a
+            kapcsolatot.
+          </p>
+        </div>
+      )}
       <div className="frame-decoration"></div>
     </form>
   );

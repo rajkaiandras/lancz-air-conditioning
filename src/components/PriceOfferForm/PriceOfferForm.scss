@@ -105,6 +105,7 @@
 
   .input--submit-wrapper {
     grid-area: submit;
+    position: relative;
 
     .btn--submit {
       width: 100%;
@@ -158,6 +159,23 @@
 
     @media (min-width: 1024px) {
       display: block;
+    }
+  }
+
+  .offer-sent-modal {
+    width: 240px;
+    height: 135px;
+    padding: 16px;
+    border: 2px solid $global-clr-design-blue;
+    border-radius: 8px;
+    position: fixed;
+    top: calc(50vh - 120px);
+    left: calc(50vw - 120px);
+    background-color: $global-clr-design-blue;
+
+    .modal__text {
+      color: white;
+      text-align: center;
     }
   }
 }

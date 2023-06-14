@@ -81,6 +81,7 @@
 }
 .PriceOfferForm .input--submit-wrapper {
   grid-area: submit;
+  position: relative;
 }
 .PriceOfferForm .input--submit-wrapper .btn--submit {
   width: 100%;
@@ -130,4 +131,19 @@
   .PriceOfferForm .frame-decoration {
     display: block;
   }
+}
+.PriceOfferForm .offer-sent-modal {
+  width: 240px;
+  height: 135px;
+  padding: 16px;
+  border: 2px solid hsl(189, 81%, 64%);
+  border-radius: 8px;
+  position: fixed;
+  top: calc(50vh - 120px);
+  left: calc(50vw - 120px);
+  background-color: hsl(189, 81%, 64%);
+}
+.PriceOfferForm .offer-sent-modal .modal__text {
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=PriceOfferForm.css.map */
