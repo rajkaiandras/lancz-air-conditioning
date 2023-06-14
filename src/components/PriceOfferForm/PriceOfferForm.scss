@@ -162,19 +162,33 @@
     }
   }
 
-  .offer-sent-modal {
-    width: 240px;
-    height: 135px;
+  .offer-modal {
+    width: 260px;
+    height: auto;
     padding: 16px;
     border: 2px solid $global-clr-design-blue;
     border-radius: 8px;
-    background-color: $global-clr-design-blue;
+    background-color: $global-clr-white;
     position: fixed;
     top: calc(50vh - 120px);
-    left: calc(50vw - 120px);
+    left: calc(50vw - 130px);
     z-index: 999;
 
-    .modal__text {
+    &.dark-mode {
+      background-color: $global-clr-graphite;
+
+      .modal__subtitle {
+        color: $global-clr-txt-white;
+      }
+    }
+
+    .modal__title {
+      color: $global-clr-txt-design-blue;
+      margin: 0 0 16px;
+      text-align: center;
+    }
+
+    .modal__subtitle {
       color: $global-clr-txt-graphite;
       text-align: center;
     }

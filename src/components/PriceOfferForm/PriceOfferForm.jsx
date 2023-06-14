@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+
+// context
+import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
 
 // components
 import { Icon } from '../Icons/Icons.jsx';
@@ -8,6 +11,8 @@ import { PriceOfferInfoModal } from '../PriceOfferInfoModal/PriceOfferInfoModal.
 import './PriceOfferForm.css';
 
 export const PriceOfferForm = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
@@ -16,7 +21,7 @@ export const PriceOfferForm = () => {
 
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
-  const [isOfferSent, setIsOfferSent] = useState(false);
+  const [modalVisibility, setModalVisibility] = useState(false);
 
   const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
 
@@ -50,11 +55,11 @@ export const PriceOfferForm = () => {
         }
 
         setIsPending(false);
-        setIsOfferSent(true);
+        setModalVisibility(true);
         setError(null);
 
         setTimeout(() => {
-          setIsOfferSent(false);
+          setModalVisibility(false);
         }, 4000);
 
         console.log('Response object is the following:', response);
@@ -62,7 +67,7 @@ export const PriceOfferForm = () => {
         console.log('Catch error is the following:', catchError);
 
         setIsPending(false);
-        setIsOfferSent(false);
+        setModalVisibility(false);
         setError(
           'Sajnos nem tudtuk elküldeni az ajánlatkérést. Legyen szíves telefonos kapcsolaton érdeklődni munktársunktól. Megértését köszönjük.'
         );
@@ -167,11 +172,11 @@ export const PriceOfferForm = () => {
           </button>
         )}
       </div>
-      {isOfferSent && (
-        <div className="offer-sent-modal">
-          <p className="modal__text">
-            Ajánlatkérését megkaptuk. Munkatársunk hamarosan felveszi Önnel a
-            kapcsolatot.
+      {modalVisibility && (
+        <div className={`offer-modal ${darkMode ? 'dark-mode' : ''}`}>
+          <h5 className="modal__title">Ajánlatkérését megkaptuk!</h5>
+          <p className="modal__subtitle">
+            Munkatársunk hamarosan felveszi Önnel a kapcsolatot.
           </p>
         </div>
       )}
