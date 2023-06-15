@@ -21,10 +21,18 @@
     border-radius: 4px;
     background-color: $global-clr-graphite;
     transition: $global-transition;
-  }
 
-  .hamburger-menu__bar.dark-mode {
-    background-color: $global-clr-white;
+    &.open {
+      background-color: $global-clr-graphite;
+    }
+
+    &.dark-mode {
+      background-color: $global-clr-white;
+
+      &.open {
+        background-color: $global-clr-white;
+      }
+    }
   }
 
   .bar-top {

@@ -18,8 +18,14 @@ export const NavigationMobile = ({
   const closeNavigationMobile = () => {
     handleHamburgerMenu();
   };
+
   return (
-    <nav className={`NavigationMobile ${hamburgerMenuIsOpen ? 'open' : ''}`}>
+    <nav
+      className={`NavigationMobile
+        ${hamburgerMenuIsOpen ? 'open' : ''}
+        ${darkMode ? 'dark-mode' : ''}
+      `}
+    >
       <ul className="navigation-mobile__list">
         <li className="navigation-mobile__item">
           <a href="#section-home" onClick={closeNavigationMobile}>

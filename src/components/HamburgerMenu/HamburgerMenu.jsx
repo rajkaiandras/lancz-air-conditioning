@@ -11,19 +11,22 @@ export const HamburgerMenu = ({
   return (
     <div className="HamburgerMenu" onClick={handleHamburgerMenu}>
       <div
-        className={`hamburger-menu__bar bar-top ${
-          darkMode || hamburgerMenuIsOpen ? 'dark-mode' : ''
-        } ${hamburgerMenuIsOpen ? 'open' : ''}`}
+        className={`hamburger-menu__bar bar-top
+        ${darkMode ? 'dark-mode' : ''}
+        ${hamburgerMenuIsOpen ? 'open' : ''}
+        `}
       ></div>
       <div
-        className={`hamburger-menu__bar bar-center ${
-          darkMode || hamburgerMenuIsOpen ? 'dark-mode' : ''
-        } ${hamburgerMenuIsOpen ? 'open' : ''}`}
+        className={`hamburger-menu__bar bar-center
+        ${darkMode ? 'dark-mode' : ''}
+        ${hamburgerMenuIsOpen ? 'open' : ''}
+        `}
       ></div>
       <div
-        className={`hamburger-menu__bar bar-bottom ${
-          darkMode || hamburgerMenuIsOpen ? 'dark-mode' : ''
-        } ${hamburgerMenuIsOpen ? 'open' : ''}`}
+        className={`hamburger-menu__bar bar-bottom
+        ${darkMode ? 'dark-mode' : ''}
+        ${hamburgerMenuIsOpen ? 'open' : ''}
+        `}
       ></div>
     </div>
   );

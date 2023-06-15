@@ -16,7 +16,13 @@
   background-color: hsl(0, 0%, 15%);
   transition: all 300ms ease-out;
 }
+.HamburgerMenu .hamburger-menu__bar.open {
+  background-color: hsl(0, 0%, 15%);
+}
 .HamburgerMenu .hamburger-menu__bar.dark-mode {
+  background-color: hsl(0, 0%, 100%);
+}
+.HamburgerMenu .hamburger-menu__bar.dark-mode.open {
   background-color: hsl(0, 0%, 100%);
 }
 .HamburgerMenu .bar-top {
