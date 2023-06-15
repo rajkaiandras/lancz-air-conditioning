@@ -1,0 +1,34 @@
+.PriceOfferFeedbackModal {
+  width: 260px;
+  height: auto;
+  padding: 16px;
+  border: 2px solid hsl(189, 81%, 64%);
+  border-radius: 8px;
+  background-color: hsl(0, 0%, 100%);
+  position: fixed;
+  top: calc(50vh - 120px);
+  left: calc(50vw - 130px);
+  z-index: 999;
+}
+.PriceOfferFeedbackModal.dark-mode {
+  background-color: hsl(0, 0%, 15%);
+}
+.PriceOfferFeedbackModal.dark-mode .modal__subtitle {
+  color: hsl(0, 0%, 100%);
+}
+.PriceOfferFeedbackModal svg:has(use[href="#logo-monogram"]) {
+  height: 36px;
+  width: auto;
+  position: absolute;
+  top: -37px;
+  left: 110px;
+}
+.PriceOfferFeedbackModal .modal__title {
+  color: hsl(189, 81%, 64%);
+  margin: 0 0 16px;
+  text-align: center;
+}
+.PriceOfferFeedbackModal .modal__subtitle {
+  color: hsl(0, 0%, 15%);
+  text-align: center;
+}/*# sourceMappingURL=PriceOfferFeedbackModal.css.map */

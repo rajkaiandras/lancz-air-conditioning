@@ -9,7 +9,6 @@ import { Icon } from '../Icons/Icons.jsx';
 import { HamburgerMenu } from '../HamburgerMenu/HamburgerMenu.jsx';
 import { NavigationMobile } from '../NavigationMobile/NavigationMobile.jsx';
 import { NavigationDesktop } from '../NavigationDesktop/NavigationDesktop.jsx';
-/* import { Backdrop } from '../Backdrop/Backdrop.jsx'; */
 
 // styles
 import './MainHeader.css';
@@ -110,11 +109,6 @@ export const MainHeader = () => {
         >
           {darkMode ? <Icon id="light-mode" /> : <Icon id="dark-mode" />}
         </div>
-
-        {/* backdrop */}
-        {/* {hamburgerMenuIsOpen && (
-          <Backdrop handleHamburgerMenu={handleHamburgerMenu} />
-        )} */}
       </div>
     </header>
   );

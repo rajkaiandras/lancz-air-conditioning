@@ -131,31 +131,4 @@
   .PriceOfferForm .frame-decoration {
     display: block;
   }
-}
-.PriceOfferForm .offer-modal {
-  width: 260px;
-  height: auto;
-  padding: 16px;
-  border: 2px solid hsl(189, 81%, 64%);
-  border-radius: 8px;
-  background-color: hsl(0, 0%, 100%);
-  position: fixed;
-  top: calc(50vh - 120px);
-  left: calc(50vw - 130px);
-  z-index: 999;
-}
-.PriceOfferForm .offer-modal.dark-mode {
-  background-color: hsl(0, 0%, 15%);
-}
-.PriceOfferForm .offer-modal.dark-mode .modal__subtitle {
-  color: hsl(0, 0%, 100%);
-}
-.PriceOfferForm .offer-modal .modal__title {
-  color: hsl(189, 81%, 64%);
-  margin: 0 0 16px;
-  text-align: center;
-}
-.PriceOfferForm .offer-modal .modal__subtitle {
-  color: hsl(0, 0%, 15%);
-  text-align: center;
 }/*# sourceMappingURL=PriceOfferForm.css.map */

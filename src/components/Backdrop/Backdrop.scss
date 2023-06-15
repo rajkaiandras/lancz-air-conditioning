@@ -5,7 +5,8 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
+  backdrop-filter: blur(4px);
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 998;
 }

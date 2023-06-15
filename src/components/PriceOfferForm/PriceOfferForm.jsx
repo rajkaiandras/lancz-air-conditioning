@@ -1,29 +1,35 @@
-import React, { useContext, useState } from 'react';
-
-// context
-import { DarkModeContext } from '../../contexts/DarkModeContext.jsx';
+import React, { useEffect, useState } from 'react';
 
 // components
 import { Icon } from '../Icons/Icons.jsx';
 import { PriceOfferInfoModal } from '../PriceOfferInfoModal/PriceOfferInfoModal.jsx';
+import { Backdrop } from '../Backdrop/Backdrop.jsx';
+import { PriceOfferFeedbackModal } from '../PriceOfferFeedbackModal/PriceOfferFeedbackModal.jsx';
 
 // styles
 import './PriceOfferForm.css';
 
 export const PriceOfferForm = () => {
-  const { darkMode } = useContext(DarkModeContext);
-
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [offerSubject, setOfferSubject] = useState('');
   const [offerInformation, setOfferInformation] = useState('');
 
+  const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
+
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
-  const [modalVisibility, setModalVisibility] = useState(false);
+  const [offerModalVisibility, setOfferModalVisibility] = useState(false);
 
-  const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
+  // disable scrolling when navigation mobile is opened
+  useEffect(() => {
+    const body = document.querySelector('body');
+
+    offerModalVisibility
+      ? body.classList.add('disable-scrolling')
+      : body.classList.remove('disable-scrolling');
+  }, [offerModalVisibility]);
 
   // form submit handler
   const handlePriceOfferSubmit = (e) => {
@@ -55,11 +61,11 @@ export const PriceOfferForm = () => {
         }
 
         setIsPending(false);
-        setModalVisibility(true);
+        setOfferModalVisibility(true);
         setError(null);
 
         setTimeout(() => {
-          setModalVisibility(false);
+          setOfferModalVisibility(false);
         }, 4000);
 
         console.log('Response object is the following:', response);
@@ -67,7 +73,7 @@ export const PriceOfferForm = () => {
         console.log('Catch error is the following:', catchError);
 
         setIsPending(false);
-        setModalVisibility(false);
+        setOfferModalVisibility(false);
         setError(
           'Sajnos nem tudtuk elküldeni az ajánlatkérést. Legyen szíves telefonos kapcsolaton érdeklődni munktársunktól. Megértését köszönjük.'
         );
@@ -172,14 +178,8 @@ export const PriceOfferForm = () => {
           </button>
         )}
       </div>
-      {modalVisibility && (
-        <div className={`offer-modal ${darkMode ? 'dark-mode' : ''}`}>
-          <h5 className="modal__title">Ajánlatkérését megkaptuk!</h5>
-          <p className="modal__subtitle">
-            Munkatársunk hamarosan felveszi Önnel a kapcsolatot.
-          </p>
-        </div>
-      )}
+      {offerModalVisibility && <PriceOfferFeedbackModal />}
+      {offerModalVisibility && <Backdrop />}
       <div className="frame-decoration"></div>
     </form>
   );
