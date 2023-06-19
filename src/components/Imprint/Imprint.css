@@ -1,0 +1,9 @@
+.Imprint {
+  width: 100wv;
+  height: 100vh;
+}
+.Imprint .imprint-inner {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+}/*# sourceMappingURL=Imprint.css.map */
