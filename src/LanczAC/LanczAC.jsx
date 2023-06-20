@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 
 // dark mode context
 import { DarkModeContext } from '../contexts/DarkModeContext.jsx';
@@ -10,6 +10,7 @@ import { AboutUs } from '../sections/AboutUs/AboutUs.jsx';
 import { Services } from '../sections/Services/Services.jsx';
 import { Prices } from '../sections/Prices/Prices.jsx';
 import { PriceOffer } from '../sections/PriceOffer/PriceOffer.jsx';
+import { Imprint } from '../components/Imprint/Imprint.jsx';
 import { MainFooter } from '../sections/MainFooter/MainFooter.jsx';
 
 // components
@@ -24,12 +25,17 @@ import './LanczAC.css';
 export const LanczAC = () => {
   const { darkMode } = useContext(DarkModeContext);
   const root = document.getElementById('root');
+  const [isImprintVisible, setIsImprintVisible] = useState(false);
 
   useEffect(() => {
     darkMode
       ? root.classList.add('dark-mode')
       : root.classList.remove('dark-mode');
   }, [root, darkMode]);
+
+  const handleImprintVisibility = () => {
+    setIsImprintVisible(!isImprintVisible);
+  };
 
   return (
     <>
@@ -46,7 +52,12 @@ export const LanczAC = () => {
         <Services />
         <Prices />
         <PriceOffer />
-        <MainFooter />
+        <MainFooter handleImprintVisibility={handleImprintVisibility} />
+
+        {/* impressum */}
+        {isImprintVisible && (
+          <Imprint handleImprintVisibility={handleImprintVisibility} />
+        )}
 
         {/* scroll to top component */}
         <ScrollTop />

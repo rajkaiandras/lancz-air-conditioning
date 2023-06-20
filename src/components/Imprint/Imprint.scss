@@ -1,13 +1,36 @@
 @charset 'UTF-8';
 
+// custom properties
+@import '../../styles/custom-properties/_variables.scss';
+
 // imprint styles
 .Imprint {
-  width: 100wv;
+  width: 100vw;
   height: 100vh;
+  background-color: $global-clr-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .imprint-inner {
     width: 100%;
     max-width: 1280px;
     height: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    position: relative;
+
+    .close-sign {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
   }
 }

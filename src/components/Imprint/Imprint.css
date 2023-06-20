@@ -1,9 +1,27 @@
 .Imprint {
-  width: 100wv;
+  width: 100vw;
   height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.Imprint::-webkit-scrollbar {
+  display: none;
 }
 .Imprint .imprint-inner {
   width: 100%;
   max-width: 1280px;
   height: 100%;
+  margin: 0 auto;
+  padding: 24px;
+  position: relative;
+}
+.Imprint .imprint-inner .close-sign {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }/*# sourceMappingURL=Imprint.css.map */

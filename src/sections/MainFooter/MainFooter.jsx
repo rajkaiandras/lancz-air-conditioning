@@ -10,7 +10,7 @@ import { Icon } from '../../components/Icons/Icons.jsx';
 // styles
 import './MainFooter.css';
 
-export const MainFooter = () => {
+export const MainFooter = ({ handleImprintVisibility }) => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
@@ -81,6 +81,15 @@ export const MainFooter = () => {
               <li className="section">
                 <a className="section__link" href="#section-contact">
                   Kapcsolat
+                </a>
+              </li>
+              <li className="section">
+                <a
+                  className="section__link"
+                  href="#section-imprint"
+                  onClick={handleImprintVisibility}
+                >
+                  Impresszum
                 </a>
               </li>
             </ul>

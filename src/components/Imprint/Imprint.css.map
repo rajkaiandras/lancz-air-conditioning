@@ -1,1 +1,1 @@
-{"version":3,"sources":["Imprint.scss","Imprint.css"],"names":[],"mappings":"AAGA;EACE,YAAA;EACA,aAAA;ACFF;ADIE;EACE,WAAA;EACA,iBAAA;EACA,YAAA;ACFJ","file":"Imprint.css"}
+{"version":3,"sources":["Imprint.scss","../../styles/custom-properties/_variables.scss","Imprint.css"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,aAAA;EACA,kCCRiB;EDSjB,eAAA;EACA,MAAA;EACA,OAAA;EACA,aAAA;EACA,kBAAA;AELF;AFOE;EACE,aAAA;AELJ;AFQE;EACE,WAAA;EACA,iBAAA;EACA,YAAA;EACA,cAAA;EACA,aAAA;EACA,kBAAA;AENJ;AFQI;EACE,kBAAA;EACA,MAAA;EACA,QAAA;EACA,eAAA;AENN","file":"Imprint.css"}
