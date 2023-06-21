@@ -5,7 +5,7 @@ import { BrandLogo } from '../BrandLogos/BrandLogos.jsx';
 
 // swiper modules
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 
 // swiper styles
 import 'swiper/css';
@@ -50,10 +50,12 @@ export const BrandsCarousel = () => {
     <section className="BrandsCarousel">
       <div className="brand-carousel-inner">
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           pagination={{
             clickable: true,
           }}
+          autoplay
+          speed={750}
           slidesPerView={
             windowWidth <= 480
               ? 3
