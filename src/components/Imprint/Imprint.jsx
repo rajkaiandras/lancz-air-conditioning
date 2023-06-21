@@ -26,7 +26,15 @@ export const Imprint = ({ handleImprintVisibility }) => {
               <p>Adószám: 56870961-2-40</p>
             </li>
             <li>
-              <p>Székhely: 8373 Rezi, Petőfi Sándor utca 78.</p>
+              <span>Telephely: </span>
+              <a
+                href="https://goo.gl/maps/n4ndQUQAjzjMUvgo8"
+                target="_blank"
+                rel="noreferrer"
+                className="location__address item__link"
+              >
+                8373 Rezi, Petőfi S. u. 78.
+              </a>
             </li>
             <li>
               <span>Telefonszám: </span>
@@ -66,7 +74,15 @@ export const Imprint = ({ handleImprintVisibility }) => {
               <p>Adószám: 23358005-2-43</p>
             </li>
             <li>
-              <p>Székhely: 1115 Budapest, Halmi utca 29.</p>
+              <span>Székhely: </span>
+              <a
+                href="https://goo.gl/maps/NSsytoXQD65T6VKG9"
+                target="_blank"
+                rel="noreferrer"
+                className="location__address item__link"
+              >
+                1115 Budapest, Halmi utca 29.
+              </a>
             </li>
             <li>
               <span>Telefonszám: </span>

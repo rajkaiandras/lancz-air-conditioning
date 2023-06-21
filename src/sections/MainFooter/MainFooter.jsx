@@ -100,7 +100,7 @@ export const MainFooter = ({ handleImprintVisibility }) => {
                 </a>
               </li>
               <li className="contact__item contact__email">
-                <h6 className="item__title email__title">E-mail</h6>
+                <h6 className="item__title email__title">E-mail cím</h6>
                 <a
                   href="mailto:info@lanczklima.hu"
                   className="email__address item__link"
@@ -111,7 +111,7 @@ export const MainFooter = ({ handleImprintVisibility }) => {
               <li className="contact__item contact__location">
                 <h6 className="item__title location__title">Telephely</h6>
                 <a
-                  href="https://goo.gl/maps/gkrdMWmQfEaE7t959"
+                  href="https://goo.gl/maps/n4ndQUQAjzjMUvgo8"
                   target="_blank"
                   rel="noreferrer"
                   className="location__address item__link"
