@@ -8,6 +8,10 @@
   overflow-y: scroll;
   z-index: 1000;
 }
+.Imprint.dark-mode {
+  background-color: hsl(0, 0%, 15%);
+  color: white;
+}
 .Imprint::-webkit-scrollbar {
   display: none;
 }
@@ -21,12 +25,16 @@
   align-items: center;
   flex-flow: column nowrap;
 }
+.Imprint .imprint-inner .imprint__title {
+  color: hsl(189, 81%, 64%);
+}
 .Imprint .imprint-inner article {
   width: 100%;
   max-width: 360px;
 }
 .Imprint .imprint-inner article h2 {
   font-size: 28px;
+  color: hsl(189, 81%, 64%);
 }
 @media (min-width: 480px) {
   .Imprint .imprint-inner article h2 {
@@ -35,6 +43,7 @@
 }
 .Imprint .imprint-inner article h3 {
   margin: 0;
+  color: hsl(189, 81%, 64%);
 }
 .Imprint .imprint-inner article ul {
   margin-left: 48px;
@@ -46,6 +55,10 @@
   cursor: pointer;
 }
 .Imprint .imprint-inner .close-sign svg:has(use[href="#icon-close"]) {
+  width: 32px;
+  height: 32px;
+}
+.Imprint .imprint-inner .close-sign svg:has(use[href="#icon-close-dark"]) {
   width: 32px;
   height: 32px;
 }/*# sourceMappingURL=Imprint.css.map */
