@@ -11,8 +11,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
   overflow-y: scroll;
+  z-index: 1000;
 
   &::-webkit-scrollbar {
     display: none;
@@ -21,16 +21,43 @@
   .imprint-inner {
     width: 100%;
     max-width: 1280px;
-    height: 100%;
     margin: 0 auto;
     padding: 24px;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    article {
+      width: 100%;
+      max-width: 360px;
+
+      h2 {
+        font-size: 28px;
+
+        @media (min-width: 480px) {
+          font-size: 32px;
+        }
+      }
+      h3 {
+        margin: 0;
+      }
+
+      ul {
+        margin-left: 48px;
+      }
+    }
 
     .close-sign {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 24px;
+      right: 24px;
       cursor: pointer;
+
+      svg:has(use[href='#icon-close']) {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }

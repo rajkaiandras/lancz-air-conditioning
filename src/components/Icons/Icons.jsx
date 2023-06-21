@@ -20,6 +20,12 @@ const files = {
       viewBox: [0, -960, 960, 960],
       data: '<path xmlns="http://www.w3.org/2000/svg" fill="hsl(0, 0%, 100%)" d="M289.923-377.769 267.692-400 480-612.308 692.308-400l-22.231 22.231L480-567.846 289.923-377.769Z"/>',
     },
+    close: {
+      width: 48,
+      height: 48,
+      viewBox: [0, -960, 960, 960],
+      data: '<path xmlns="http://www.w3.org/2000/svg" d="m252.846-230.846-22-22L458-480 230.846-707.154l22-22L480-502l227.154-227.154 22 22L502-480l227.154 227.154-22 22L480-458 252.846-230.846Z"/>',
+    },
     'phone-call': {
       width: 48,
       height: 48,
@@ -85,6 +91,7 @@ const files = {
     'dark-mode',
     'light-mode',
     'top-arrow',
+    'close',
     'phone-call',
     'experience',
     'facebook',

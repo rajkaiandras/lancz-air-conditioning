@@ -28,18 +28,11 @@ export const MainFooter = ({ handleImprintVisibility }) => {
             </p>
             <div className="company__social-icons">
               <a
-                href="https://www.facebook.com/profile.php?id=100005642478675"
+                href="https://www.facebook.com/profile.php?id=100093797289847"
                 target="_blank"
                 rel="noreferrer"
               >
                 <Icon id="facebook" />
-              </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon id="instagram" />
               </a>
             </div>
           </div>
@@ -123,7 +116,7 @@ export const MainFooter = ({ handleImprintVisibility }) => {
                   rel="noreferrer"
                   className="location__address item__link"
                 >
-                  8373 Rezi, Zala vármegye
+                  8373 Rezi, Petőfi S. u. 78.
                 </a>
               </li>
             </ul>

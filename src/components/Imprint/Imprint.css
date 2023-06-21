@@ -5,8 +5,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
   overflow-y: scroll;
+  z-index: 1000;
 }
 .Imprint::-webkit-scrollbar {
   display: none;
@@ -14,14 +14,38 @@
 .Imprint .imprint-inner {
   width: 100%;
   max-width: 1280px;
-  height: 100%;
   margin: 0 auto;
   padding: 24px;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.Imprint .imprint-inner article {
+  width: 100%;
+  max-width: 360px;
+}
+.Imprint .imprint-inner article h2 {
+  font-size: 28px;
+}
+@media (min-width: 480px) {
+  .Imprint .imprint-inner article h2 {
+    font-size: 32px;
+  }
+}
+.Imprint .imprint-inner article h3 {
+  margin: 0;
+}
+.Imprint .imprint-inner article ul {
+  margin-left: 48px;
 }
 .Imprint .imprint-inner .close-sign {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 24px;
+  right: 24px;
   cursor: pointer;
+}
+.Imprint .imprint-inner .close-sign svg:has(use[href="#icon-close"]) {
+  width: 32px;
+  height: 32px;
 }/*# sourceMappingURL=Imprint.css.map */

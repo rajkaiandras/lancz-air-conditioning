@@ -1,5 +1,8 @@
 import React from 'react';
 
+// icons
+import { Icon } from '../../components/Icons/Icons.jsx';
+
 // styles
 import './Imprint.css';
 
@@ -9,12 +12,13 @@ export const Imprint = ({ handleImprintVisibility }) => {
       <div className="imprint-inner">
         <h1 className="imprint__title">Impresszum</h1>
         <article className="imprint__owner">
+          <h2 className="owner__title">A weboldal tulajdonosa</h2>
           <ul className="owner-inner">
             <li>
-              <h2 className="owner__title">A weboldal tulajdonosa</h2>
+              <h3 className="owner__name">Lancz Kornél e.v.</h3>
             </li>
             <li>
-              <h3 className="owner__name">Lancz Kornél e.v.</h3>
+              <p className="owner__tax-number">Adószám: 56870961-2-40</p>
             </li>
             <li>
               <p className="owner__address">
@@ -34,17 +38,10 @@ export const Imprint = ({ handleImprintVisibility }) => {
           </ul>
         </article>
         <article className="imprint__developer">
+          <h2 className="developer__title">A weboldalt fejlesztette</h2>
           <ul className="developer-inner">
             <li>
-              <h2 className="developer__title">A weboldalt fejlesztette</h2>
-            </li>
-            <li>
               <h3 className="developer__name">Rajkai András</h3>
-            </li>
-            <li>
-              <p className="developer__address">
-                8373 Rezi, Bem József utca 19.
-              </p>
             </li>
             <li>
               <a className="developer__phone" href="tel:+36305004691">
@@ -56,18 +53,21 @@ export const Imprint = ({ handleImprintVisibility }) => {
                 className="developer__linked-in"
                 href="https://www.linkedin.com/in/andrasrajkai"
               >
-                LinkedIn
+                LinkedIn Profil
               </a>
             </li>
           </ul>
         </article>
         <article className="imprint__hosting-provider">
+          <h2 className="hosting-provider__title">Tárhelyszolgáltató</h2>
           <ul className="hosting-provider-inner">
             <li>
-              <h2 className="hosting-provider__title">Tárhelyszolgáltató</h2>
+              <h3 className="hosting-provider__name">Nethely Kft.</h3>
             </li>
             <li>
-              <h3 className="hosting-provider__name">Nethely Kft.</h3>
+              <p className="hosting-provider__tax-number">
+                Adószám: 23358005-2-43
+              </p>
             </li>
             <li>
               <p className="hosting-provider__address">
@@ -80,22 +80,25 @@ export const Imprint = ({ handleImprintVisibility }) => {
               </a>
             </li>
             <li>
-              <p className="hosting-provider__tax-number">
-                Adószám: 23358005-2-43
-              </p>
+              <a
+                className="hosting-provider__email"
+                href="mailto:info@nethely.hu"
+              >
+                info@nethely.hu
+              </a>
             </li>
             <li>
               <a
                 className="hosting-provider__website"
                 href="https://www.nethely.hu/"
               >
-                LinkedIn
+                www.nethely.hu
               </a>
             </li>
           </ul>
         </article>
         <div className="close-sign" onClick={handleImprintVisibility}>
-          X
+          <Icon id="close" />
         </div>
       </div>
     </section>
