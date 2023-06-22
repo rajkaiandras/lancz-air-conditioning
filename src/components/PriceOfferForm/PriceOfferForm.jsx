@@ -15,6 +15,7 @@ export const PriceOfferForm = () => {
   const [emailAddress, setEmailAddress] = useState('');
   const [offerSubject, setOfferSubject] = useState('');
   const [offerInformation, setOfferInformation] = useState('');
+  const [dataPrivacy, setDataPrivacy] = useState(false);
 
   const [offerInfoVisibility, setOfferInfoVisibility] = useState(false);
 
@@ -93,6 +94,7 @@ export const PriceOfferForm = () => {
     setEmailAddress('');
     setOfferSubject('');
     setOfferInformation('');
+    setDataPrivacy(false);
   };
 
   // info modal visibility
@@ -167,6 +169,16 @@ export const PriceOfferForm = () => {
           <Icon id="info-fill" />
         </div>
         {offerInfoVisibility && <PriceOfferInfoModal />}
+      </div>
+      <div className="input--offer-data-privacy-wrapper">
+        <input
+          className="input--offer-data-privacy"
+          type="checkbox"
+          name="dataPrivacy"
+          checked={dataPrivacy}
+          onChange={(e) => setDataPrivacy(e.target.value)}
+          required
+        />
       </div>
       <div className="input--submit-wrapper">
         {!isPending && (
