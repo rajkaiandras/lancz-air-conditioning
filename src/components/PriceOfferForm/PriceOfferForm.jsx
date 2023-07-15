@@ -170,7 +170,7 @@ export const PriceOfferForm = () => {
         </div>
         {offerInfoVisibility && <PriceOfferInfoModal />}
       </div>
-      <div className="input--offer-data-privacy-wrapper">
+      {/* <div className="input--offer-data-privacy-wrapper">
         <input
           className="input--offer-data-privacy"
           type="checkbox"
@@ -179,7 +179,7 @@ export const PriceOfferForm = () => {
           onChange={(e) => setDataPrivacy(e.target.value)}
           required
         />
-      </div>
+      </div> */}
       <div className="input--submit-wrapper">
         {!isPending && (
           <button className="btn btn--filled btn--submit">Küldés</button>
