@@ -59,7 +59,7 @@ export const Imprint = ({ handleImprintVisibility }) => {
             <li>
               <span>LinkedIn: </span>
               <a href="https://www.linkedin.com/in/andrasrajkai">
-                András Rajkai
+                linkedin.com/andrasrajkai
               </a>
             </li>
           </ul>
